@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1551094187:1684835381678" name="IS_VALID_ACCOUNT_NUMBER_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.crm.GetAccountDetails</source>
+</config>
+</decision>
