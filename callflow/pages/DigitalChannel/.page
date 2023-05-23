@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@732361717:1672298555839" name="DigitalChannel" version="6.0.1">
+<element height="46" id="Element@1156658546:1672987444667" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="-619" y="519">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1814213966:1672987999878" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="159" y="607">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@11770144:1676382300364" name="BANKING_MENU_PE" type="Page Connector" width="158" x="116" y="48">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@935748286:1672988630644" name="BARODA_CONNECT_PE" type="Page Connector" width="175" x="618" y="263">
+<page_connector target="Element@1466210332:1672988479094">BARODA_CONNECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@366665540:1672988608548" name="BHIM_BARODA_PE" type="Page Connector" width="150" x="451" y="256">
+<page_connector target="Element@465659562:1672988417335">BHIM_BARODA_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@65149217:1672928813787" name="DIGITAL_CHANNEL_BC" type="Decision" width="171" x="381" y="179">
+<exit_states>
+<exit_state name="1" target="Element@1694636429:1672929371976"/>
+<exit_state name="2" target="Element@1559203243:1672988385320"/>
+<exit_state name="3" target="Element@366665540:1672988608548"/>
+<exit_state name="4" target="Element@935748286:1672988630644"/>
+<exit_state name="5" target="Element@1947378997:1672988659938"/>
+<exit_state name="7" target="Element@11770144:1676382300364"/>
+<exit_state name="8" target="Element@1819497736:1676382302234"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1758237281:1672928813787" name="DIGITAL_CHANNEL_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="176" x="377" y="107">
+<exit_states>
+<exit_state name="done" target="Element@65149217:1672928813787"/>
+<exit_state name="max_nomatch" target="Element@1177366463:1672928813787"/>
+<exit_state name="max_noinput" target="Element@1907075044:1672928813787"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1372910279:1672298555839" name="DIGITAL_CHANNEL_PE" type="Page Entry" width="169" x="379" y="34">
+<exit_states>
+<exit_state name="next" target="Element@1758237281:1672928813787"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2059102438:1673800815773" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="-15" y="539">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1660635397:1672987503897" name="GENERATE_GREEN_PIN_PE" type="Page Connector" width="188" x="-486" y="573">
+<page_connector target="Element@1903868590:1672297822718">GENERATE_GREEN_PIN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1694636429:1672929371976" name="IS_RMN_CHECK_2" type="Decision" width="145" x="40" y="254">
+<exit_states>
+<exit_state name="yes" target="Element@168608233:1672930624561"/>
+<exit_state name="no" target="Element@1235782822:1672987999878"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1962071910:1673800801308" name="MAIN_MENU_PE" type="Page Connector" width="138" x="12" y="468">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1819497736:1676382302234" name="MAIN_MENU_PE" type="Page Connector" width="138" x="125" y="156">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1559203243:1672988385320" name="MOBILE_BANKING_PE" type="Page Connector" width="166" x="269" y="255">
+<page_connector target="Element@97183264:1672987883248">MOBILE_BANKING_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1907075044:1672928813787" name="NI_PE" type="Page Connector" width="158" x="643" y="129">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1667048631:1672987459948" name="NI_PE" type="Page Connector" width="158" x="62" y="408">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1177366463:1672928813787" name="NM_PE" type="Page Connector" width="165" x="644" y="78">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@2047391:1672987459948" name="NM_PE" type="Page Connector" width="165" x="54" y="325">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1485728890:1672987999878" name="NON_RMN_DEBIT_CARD_BC" type="Decision" width="217" x="257" y="392">
+<exit_states>
+<exit_state name="1" target="Element@1814213966:1672987999878"/>
+<exit_state name="2" target="Element@1814213966:1672987999878">
+<bendpoint>
+<dim1 x="-153" y="32"/>
+<dim2 x="37" y="-83"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@312296030:1672988184645"/>
+<exit_state name="4" target="Element@667628545:1672987999878"/>
+<exit_state name="7" target="Element@2059102438:1673800815773"/>
+<exit_state name="8" target="Element@1962071910:1673800801308"/>
+<exit_state name="9" target="Element@1814213966:1672987999878"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1235782822:1672987999878" name="NON_RMN_DEBIT_CARD_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="205" x="281" y="326">
+<exit_states>
+<exit_state name="done" target="Element@1485728890:1672987999878"/>
+<exit_state name="max_nomatch" target="Element@2047391:1672987459948"/>
+<exit_state name="max_noinput" target="Element@1667048631:1672987459948"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1833849181:1677127045799" name="RMN_ATM_SERVICE" type="Page Entry" width="154" x="-563" y="281">
+<exit_states>
+<exit_state name="next" target="Element@168608233:1672930624561"/>
+</exit_states>
+</element>
+<element height="46" id="Element@425789372:1672930624561" name="RMN_DEBIT_CARD_BC" type="Decision" width="168" x="-324" y="369">
+<exit_states>
+<exit_state name="1" target="Element@1156658546:1672987444667"/>
+<exit_state name="2" target="Element@1660635397:1672987503897"/>
+<exit_state name="3" target="Element@1156658546:1672987444667">
+<bendpoint>
+<dim1 x="-272" y="4"/>
+<dim2 x="25" y="-146"/>
+</bendpoint>
+</exit_state>
+<exit_state name="4" target="Element@1350765763:1673874287528"/>
+<exit_state name="5" target="Element@1103587537:1672987980540"/>
+<exit_state name="6" target="Element@1156658546:1672987444667">
+<bendpoint>
+<dim1 x="-216" y="32"/>
+<dim2 x="140" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@2059102438:1673800815773"/>
+<exit_state name="8" target="Element@1962071910:1673800801308"/>
+<exit_state name="9" target="Element@1156658546:1672987444667">
+<bendpoint>
+<dim1 x="-129" y="122"/>
+<dim2 x="165" y="-82"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@168608233:1672930624561" name="RMN_DEBIT_CARD_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="173" x="-334" y="291">
+<exit_states>
+<exit_state name="done" target="Element@425789372:1672930624561"/>
+<exit_state name="max_nomatch" target="Element@2047391:1672987459948"/>
+<exit_state name="max_noinput" target="Element@1667048631:1672987459948"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1947378997:1672988659938" name="SET_SMS_ALERT_PE" type="Page Connector" width="151" x="826" y="257">
+<page_connector target="Element@1425123531:1672988544483">SET_SMS_ALERT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1103587537:1672987980540" name="SET_TXN_LIMIT_PE" type="Page Connector" width="147" x="-188" y="523">
+<page_connector target="Element@583730267:1672987865476">SET_TXN_LIMIT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@667628545:1672987999878" name="SET_TXN_LIMIT_PE" type="Page Connector" width="156" x="486" y="482">
+<page_connector target="Element@583730267:1672987865476">SET_TXN_LIMIT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@312296030:1672988184645" name="SET_TXN_STATUS_PE" type="Page Connector" width="156" x="343" y="561">
+<page_connector target="Element@341201310:1673853201675">SET_TXN_STATUS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1350765763:1673874287528" name="SET_TXN_STATUS_PE" type="Page Connector" width="156" x="-270" y="581">
+<page_connector target="Element@341201310:1673853201675">SET_TXN_STATUS_PE<config/>
+</page_connector>
+</element>
+</page>

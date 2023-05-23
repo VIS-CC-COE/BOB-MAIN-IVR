@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2140723978:1679206285711" name="CHK_FLOW_TYPE" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHK_FLOW_TYPE" default_exit_state="new-call">
+        <exit_state name="create-tpin" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="TPIN_FLOW" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="nri" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="S_NRI_DNIS" />
+                </data>
+                <call_data type="dnis" />
+            </string>
+        </exit_state>
+        <exit_state name="disc-dnis" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="S_DISC_DNIS" />
+                </data>
+                <call_data type="dnis" />
+            </string>
+        </exit_state>
+        <exit_state name="tata-dnis" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="S_TATA_DNIS" />
+                </data>
+                <call_data type="dnis" />
+            </string>
+        </exit_state>
+        <exit_state name="from-gnani" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="S_GNANI_DNIS" />
+                </data>
+                <call_data type="dnis" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

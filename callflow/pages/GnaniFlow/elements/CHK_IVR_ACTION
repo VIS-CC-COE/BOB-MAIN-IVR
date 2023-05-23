@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1421519294:1680963656038" name="CHK_IVR_ACTION" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHK_IVR_ACTION" default_exit_state="welcome">
+        <exit_state name="eoc" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_IVR_ACTION" />
+                </data>
+                <constant_string value="EOC" />
+            </string>
+        </exit_state>
+        <exit_state name="tta" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_IVR_ACTION" />
+                </data>
+                <constant_string value="TTA" />
+            </string>
+        </exit_state>
+        <exit_state name="tti" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_IVR_ACTION" />
+                </data>
+                <constant_string value="TTI" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

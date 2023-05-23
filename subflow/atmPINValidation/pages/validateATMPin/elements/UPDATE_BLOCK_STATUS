@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1009965701:1678772487703" name="UPDATE_BLOCK_STATUS" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.UpdateBlockStatus_BC</source>
+</config>
+</decision>

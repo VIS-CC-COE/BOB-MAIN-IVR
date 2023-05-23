@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@933265632:1670996282938" name="SetLang" version="6.0.1">
+<element height="46" id="Element@520059867:1671001736394" name="ACCOUNT_BALANCE_PE" type="Page Connector" width="181" x="-6" y="335">
+<page_connector target="Element@440110326:1671001691297">ACCOUNT_BALANCE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1512389834:1670996516991" name="CHECK_PREFERRED_LANG" type="Decision" width="189" x="-52" y="-22">
+<exit_states>
+<exit_state name="YES" target="Element@1085788903:1682670986768"/>
+<exit_state name="NO" target="Element@1085788903:1682670986768">
+<bendpoint>
+<dim1 x="-8" y="76"/>
+<dim2 x="-96" y="-52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@790204983:1676283066765" name="Copy_of_IS_RMN" type="Decision" width="140" x="400" y="574">
+<exit_states>
+<exit_state name="YES" target="Element@120323421:1673789107722"/>
+<exit_state name="NO" target="Element@239282124:1674119232749"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1177575217:1671169777017" name="EXTENDED_LANG_BC" type="Decision" width="262" x="622" y="439">
+<exit_states>
+<exit_state name="1" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="-160" y="62"/>
+<dim2 x="-158" y="-71"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="-110" y="63"/>
+<dim2 x="-108" y="-70"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="-63" y="64"/>
+<dim2 x="-61" y="-69"/>
+</bendpoint>
+</exit_state>
+<exit_state name="4" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="-27" y="68"/>
+<dim2 x="-25" y="-65"/>
+</bendpoint>
+</exit_state>
+<exit_state name="5" target="Element@2044719310:1671169939528"/>
+<exit_state name="6" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="56" y="65"/>
+<dim2 x="58" y="-68"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="91" y="61"/>
+<dim2 x="93" y="-72"/>
+</bendpoint>
+</exit_state>
+<exit_state name="8" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="141" y="66"/>
+<dim2 x="143" y="-67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="9" target="Element@2044719310:1671169939528">
+<bendpoint>
+<dim1 x="188" y="64"/>
+<dim2 x="190" y="-69"/>
+</bendpoint>
+</exit_state>
+<exit_state name="0" target="Element@765823229:1671018385154"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2142936755:1671156979970" name="EXTENDED_LANG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="167" x="661" y="346">
+<exit_states>
+<exit_state name="done" target="Element@1177575217:1671169777017"/>
+<exit_state name="max_nomatch" target="Element@370273781:1675328754550"/>
+<exit_state name="max_noinput" target="Element@370273781:1675328754550"/>
+</exit_states>
+</element>
+<element height="46" id="Element@120323421:1673789107722" name="FETCH_ACCOUNT_INFO_BC" type="Decision" width="197" x="71" y="239">
+<exit_states>
+<exit_state name="YES" target="Element@520059867:1671001736394"/>
+<exit_state name="NO" target="Element@286820195:1673789166389"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1796970820:1682671261891" name="GNANI_SUBDIALOGUE_TRANSFER" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="229" x="-190" y="229">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@738577838:1683898764462" name="IS_BIRTHDAY" type="Decision" width="128" x="253" y="58">
+<exit_states>
+<exit_state name="YES" target="Element@839169425:1683898875310"/>
+<exit_state name="NO" target="Element@1512389834:1670996516991"/>
+</exit_states>
+</element>
+<element height="46" id="Element@821654145:1670996387491" name="IS_RMN" type="Decision" width="98" x="429" y="115">
+<exit_states>
+<exit_state name="YES" target="Element@738577838:1683898764462"/>
+<exit_state name="NO" target="Element@765823229:1671018385154"/>
+</exit_states>
+</element>
+<element height="46" id="Element@533861223:1671019341297" name="LIMITED_LANG_BC" type="Decision" width="149" x="403" y="347">
+<exit_states>
+<exit_state name="1" target="Element@843966114:1671021139995">
+<bendpoint>
+<dim1 x="-71" y="41"/>
+<dim2 x="-75" y="-43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@843966114:1671021139995">
+<bendpoint>
+<dim1 x="95" y="44"/>
+<dim2 x="91" y="-40"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@2142936755:1671156979970"/>
+</exit_states>
+</element>
+<element height="46" id="Element@765823229:1671018385154" name="LIMITED_LANG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="154" x="399" y="206">
+<exit_states>
+<exit_state name="done" target="Element@533861223:1671019341297"/>
+<exit_state name="max_nomatch" target="Element@120323421:1673789107722"/>
+<exit_state name="max_noinput" target="Element@120323421:1673789107722"/>
+</exit_states>
+</element>
+<element height="46" id="Element@286820195:1673789166389" name="MAIN_MENU_PE" type="Page Connector" width="138" x="221" y="340">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@239282124:1674119232749" name="MAIN_MENU_PE" type="Page Connector" width="138" x="831" y="772">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@370273781:1675328754550" name="MAIN_MENU_PE" type="Page Connector" width="138" x="663" y="265">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@180000326:1675331096318" name="NM_PE" type="Page Connector" width="88" x="827" y="167">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@484046511:1675332594208" name="NM_PE" type="Page Connector" width="88" x="1433" y="403">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@839169425:1683898875310" name="PLAY_BIRTHDAY_WISHES" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="194" y="-68">
+<exit_states>
+<exit_state name="done" target="Element@1512389834:1670996516991"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1961674604:1682671020204" name="SET_GNANI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="128" x="-152" y="105">
+<exit_states>
+<exit_state name="done" target="Element@1796970820:1682671261891"/>
+</exit_states>
+</element>
+<element height="46" id="Element@562561881:1670996282938" name="SET_LANG" type="Page Entry" width="104" x="425" y="-57">
+<exit_states>
+<exit_state name="next" target="Element@821654145:1670996387491"/>
+</exit_states>
+</element>
+<element height="46" id="Element@843966114:1671021139995" name="SET_PREFERRED_LANG" type="Action" width="169" x="386" y="438">
+<exit_states>
+<exit_state name="done" target="Element@1951072235:1675331355355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2044719310:1671169939528" name="SET_PREFERRED_LANG_2" type="Action" width="218" x="648" y="572">
+<exit_states>
+<exit_state name="done" target="Element@1951072235:1675331355355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1357787394:1675332419620" name="SET_PREFERRED_LANG_3" type="Action" width="180" x="1003" y="541">
+<exit_states>
+<exit_state name="done" target="Element@712007264:1675332407633"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1085788903:1682670986768" name="TRANSFER_TO_GNANI" type="Decision" width="166" x="47" y="105">
+<exit_states>
+<exit_state name="YES" target="Element@1961674604:1682671020204"/>
+<exit_state name="NO" target="Element@120323421:1673789107722"/>
+</exit_states>
+</element>
+<element height="46" id="Element@712007264:1675332407633" name="UPDATED_LANGUAGE_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="1002" y="617">
+<exit_states>
+<exit_state name="done" target="Element@1951072235:1675331355355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1351255332:1675332250486" name="UPDATE_EXTENDED_LANG_BC" type="Decision" width="209" x="1182" y="433">
+<exit_states>
+<exit_state name="1" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="-113" y="41"/>
+<dim2 x="30" y="-55"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="-95" y="46"/>
+<dim2 x="48" y="-50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@1357787394:1675332419620"/>
+<exit_state name="4" target="Element@1357787394:1675332419620"/>
+<exit_state name="5" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="-40" y="72"/>
+<dim2 x="103" y="-24"/>
+</bendpoint>
+</exit_state>
+<exit_state name="6" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="-37" y="68"/>
+<dim2 x="62" y="-49"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="8" y="80"/>
+<dim2 x="107" y="-37"/>
+</bendpoint>
+</exit_state>
+<exit_state name="8" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="33" y="78"/>
+<dim2 x="132" y="-39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="9" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="65" y="94"/>
+<dim2 x="164" y="-23"/>
+</bendpoint>
+</exit_state>
+<exit_state name="0" target="Element@1088945514:1675330961171"/>
+</exit_states>
+</element>
+<element height="46" id="Element@106001940:1675332250485" name="UPDATE_EXTENDED_LANG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="214" x="1176" y="357">
+<exit_states>
+<exit_state name="done" target="Element@1351255332:1675332250486"/>
+<exit_state name="max_nomatch" target="Element@484046511:1675332594208"/>
+<exit_state name="max_noinput" target="Element@484046511:1675332594208"/>
+</exit_states>
+</element>
+<element height="46" id="Element@219158339:1672990282938" name="UPDATE_LANG_PE" type="Page Entry" width="146" x="1050" y="68">
+<exit_states>
+<exit_state name="next" target="Element@1088945514:1675330961171"/>
+</exit_states>
+</element>
+<element height="46" id="Element@127407475:1675330961172" name="UPDATE_LIMITED_LANG_BC" type="Decision" width="196" x="1038" y="229">
+<exit_states>
+<exit_state name="1" target="Element@1357787394:1675332419620">
+<bendpoint>
+<dim1 x="-208" y="54"/>
+<dim2 x="-57" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@1357787394:1675332419620"/>
+<exit_state name="3" target="Element@106001940:1675332250485"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1088945514:1675330961171" name="UPDATE_LIMITED_LANG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="203" x="1033" y="152">
+<exit_states>
+<exit_state name="done" target="Element@127407475:1675330961172"/>
+<exit_state name="max_nomatch" target="Element@180000326:1675331096318"/>
+<exit_state name="max_noinput" target="Element@180000326:1675331096318"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1951072235:1675331355355" name="UPDATE_PREFERRED_LANG_DB" type="Decision" width="213" x="651" y="658">
+<exit_states>
+<exit_state name="YES" target="Element@790204983:1676283066765">
+<bendpoint>
+<dim1 x="-173" y="-29"/>
+<dim2 x="126" y="7"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@790204983:1676283066765">
+<bendpoint>
+<dim1 x="-136" y="-69"/>
+<dim2 x="151" y="15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

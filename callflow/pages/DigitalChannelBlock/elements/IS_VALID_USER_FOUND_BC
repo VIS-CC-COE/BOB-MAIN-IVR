@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@727861796:1671309639082" name="IS_VALID_USER_FOUND_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.bcot.FetchBcotUsers_BC</source>
+</config>
+</decision>

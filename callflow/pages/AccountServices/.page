@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@211133401:1672298535054" name="AccountServices" version="6.0.1">
+<element height="46" id="Element@1336075960:1672924596101" name="ACCOUNT_SERVICES_BC" type="Decision" width="180" x="415" y="177">
+<exit_states>
+<exit_state name="1" target="Element@2088195453:1676471207705"/>
+<exit_state name="2" target="Element@628722376:1673077590275">
+<bendpoint>
+<dim1 x="266" y="89"/>
+<dim2 x="-227" y="-133"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@868965145:1673607267197"/>
+<exit_state name="4" target="Element@1243164372:1673610240617"/>
+<exit_state name="5" target="Element@100802969:1673077614033"/>
+<exit_state name="7" target="Element@696784162:1676378982003"/>
+<exit_state name="8" target="Element@1509620427:1676379003458"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1211914368:1672924596101" name="ACCOUNT_SERVICES_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="185" x="409" y="116">
+<exit_states>
+<exit_state name="done" target="Element@1336075960:1672924596101"/>
+<exit_state name="max_nomatch" target="Element@895027241:1672924596101"/>
+<exit_state name="max_noinput" target="Element@781180613:1672924596101"/>
+</exit_states>
+</element>
+<element height="46" id="Element@134425777:1672298535054" name="ACCOUNT_SERVICES_PE" type="Page Entry" width="178" x="414" y="38">
+<exit_states>
+<exit_state name="next" target="Element@1211914368:1672924596101"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1243164372:1673610240617" name="ACCOUNT_STMT_PE" type="Page Connector" width="158" x="547" y="302">
+<page_connector target="Element@967780353:1673077791469">ACCOUNT_STMT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@839858919:1677481525702" name="ACC_BALANCE_PE" type="Page Entry" width="149" x="-124" y="210">
+<exit_states>
+<exit_state name="next" target="Element@2088195453:1676471207705"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1720462586:1676471207705" name="ACC_BALANCE_SERVICE_BC" type="Decision" width="200" x="-145" y="601">
+<exit_states>
+<exit_state name="star" target="Element@1839977883:1676471207705"/>
+<exit_state name="1" target="Element@1677144603:1676471389066"/>
+<exit_state name="2" target="Element@1352683722:1676471207705"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1847370915:1676471207704" name="ACC_BALANCE_SERVICE_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="205" x="-161" y="475">
+<exit_states>
+<exit_state name="done" target="Element@1720462586:1676471207705"/>
+<exit_state name="max_nomatch" target="Element@233240421:1676471207705"/>
+<exit_state name="max_noinput" target="Element@1721322583:1676471207705"/>
+</exit_states>
+</element>
+<element height="46" id="Element@696784162:1676378982003" name="BANKING_MENU_PE" type="Page Connector" width="158" x="51" y="189">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1677144603:1676471389066" name="BANKING_MENU_PE" type="Page Connector" width="158" x="-212" y="682">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@868965145:1673607267197" name="CHEQUE_SERVICES_PE" type="Page Connector" width="168" x="344" y="286">
+<page_connector target="Element@1886251769:1673077729774">CHEQUE_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2088195453:1676471207705" name="FETCH_ACC_BALANCE_SERVICE_BC" type="Decision" width="238" x="-159" y="293">
+<exit_states>
+<exit_state name="YES" target="Element@1839977883:1676471207705"/>
+<exit_state name="NO" target="Element@1231354179:1676471449100"/>
+</exit_states>
+</element>
+<element height="46" id="Element@628722376:1673077590275" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="188" y="283">
+<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1352683722:1676471207705" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="29" y="686">
+<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1509620427:1676379003458" name="MAIN_MENU_PE" type="Page Connector" width="138" x="122" y="90">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@781180613:1672924596101" name="NI_PE" type="Page Connector" width="158" x="674" y="169">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1721322583:1676471207705" name="NI_PE" type="Page Connector" width="158" x="109" y="546">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@895027241:1672924596101" name="NM_PE" type="Page Connector" width="165" x="675" y="77">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@233240421:1676471207705" name="NM_PE" type="Page Connector" width="165" x="115" y="458">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@100802969:1673077614033" name="OTHER_SERVICES_PE" type="Page Connector" width="158" x="729" y="289">
+<page_connector target="Element@292254279:1672298585383">OTHER_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1839977883:1676471207705" name="PLAY_ACC_BALANCE_SERVICE" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="212" x="-160" y="389">
+<exit_states>
+<exit_state name="done" target="Element@1847370915:1676471207704"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1231354179:1676471449100" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="118" y="375">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+</page>

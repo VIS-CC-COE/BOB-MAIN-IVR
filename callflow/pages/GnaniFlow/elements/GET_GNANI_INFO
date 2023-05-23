@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1597583232:1680960045475" name="GET_GNANI_INFO" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.gnani.FetchGnaniCallDetails</source>
+</config>
+</decision>

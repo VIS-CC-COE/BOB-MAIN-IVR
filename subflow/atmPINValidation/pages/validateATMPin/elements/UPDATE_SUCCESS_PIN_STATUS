@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@752810621:1681901836698" name="UPDATE_SUCCESS_PIN_STATUS" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.UpdatePinSuccessStatus_BC</source>
+</config>
+</decision>

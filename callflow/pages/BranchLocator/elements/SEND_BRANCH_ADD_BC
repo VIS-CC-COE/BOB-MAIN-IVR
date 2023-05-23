@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1976321848:1673070811556" name="SEND_BRANCH_ADD_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.sms.SendLocatorSMS_BC</source>
+</config>
+</decision>

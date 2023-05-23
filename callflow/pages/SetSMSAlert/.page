@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1794549600:1672988544483" name="SetSMSAlert" version="6.0.1">
+<element height="46" id="Element@108154042:1676436267190" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="561" y="742">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@675964686:1676458860991" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="46" y="685">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2061924395:1676470914184" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="34" y="190">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1903147547:1676435343574" name="MAIN_MENU_PE" type="Page Connector" width="138" x="37" y="93">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@718806769:1676436235835" name="MAIN_MENU_PE" type="Page Connector" width="138" x="55" y="574">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@56039757:1676434948948" name="NI_PE" type="Page Connector" width="80" x="607" y="108">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1114190780:1676435410405" name="NI_PE" type="Page Connector" width="80" x="322" y="310">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@370797264:1676436219976" name="NI_PE" type="Page Connector" width="80" x="547" y="569">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2114480990:1676434948948" name="NM_PE" type="Page Connector" width="88" x="608" y="181">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@854381753:1676435410405" name="NM_PE" type="Page Connector" width="88" x="323" y="383">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1039814562:1676436219976" name="NM_PE" type="Page Connector" width="88" x="554" y="635">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1324340034:1676375580668" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="531" y="505">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1425123531:1672988544483" name="SET_SMS_ALERT_PE" type="Page Entry" width="151" x="338" y="23">
+<exit_states>
+<exit_state name="next" target="Element@558751894:1676434948948"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1170209445:1676435248407" name="SMS_ALERT_ACTIVATION_BC" type="Decision" width="202" x="12" y="345">
+<exit_states>
+<exit_state name="1" target="Element@1196802540:1676436006441"/>
+<exit_state name="2" target="Element@2061924395:1676470914184"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1236404201:1676435248407" name="SMS_ALERT_ACTIVATION_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="206" x="10" y="264">
+<exit_states>
+<exit_state name="done" target="Element@1170209445:1676435248407"/>
+<exit_state name="max_nomatch" target="Element@854381753:1676435410405"/>
+<exit_state name="max_noinput" target="Element@1114190780:1676435410405"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1295572482:1676434948948" name="SMS_ALERT_BC" type="Decision" width="202" x="284" y="204">
+<exit_states>
+<exit_state name="1" target="Element@1236404201:1676435248407"/>
+<exit_state name="2" target="Element@536760801:1676435299102"/>
+<exit_state name="7" target="Element@2061924395:1676470914184"/>
+<exit_state name="8" target="Element@1903147547:1676435343574"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1200233967:1676435299102" name="SMS_ALERT_DEACTIVATION_BC" type="Decision" width="228" x="514" y="359">
+<exit_states>
+<exit_state name="1" target="Element@1196802540:1676436006441"/>
+<exit_state name="2" target="Element@2061924395:1676470914184"/>
+</exit_states>
+</element>
+<element height="46" id="Element@536760801:1676435299102" name="SMS_ALERT_DEACTIVATION_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="254" x="472" y="285">
+<exit_states>
+<exit_state name="done" target="Element@1200233967:1676435299102"/>
+<exit_state name="max_nomatch" target="Element@854381753:1676435410405"/>
+<exit_state name="max_noinput" target="Element@1114190780:1676435410405"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1556971291:1676436171331" name="SMS_ALERT_GLOBAL_BC" type="Decision" width="202" x="282" y="706">
+<exit_states>
+<exit_state name="7" target="Element@675964686:1676458860991"/>
+<exit_state name="8" target="Element@718806769:1676436235835"/>
+<exit_state name="9" target="Element@108154042:1676436267190"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1534861587:1676436171331" name="SMS_ALERT_GLOBAL_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="206" x="280" y="601">
+<exit_states>
+<exit_state name="done" target="Element@1556971291:1676436171331"/>
+<exit_state name="max_nomatch" target="Element@1039814562:1676436219976"/>
+<exit_state name="max_noinput" target="Element@370797264:1676436219976"/>
+</exit_states>
+</element>
+<element height="46" id="Element@558751894:1676434948948" name="SMS_ALERT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="206" x="282" y="123">
+<exit_states>
+<exit_state name="done" target="Element@1295572482:1676434948948"/>
+<exit_state name="max_nomatch" target="Element@2114480990:1676434948948"/>
+<exit_state name="max_noinput" target="Element@56039757:1676434948948"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1196802540:1676436006441" name="SMS_ALERT_UPDATE_BC" type="Decision" width="181" x="286" y="466">
+<exit_states>
+<exit_state name="YES" target="Element@1534861587:1676436171331"/>
+<exit_state name="NO" target="Element@1324340034:1676375580668"/>
+</exit_states>
+</element>
+</page>

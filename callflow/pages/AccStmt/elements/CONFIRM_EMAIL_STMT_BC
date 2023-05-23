@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1428539140:1677667652629" name="CONFIRM_EMAIL_STMT_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.MenuDecisionBC</source>
+</config>
+</decision>

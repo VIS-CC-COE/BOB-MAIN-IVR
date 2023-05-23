@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@487621847:1680958516348" name="GnaniFlow" version="6.0.1">
+<element height="46" id="Element@1813170462:1680965144431" name="ACC_BALANCE_PE" type="Page Connector" width="181" x="444" y="480">
+<page_connector target="Element@839858919:1677481525702">ACC_BALANCE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1507057641:1680963784379" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="18" y="369">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@141130175:1680964886832" name="CHECK_PREF_GNANI_LANG_BC" type="Decision" width="217" x="557" y="331">
+<exit_states>
+<exit_state name="YES" target="Element@1466854811:1680964955372"/>
+<exit_state name="NO" target="Element@1075919167:1680964626847"/>
+</exit_states>
+</element>
+<element height="46" id="Element@362219643:1680965646281" name="CHECK_PREF_GNANI_LANG_DISC_BC" type="Decision" width="247" x="-34" y="198">
+<exit_states>
+<exit_state name="YES" target="Element@1332765992:1680963781952">
+<bendpoint>
+<dim1 x="-71" y="-47"/>
+<dim2 x="-47" y="38"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1332765992:1680963781952"/>
+</exit_states>
+</element>
+<element height="46" id="Element@276416749:1680965682246" name="CHECK_PREF_GNANI_LANG_XFER_BC" type="Decision" width="248" x="-27" y="275">
+<exit_states>
+<exit_state name="YES" target="Element@1507057641:1680963784379">
+<bendpoint>
+<dim1 x="-53" y="51"/>
+<dim2 x="-56" y="-43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1507057641:1680963784379">
+<bendpoint>
+<dim1 x="34" y="47"/>
+<dim2 x="31" y="-47"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1421519294:1680963656038" name="CHK_IVR_ACTION" type="Decision" width="144" x="381" y="243">
+<exit_states>
+<exit_state name="eoc" target="Element@362219643:1680965646281"/>
+<exit_state name="tta" target="Element@276416749:1680965682246"/>
+<exit_state name="tti" target="Element@141130175:1680964886832"/>
+<exit_state name="welcome" target="Element@1038340345:1681935930378"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1332765992:1680963781952" name="DISCONNECT_PE" type="Page Connector" width="140" x="-5" y="113">
+<page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1597583232:1680960045475" name="GET_GNANI_INFO" type="Decision" width="144" x="384" y="139">
+<exit_states>
+<exit_state name="YES" target="Element@1421519294:1680963656038"/>
+<exit_state name="NO" target="Element@1038340345:1681935930378"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2108698319:1680958516348" name="GNANI_FLOW" type="Page Entry" width="124" x="392" y="46">
+<exit_states>
+<exit_state name="next" target="Element@1597583232:1680960045475"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1466854811:1680964955372" name="IS_GNANI_RMN_BC" type="Decision" width="153" x="346" y="412">
+<exit_states>
+<exit_state name="YES" target="Element@1813170462:1680965144431"/>
+<exit_state name="NO" target="Element@331504030:1680964921504"/>
+</exit_states>
+</element>
+<element height="46" id="Element@331504030:1680964921504" name="MAIN_MENU_PE" type="Page Connector" width="138" x="225" y="481">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1075919167:1680964626847" name="SET_LANG" type="Page Connector" width="199" x="600" y="406">
+<page_connector target="Element@562561881:1670996282938">SET_LANG<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1038340345:1681935930378" name="SET_LANG" type="Page Connector" width="199" x="637" y="183">
+<page_connector target="Element@562561881:1670996282938">SET_LANG<config/>
+</page_connector>
+</element>
+</page>

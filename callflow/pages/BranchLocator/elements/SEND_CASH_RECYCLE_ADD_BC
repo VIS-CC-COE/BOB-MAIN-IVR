@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2126492918:1673072251000" name="SEND_CASH_RECYCLE_ADD_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.sms.SendLocatorSMS_BC</source>
+</config>
+</decision>

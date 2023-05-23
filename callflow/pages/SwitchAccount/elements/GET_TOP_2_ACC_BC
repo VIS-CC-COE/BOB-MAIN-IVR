@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@143818552:1676535537251" name="GET_TOP_2_ACC_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.crm.GetTop2Accounts</source>
+</config>
+</decision>

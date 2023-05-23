@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1705193750:1672297650997" name="ACC_MENU_VALIDATE_TPIN_SF" version="6.0.1">
+<subflow_call subflow_name="validateTPIN" target="Element@31:1672297668762">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

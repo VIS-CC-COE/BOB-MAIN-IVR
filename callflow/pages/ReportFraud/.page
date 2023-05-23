@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1950650833:1671256179203" name="ReportFraud" version="6.0.1">
+<element height="46" id="Element@1606544455:1682410577056" name="ACCOUNT_BLOCKED_FRAUD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="223" x="261" y="130">
+<exit_states>
+<exit_state name="done" target="Element@686533195:1682410764699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@610589625:1671310901536" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="723" y="339">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1853697108:1680185612102" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="840" y="11">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@686533195:1682410764699" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="34" y="174">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1404415352:1682410577056" name="CHECK_BLOCK_STATUS_FRAUD" type="Decision" width="215" x="387" y="40">
+<exit_states>
+<exit_state name="PERMANENT_BLOCK" target="Element@654393495:1682410836185"/>
+<exit_state name="SOFT_BLOCK" target="Element@1606544455:1682410577056"/>
+<exit_state name="POTENTIAL_FRAUD" target="Element@65412589:1682410577056"/>
+<exit_state name="NO_FRAUD" target="Element@1911329114:1671310901536"/>
+</exit_states>
+</element>
+<element height="46" id="Element@833560102:1676434781414" name="ENTER_ACCOUNT_NUMBER_FRAUD_BC" type="Decision" width="260" x="109" y="-38">
+<exit_states>
+<exit_state name="YES" target="Element@1404415352:1682410577056"/>
+<exit_state name="NO" target="Element@589281295:1680451162952"/>
+<exit_state name="MAX_ATTEMPT" target="Element@1853697108:1680185612102"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1774743115:1676434781414" name="ENTER_ACCOUNT_NUMBER_FRAUD_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="259" x="92" y="-114">
+<exit_states>
+<exit_state name="done" target="Element@833560102:1676434781414"/>
+<exit_state name="max_nomatch" target="Element@1853697108:1680185612102"/>
+<exit_state name="max_noinput" target="Element@1853697108:1680185612102"/>
+</exit_states>
+</element>
+<element height="46" id="Element@804255468:1676434781413" name="INCORRECT_ACCOUNT_FRAUD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="235" x="-239" y="-24">
+<exit_states>
+<exit_state name="done" target="Element@1774743115:1676434781414"/>
+</exit_states>
+</element>
+<element height="46" id="Element@220866447:1671310901536" name="REPORT_FRAUD_CHECK_SUBFLOW_ACTION" type="Decision" width="308" x="642" y="209">
+<exit_states>
+<exit_state name="max-no-input" target="Element@1853697108:1680185612102"/>
+<exit_state name="max-no-match" target="Element@1853697108:1680185612102"/>
+<exit_state name="valid" target="Element@610589625:1671310901536">
+<bendpoint>
+<dim1 x="-88" y="104"/>
+<dim2 x="-328" y="-52"/>
+</bendpoint>
+</exit_state>
+<exit_state name="transfer" target="Element@610589625:1671310901536"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1770944876:1671256179203" name="REPORT_FRAUD_PE" type="Page Entry" width="151" x="151" y="-176">
+<exit_states>
+<exit_state name="next" target="Element@1774743115:1676434781414"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1911329114:1671310901536" name="REPORT_FRAUD_PIN_VALIDATION_SF" type="Subflow Call" width="270" x="611" y="131">
+<subflow_call subflow_name="atmPINValidation" target="Element@31:1671264217070">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@220866447:1671310901536"/>
+</exit_states>
+</element>
+<element height="46" id="Element@654393495:1682410836185" name="SET_FRAUD_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="174" x="188" y="64">
+<exit_states>
+<exit_state name="done" target="Element@686533195:1682410764699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@65412589:1682410577056" name="SET_POT_FRAUD_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="200" x="271" y="195">
+<exit_states>
+<exit_state name="done" target="Element@1911329114:1671310901536"/>
+</exit_states>
+</element>
+<element height="46" id="Element@589281295:1680451162952" name="VALID_ACC_FRAUD_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="240" x="-75" y="76">
+<exit_states>
+<exit_state name="done" target="Element@947356436:1680451162952"/>
+</exit_states>
+</element>
+<element height="46" id="Element@947356436:1680451162952" name="VALID_ACC_MB_FRAUD_BC" type="Decision" width="260" x="-217" y="234">
+<exit_states>
+<exit_state name="retry" target="Element@804255468:1676434781413"/>
+<exit_state name="max-attempt" target="Element@610589625:1671310901536"/>
+</exit_states>
+</element>
+</page>

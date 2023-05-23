@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1033264308:1677230783172" name="IS_VALID_AMOUNT_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.ValidateLoanAmount</source>
+</config>
+</decision>

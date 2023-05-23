@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@340825428:1673873646711" name="CHECK_DC_STATUS_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHECK_DC_STATUS_BC" default_exit_state="transfer">
+        <exit_state name="active" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CARD_STATUS" />
+                </data>
+                <constant_string value="ACTIVE" />
+            </string>
+        </exit_state>
+        <exit_state name="blocked" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CARD_STATUS" />
+                </data>
+                <constant_string value="BLOCKED" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

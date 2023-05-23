@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1196802540:1676436006441" name="SMS_ALERT_UPDATE_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.cbs.SetSmsAlert_BC</source>
+</config>
+</decision>

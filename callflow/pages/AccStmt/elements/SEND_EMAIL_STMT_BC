@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1228015923:1677829009324" name="SEND_EMAIL_STMT_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.email.SendEmailStmt_BC</source>
+</config>
+</decision>

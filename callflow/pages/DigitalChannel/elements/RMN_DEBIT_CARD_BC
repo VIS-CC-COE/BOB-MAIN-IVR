@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@425789372:1672930624561" name="RMN_DEBIT_CARD_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.MenuDecisionBC</source>
+</config>
+</decision>

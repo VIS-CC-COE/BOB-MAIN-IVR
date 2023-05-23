@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1303407702:1673873209633" name="GET_CUST_STATUS_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.dcms.GetCustInfo</source>
+</config>
+</decision>

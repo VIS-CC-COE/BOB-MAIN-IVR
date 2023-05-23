@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@950002158:1679378019969" name="SET_RMN" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.crm.IsRMN</source>
+</config>
+</decision>

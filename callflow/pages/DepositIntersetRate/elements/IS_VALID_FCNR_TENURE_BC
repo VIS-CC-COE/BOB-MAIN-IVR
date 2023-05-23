@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@182366046:1677492004424" name="IS_VALID_FCNR_TENURE_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.ValidateLoanTenure</source>
+</config>
+</decision>

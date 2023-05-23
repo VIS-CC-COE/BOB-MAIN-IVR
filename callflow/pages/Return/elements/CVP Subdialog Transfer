@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@1149067890:1670845250732" name="CVP Subdialog Transfer" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">D</setting>
+<setting name="FromExtVXML0">{Data.Session.S_PREFERRED_LANGUAGE}</setting>
+<setting name="FromExtVXML1">{Data.Session.DROP_FLAG}</setting>
+<setting name="FromExtVXML2">IS_EMERGENCY={Data.Session.S_EMERGENCY_FLAG};IS_NRI={Data.Session.S_IS_NRI};</setting>
+<setting name="FromExtVXML3">{Data.Session.S_CUSTOMER_ID}|{Data.Session.S_RMN}</setting>
+</settings>
+</config>
+</subdialog_return>

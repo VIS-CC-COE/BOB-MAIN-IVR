@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1961674604:1682671020204" name="SET_GNANI" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="S_PREFERRED_LANGUAGE">GNANI</data>
+<data create_when="After" name="S_TRANSFER_TO_GNANI_FLAG">YES</data>
+<data create_when="Before" name="S_GNANI_PREFERRED_LANGUAGE">{Data.Session.S_PREFERRED_LANGUAGE}</data>
+</session_data>
+</config>
+</action_element>

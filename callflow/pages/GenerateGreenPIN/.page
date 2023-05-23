@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@473321536:1672297822718" name="GenerateGreenPIN" version="6.0.1">
+<element height="46" id="Element@1638937439:1676236717479" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="221" y="1295">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1118854669:1676373144277" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="300" y="1129">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1957476230:1680174233863" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="941" y="57">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@900384206:1680185088875" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="-61" y="374">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@506780535:1676236891866" name="BANKING_MENU_PE" type="Page Connector" width="181" x="-128" y="1278">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@418873209:1672762861504" name="CONFIRM_PIN_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="147" x="323" y="750">
+<exit_states>
+<exit_state name="done" target="Element@124475900:1672762964935"/>
+<exit_state name="max_nomatch" target="Element@348553405:1672757252145"/>
+<exit_state name="max_noinput" target="Element@348553405:1672757252145">
+<bendpoint>
+<dim1 x="137" y="-64"/>
+<dim2 x="-202" y="19"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@290398396:1672755864777" name="ENTER_EXPIRY_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="145" x="250" y="224">
+<exit_states>
+<exit_state name="done" target="Element@1326453734:1672755989350"/>
+<exit_state name="max_nomatch" target="Element@900384206:1680185088875"/>
+<exit_state name="max_noinput" target="Element@900384206:1680185088875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@56969497:1672757212208" name="ENTER_NEW_PIN_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="178" x="310" y="671">
+<exit_states>
+<exit_state name="done" target="Element@418873209:1672762861504"/>
+<exit_state name="max_nomatch" target="Element@348553405:1672757252145">
+<bendpoint>
+<dim1 x="156" y="-61"/>
+<dim2 x="-183" y="-57"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@348553405:1672757252145">
+<bendpoint>
+<dim1 x="168" y="-27"/>
+<dim2 x="-171" y="-23"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@164385088:1672756745102" name="ENTER_OTP_PE" type="Page Entry" width="128" x="395" y="482">
+<exit_states>
+<exit_state name="next" target="Element@1985336264:1672756556576"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2060743891:1672756758265" name="ENTER_OTP_PE" type="Page Connector" width="128" x="-29" y="659">
+<page_connector target="Element@164385088:1672756745102">ENTER_OTP_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1985336264:1672756556576" name="ENTER_OTP_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="129" x="230" y="483">
+<exit_states>
+<exit_state name="done" target="Element@564246704:1672757137247">
+<bendpoint>
+<dim1 x="-59" y="52"/>
+<dim2 x="-68" y="-50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@900384206:1680185088875"/>
+<exit_state name="max_noinput" target="Element@900384206:1680185088875">
+<bendpoint>
+<dim1 x="-100" y="-72"/>
+<dim2 x="140" y="6"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1626309918:1672804791625" name="ENTER_PIN_PE" type="Page Entry" width="126" x="449" y="613">
+<exit_states>
+<exit_state name="next" target="Element@56969497:1672757212208"/>
+</exit_states>
+</element>
+<element height="46" id="Element@385537987:1672804810122" name="ENTER_PIN_PE" type="Page Connector" width="126" x="856" y="977">
+<page_connector target="Element@1626309918:1672804791625">ENTER_PIN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1903868590:1672297822718" name="GENERATE_GREEN_PIN_PE" type="Page Entry" width="188" x="495" y="-88">
+<exit_states>
+<exit_state name="next" target="Element@1177575217:1676513647616"/>
+</exit_states>
+</element>
+<element height="46" id="Element@790520379:1672731779684" name="GENERATE_GREEN_PIN_PE" type="Page Connector" width="197" x="584" y="477">
+<page_connector target="Element@1903868590:1672297822718">GENERATE_GREEN_PIN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1998915304:1672805010148" name="GENERATE_PIN_BC" type="Decision" width="149" x="174" y="897">
+<exit_states>
+<exit_state name="YES" target="Element@1861072814:1672805298509"/>
+<exit_state name="NO" target="Element@1616029270:1672805213833"/>
+</exit_states>
+</element>
+<element height="46" id="Element@271268422:1672805276012" name="GREEN_PIN_FAILURE_SMS" type="Decision" width="186" x="285" y="1046">
+<exit_states>
+<exit_state name="YES" target="Element@1118854669:1676373144277">
+<bendpoint>
+<dim1 x="-118" y="41"/>
+<dim2 x="-116" y="-37"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1118854669:1676373144277">
+<bendpoint>
+<dim1 x="129" y="46"/>
+<dim2 x="116" y="-44"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1365764378:1676236717479" name="GREEN_PIN_SUCCESS_BC" type="Decision" width="183" x="6" y="1212">
+<exit_states>
+<exit_state name="1" target="Element@1928859545:1672805237046"/>
+<exit_state name="7" target="Element@506780535:1676236891866"/>
+<exit_state name="8" target="Element@875125571:1676236717479"/>
+<exit_state name="9" target="Element@1638937439:1676236717479"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2077469339:1676236717479" name="GREEN_PIN_SUCCESS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="198" x="-12" y="1135">
+<exit_states>
+<exit_state name="done" target="Element@1365764378:1676236717479"/>
+<exit_state name="max_nomatch" target="Element@1638937439:1676236717479"/>
+<exit_state name="max_noinput" target="Element@1638937439:1676236717479"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1861072814:1672805298509" name="GREEN_PIN_SUCCESS_SMS" type="Decision" width="204" x="-9" y="959">
+<exit_states>
+<exit_state name="YES" target="Element@1928859545:1672805237046">
+<bendpoint>
+<dim1 x="-103" y="64"/>
+<dim2 x="-122" y="-34"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1928859545:1672805237046"/>
+</exit_states>
+</element>
+<element height="46" id="Element@415461144:1672731779684" name="INCORRECT_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="193" x="581" y="398">
+<exit_states>
+<exit_state name="done" target="Element@790520379:1672731779684"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2024598918:1672756571219" name="INVALID_OTP_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="177" x="-37" y="481">
+<exit_states>
+<exit_state name="done" target="Element@587450316:1672756571219"/>
+</exit_states>
+</element>
+<element height="46" id="Element@587450316:1672756571219" name="INVALID_OTP_COUNTER_BC" type="Decision" width="197" x="-63" y="562">
+<exit_states>
+<exit_state name="retry" target="Element@2060743891:1672756758265"/>
+<exit_state name="max-attempt" target="Element@900384206:1680185088875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@348553405:1672757252145" name="INVALID_PIN_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="214" x="645" y="739">
+<exit_states>
+<exit_state name="done" target="Element@1429594005:1672757252145"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1429594005:1672757252145" name="INVALID_PIN_COUNTER_BC" type="Decision" width="195" x="658" y="826">
+<exit_states>
+<exit_state name="retry" target="Element@2098174024:1672804851637"/>
+<exit_state name="max-attempt" target="Element@1809401898:1678790904235"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2098174024:1672804851637" name="INVALID_PIN_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="824" y="898">
+<exit_states>
+<exit_state name="done" target="Element@385537987:1672804810122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@564246704:1672757137247" name="IS_OTP_VALID_BC" type="Decision" width="200" x="182" y="577">
+<exit_states>
+<exit_state name="YES" target="Element@56969497:1672757212208"/>
+<exit_state name="NO" target="Element@574644716:1672756890246"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2038321822:1672729821904" name="IS_VALID_CARD_BC" type="Decision" width="151" x="512" y="148">
+<exit_states>
+<exit_state name="YES" target="Element@290398396:1672755864777"/>
+<exit_state name="NO" target="Element@1477503757:1672731779684"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1326453734:1672755989350" name="IS_VALID_EXPIRY_DETAILS_BC" type="Decision" width="204" x="216" y="317">
+<exit_states>
+<exit_state name="YES" target="Element@1182374704:1672756453642"/>
+<exit_state name="NO" target="Element@1477503757:1672731779684"/>
+</exit_states>
+</element>
+<element height="46" id="Element@934444163:1672729518528" name="L4D_CARD_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="180" x="492" y="59">
+<exit_states>
+<exit_state name="done" target="Element@2038321822:1672729821904"/>
+<exit_state name="max_nomatch" target="Element@1957476230:1680174233863"/>
+<exit_state name="max_noinput" target="Element@1957476230:1680174233863"/>
+</exit_states>
+</element>
+<element height="46" id="Element@875125571:1676236717479" name="MAIN_MENU_PE" type="Page Connector" width="138" x="72" y="1285">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1873346889:1672804959356" name="MISMATCH_PIN_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="153" x="439" y="894">
+<exit_states>
+<exit_state name="done" target="Element@385537987:1672804810122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1809401898:1678790904235" name="NM_PE" type="Page Connector" width="165" x="629" y="913">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@574644716:1672756890246" name="OTP_INVALID_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="144" x="137" y="652">
+<exit_states>
+<exit_state name="done" target="Element@2024598918:1672756571219"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1616029270:1672805213833" name="PIN_GENERATION_FAILED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="204" x="268" y="960">
+<exit_states>
+<exit_state name="done" target="Element@271268422:1672805276012"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1928859545:1672805237046" name="PIN_GENERATION_SUCCESS_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="216" x="-19" y="1047">
+<exit_states>
+<exit_state name="done" target="Element@2077469339:1676236717479"/>
+</exit_states>
+</element>
+<element height="46" id="Element@124475900:1672762964935" name="PIN_MATCH_BC" type="Decision" width="134" x="323" y="822">
+<exit_states>
+<exit_state name="yes" target="Element@1998915304:1672805010148"/>
+<exit_state name="no" target="Element@1873346889:1672804959356"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1182374704:1672756453642" name="SEND_OTP" type="Decision" width="124" x="243" y="395">
+<exit_states>
+<exit_state name="YES" target="Element@1985336264:1672756556576"/>
+<exit_state name="NO" target="Element@900384206:1680185088875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@790622954:1682142371534" name="UNREG_CALLER_TRANSFER" type="Page Connector" width="194" x="206" y="-14">
+<page_connector target="Element@289751605:1682142146850">UNREG_CALLER_TRANSFER<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1177575217:1676513647616" name="VALIDATE_ANI_RMN_BC" type="Decision" width="177" x="495" y="-9">
+<exit_states>
+<exit_state name="YES" target="Element@934444163:1672729518528"/>
+<exit_state name="NO" target="Element@790622954:1682142371534"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1477503757:1672731779684" name="VALID_CARD_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="175" x="724" y="221">
+<exit_states>
+<exit_state name="done" target="Element@1332669155:1672731779684"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1332669155:1672731779684" name="VALID_CARD_COUNTER_BC" type="Decision" width="195" x="735" y="312">
+<exit_states>
+<exit_state name="retry" target="Element@415461144:1672731779684"/>
+<exit_state name="max-attempt" target="Element@1957476230:1680174233863"/>
+</exit_states>
+</element>
+</page>

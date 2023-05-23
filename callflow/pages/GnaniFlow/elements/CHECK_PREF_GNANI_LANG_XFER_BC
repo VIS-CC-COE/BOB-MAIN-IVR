@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@276416749:1680965682246" name="CHECK_PREF_GNANI_LANG_XFER_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.GetPreferredLang_BC</source>
+</config>
+</decision>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@590985462:1672988479094" name="BarodaConnect" version="6.0.1">
+<element height="46" id="Element@917244860:1676401218975" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="40" y="331">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2046791222:1676401218975" name="BARODA_CONNECT_BC" type="Decision" width="204" x="296" y="207">
+<exit_states>
+<exit_state name="1" target="Element@917244860:1676401218975"/>
+<exit_state name="2" target="Element@917244860:1676401218975">
+<bendpoint>
+<dim1 x="-6" y="142"/>
+<dim2 x="270" y="18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@1513591045:1676401321926"/>
+<exit_state name="8" target="Element@1869595208:1676401218975"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2071093923:1676401218975" name="BARODA_CONNECT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="209" x="294" y="113">
+<exit_states>
+<exit_state name="done" target="Element@2046791222:1676401218975"/>
+<exit_state name="max_nomatch" target="Element@1668805424:1676401218975"/>
+<exit_state name="max_noinput" target="Element@1780387882:1676401218975"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1466210332:1672988479094" name="BARODA_CONNECT_PE" type="Page Entry" width="175" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@2071093923:1676401218975"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1513591045:1676401321926" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="485" y="330">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1869595208:1676401218975" name="MAIN_MENU_PE" type="Page Connector" width="138" x="28" y="161">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1780387882:1676401218975" name="NI_PE" type="Page Connector" width="158" x="717" y="77">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1668805424:1676401218975" name="NM_PE" type="Page Connector" width="165" x="907" y="85">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+</page>

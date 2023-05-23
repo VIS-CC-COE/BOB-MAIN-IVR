@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1825129341:1679491056511" name="NRI_DIRECT" version="6.0.1">
+<element height="46" id="Element@1014765602:1679491076739" name="ACCOUNT_NUMBER_NRI_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="227" x="554" y="146">
+<exit_states>
+<exit_state name="done" target="Element@61411322:1679491076739"/>
+<exit_state name="max_nomatch" target="Element@1299068875:1679491202272"/>
+<exit_state name="max_noinput" target="Element@1299068875:1679491202272"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1811160504:1679491076739" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="408" y="323">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1484822746:1679556241226" name="DISCONNECT_PE" type="Page Connector" width="140" x="1304" y="421">
+<page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2087268437:1679491076739" name="INCORRECT_NRI_DIRECT_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="266" x="600" y="523">
+<exit_states>
+<exit_state name="done" target="Element@1767107614:1679549060584"/>
+</exit_states>
+</element>
+<element height="46" id="Element@204735276:1679549050436" name="INVALID_NRI_ACC" type="Page Entry" width="146" x="372" y="165">
+<exit_states>
+<exit_state name="next" target="Element@1014765602:1679491076739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1767107614:1679549060584" name="INVALID_NRI_ACC" type="Page Connector" width="146" x="376" y="497">
+<page_connector target="Element@204735276:1679549050436">INVALID_NRI_ACC<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@758960826:1679549030866" name="INVALID_NRI_DIRECT_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="309" x="1136" y="299">
+<exit_states>
+<exit_state name="done" target="Element@1484822746:1679556241226"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1705398067:1679491076739" name="INVALID_NRI_DIRECT_ACC_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="253" x="703" y="320">
+<exit_states>
+<exit_state name="done" target="Element@913795833:1679491076739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@913795833:1679491076739" name="INVALID_NRI_DIRECT_ACC_COUNTER_BC" type="Decision" width="279" x="694" y="411">
+<exit_states>
+<exit_state name="retry" target="Element@2087268437:1679491076739"/>
+<exit_state name="max-attempt" target="Element@758960826:1679549030866"/>
+</exit_states>
+</element>
+<element height="46" id="Element@61411322:1679491076739" name="IS_NRI" type="Decision" width="135" x="586" y="229">
+<exit_states>
+<exit_state name="YES" target="Element@854381753:1680035122972"/>
+<exit_state name="NO" target="Element@1705398067:1679491076739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1299068875:1679491202272" name="NM_PE" type="Page Connector" width="88" x="983" y="215">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2051838713:1679491076739" name="NRI_DIRECT_PE" type="Page Entry" width="136" x="595" y="-69">
+<exit_states>
+<exit_state name="next" target="Element@1182680484:1679548561246"/>
+</exit_states>
+</element>
+<element height="46" id="Element@854381753:1680035122972" name="UPDATE_NRI_SKILL_GROUP" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="215" x="125" y="228">
+<exit_states>
+<exit_state name="done" target="Element@1811160504:1679491076739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1155230997:1679548298893" name="UpdateAudioPath" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="573" y="82">
+<exit_states>
+<exit_state name="done" target="Element@1014765602:1679491076739"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1182680484:1679548561246" name="WelcomeNRI" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="119" x="596" y="9">
+<exit_states>
+<exit_state name="done" target="Element@1155230997:1679548298893"/>
+</exit_states>
+</element>
+</page>

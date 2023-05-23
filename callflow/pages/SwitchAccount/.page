@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@851653336:1672298490327" name="SwitchAccount" version="6.0.1">
+<element height="46" id="Element@1041454197:1677481437879" name="ACCOUNT_BALANCE_PE" type="Page Connector" width="181" x="788" y="594">
+<page_connector target="Element@440110326:1671001691297">ACCOUNT_BALANCE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@97389195:1677480899801" name="BANKING_MENU_PE" type="Page Connector" width="158" x="543" y="583">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@617954093:1677475915157" name="CHK_REDIRECT_PAGE" type="Decision" width="163" x="14" y="309">
+<exit_states>
+<exit_state name="banking-menu" target="Element@950002158:1679378019969"/>
+<exit_state name="main-menu" target="Element@1630093749:1679307183092"/>
+</exit_states>
+</element>
+<element height="46" id="Element@482879789:1677480870239" name="CHK_REDIRECT_PAGE_2" type="Decision" width="212" x="625" y="483">
+<exit_states>
+<exit_state name="banking-menu" target="Element@97389195:1677480899801"/>
+<exit_state name="main-menu" target="Element@1041454197:1677481437879"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1863161350:1677480111036" name="CHK_RMN_PE" type="Page Connector" width="141" x="-243" y="543">
+<page_connector target="Element@1998844450:1677480058007">CHK_RMN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1769233874:1676535669355" name="ENTER_ACCOUNT_NUMBER_SWITCH_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="264" x="-26" y="47">
+<exit_states>
+<exit_state name="done" target="Element@1660685562:1676535669355"/>
+<exit_state name="max_nomatch" target="Element@1577744105:1676535722010"/>
+<exit_state name="max_noinput" target="Element@783611377:1676535722010"/>
+</exit_states>
+</element>
+<element height="46" id="Element@143818552:1676535537251" name="GET_TOP_2_ACC_BC" type="Decision" width="156" x="411" y="55">
+<exit_states>
+<exit_state name="1" target="Element@1168981008:1677130480853">
+<bendpoint>
+<dim1 x="163" y="-15"/>
+<dim2 x="-83" y="-57"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@1168981008:1677130480853"/>
+<exit_state name="NA" target="Element@1769233874:1676535669355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1725692553:1676535669355" name="INCORRECT_ACCOUNT_SWITCH_AC_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="261" x="276" y="195">
+<exit_states>
+<exit_state name="done" target="Element@1769233874:1676535669355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1660685562:1676535669355" name="IS_VALID_ACC_BC" type="Decision" width="146" x="19" y="203">
+<exit_states>
+<exit_state name="YES" target="Element@617954093:1677475915157"/>
+<exit_state name="NO" target="Element@1725692553:1676535669355"/>
+<exit_state name="MAX_ATTEMPT" target="Element@1577744105:1676535722010"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1630093749:1679307183092" name="MAIN_MENU_PE" type="Page Connector" width="138" x="106" y="439">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@783611377:1676535722010" name="NI_PE" type="Page Connector" width="158" x="-427" y="273">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1577744105:1676535722010" name="NM_PE" type="Page Connector" width="165" x="-426" y="203">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@379521061:1677130492901" name="NM_PE" type="Page Connector" width="165" x="925" y="77">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1653243020:1677133865476" name="SET_ACCOUNT_1" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="140" x="528" y="300">
+<exit_states>
+<exit_state name="done" target="Element@1655234845:1677480383640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@579654589:1677133893792" name="SET_ACCOUNT_2" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="140" x="810" y="285">
+<exit_states>
+<exit_state name="done" target="Element@1655234845:1677480383640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@950002158:1679378019969" name="SET_RMN" type="Decision" width="100" x="-220" y="407">
+<exit_states>
+<exit_state name="YES" target="Element@1863161350:1677480111036">
+<bendpoint>
+<dim1 x="-116" y="77"/>
+<dim2 x="-113" y="-59"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1863161350:1677480111036">
+<bendpoint>
+<dim1 x="89" y="77"/>
+<dim2 x="92" y="-59"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1655234845:1677480383640" name="SWITCHED_ACCOUNT_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="191" x="634" y="399">
+<exit_states>
+<exit_state name="done" target="Element@482879789:1677480870239"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1168981008:1677130480853" name="SWITCH_ACCOUNT_DM" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="205" x="633" y="97">
+<exit_states>
+<exit_state name="done" target="Element@1388475074:1676110759727"/>
+<exit_state name="max_nomatch" target="Element@379521061:1677130492901">
+<bendpoint>
+<dim1 x="152" y="-94"/>
+<dim2 x="-120" y="-74"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@379521061:1677130492901"/>
+</exit_states>
+</element>
+<element height="46" id="Element@720383890:1672298490327" name="SWITCH_ACCOUNT_PE" type="Page Entry" width="171" x="395" y="-25">
+<exit_states>
+<exit_state name="next" target="Element@143818552:1676535537251"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1388475074:1676110759727" name="SWITCH_ACC_BC" type="Decision" width="200" x="635" y="176">
+<exit_states>
+<exit_state name="1" target="Element@1653243020:1677133865476"/>
+<exit_state name="2" target="Element@579654589:1677133893792"/>
+<exit_state name="3" target="Element@1769233874:1676535669355"/>
+</exit_states>
+</element>
+</page>

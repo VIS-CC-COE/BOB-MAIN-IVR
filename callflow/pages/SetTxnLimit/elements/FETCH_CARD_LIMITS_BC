@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@355109192:1673850194983" name="FETCH_CARD_LIMITS_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.dcms.FetchCardLimits_BC</source>
+</config>
+</decision>

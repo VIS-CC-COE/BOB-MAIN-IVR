@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@260084543:1682280240786" name="ACCOUNT_BLOCKED_UPI_PP" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="temporary-account-block.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="Before" name="S_INVALID_COUNTER">{Data.Session.S_INVALID_COOUNTER}+1</data>
+<data create_when="After" name="S_MENU_PATH_NEW">{Data.Session.S_MENU_PATH_NEW}|24_HR_BLOCK</data>
+</session_data>
+</config>
+</voice_element>

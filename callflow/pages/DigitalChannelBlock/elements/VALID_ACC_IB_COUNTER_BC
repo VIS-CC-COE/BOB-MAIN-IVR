@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@346925795:1680065600480" name="VALID_ACC_IB_COUNTER_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Copy_of_VALID_ACC_CB_COUNTER_BC" default_exit_state="max-attempt">
+        <exit_state name="retry" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="VALID_ACC_IB_COUNTER" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@952297415:1673076913767" name="FETCH_L5T_TXN_1" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.cbs.GetLast5Txn_BC</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1815223969:1678768150833" name="IS_VALID_TDS_STMT_END_DATE_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.IsValidStmtDate_BC</source>
+</config>
+</decision>

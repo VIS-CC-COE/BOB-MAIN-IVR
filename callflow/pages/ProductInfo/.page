@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@724949183:1672364268914" name="ProductInfo" version="6.0.1">
+<element height="46" id="Element@216182669:1672364426448" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="9" y="270">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@990662375:1673013135513" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="209" y="434">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@526589658:1673068831526" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="809" y="426">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@807576590:1673069099716" name="BRANCH_LOCATOR_PE" type="Page Connector" width="175" x="981" y="289">
+<page_connector target="Element@1503665232:1673069039482">BRANCH_LOCATOR_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@384759178:1673068756276" name="DEPOSITE_INTEREST_RATE_PE" type="Page Connector" width="204" x="398" y="310">
+<page_connector target="Element@1556761295:1673013179695">DEPOSITE_INTEREST_RATE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1284857519:1673012964862" name="DEPOSITE_PRODUCTS_BC" type="Decision" width="185" x="199" y="357">
+<exit_states>
+<exit_state name="1" target="Element@990662375:1673013135513">
+<bendpoint>
+<dim1 x="-48" y="41"/>
+<dim2 x="-48" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@990662375:1673013135513">
+<bendpoint>
+<dim1 x="74" y="41"/>
+<dim2 x="74" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@1541348841:1676626724032"/>
+<exit_state name="8" target="Element@1721318973:1676626753845"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2065813187:1673012964862" name="DEPOSITE_PRODUCTS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="190" x="203" y="277">
+<exit_states>
+<exit_state name="done" target="Element@1284857519:1673012964862"/>
+<exit_state name="max_nomatch" target="Element@502541491:1673012964862"/>
+<exit_state name="max_noinput" target="Element@1593903048:1673012964862"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2018099683:1676227245822" name="LOAN_INTEREST_RATE_PE" type="Page Connector" width="185" x="601" y="288">
+<page_connector target="Element@2079998091:1676225425963">LOAN_INTEREST_RATE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@520564467:1676384526641" name="MAIN_MENU_PE" type="Page Connector" width="138" x="279" y="114">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@582400537:1676384535497" name="MAIN_MENU_PE" type="Page Connector" width="138" x="316" y="35">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1721318973:1676626753845" name="MAIN_MENU_PE" type="Page Connector" width="138" x="423" y="427">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@150091086:1676626765760" name="MAIN_MENU_PE" type="Page Connector" width="138" x="989" y="426">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1317573642:1672364381301" name="NI_PE" type="Page Connector" width="158" x="707" y="67">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1593903048:1673012964862" name="NI_PE" type="Page Connector" width="158" x="182" y="187">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1277350454:1672364381301" name="NM_PE" type="Page Connector" width="165" x="897" y="75">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@502541491:1673012964862" name="NM_PE" type="Page Connector" width="165" x="5" y="183">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@896166825:1672364330800" name="PRODUCT_INFO_BC" type="Decision" width="155" x="465" y="173">
+<exit_states>
+<exit_state name="1" target="Element@216182669:1672364426448"/>
+<exit_state name="2" target="Element@2065813187:1673012964862"/>
+<exit_state name="3" target="Element@384759178:1673068756276">
+<bendpoint>
+<dim1 x="237" y="115"/>
+<dim2 x="-257" y="-48"/>
+</bendpoint>
+</exit_state>
+<exit_state name="4" target="Element@2018099683:1676227245822"/>
+<exit_state name="5" target="Element@1033636535:1673068831526">
+<bendpoint>
+<dim1 x="279" y="51"/>
+<dim2 x="-215" y="-112"/>
+</bendpoint>
+</exit_state>
+<exit_state name="6" target="Element@807576590:1673069099716"/>
+<exit_state name="7" target="Element@520564467:1676384526641"/>
+<exit_state name="8" target="Element@582400537:1676384535497"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20695355:1672364330800" name="PRODUCT_INFO_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="160" x="462" y="107">
+<exit_states>
+<exit_state name="done" target="Element@896166825:1672364330800"/>
+<exit_state name="max_nomatch" target="Element@1277350454:1672364381301"/>
+<exit_state name="max_noinput" target="Element@1317573642:1672364381301"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1830581359:1672364268914" name="PRODUCT_INFO_PE" type="Page Entry" width="153" x="466" y="39">
+<exit_states>
+<exit_state name="next" target="Element@20695355:1672364330800"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1541348841:1676626724032" name="PRODUCT_INFO_PE" type="Page Connector" width="158" x="-2" y="424">
+<page_connector target="Element@1830581359:1672364268914">PRODUCT_INFO_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@336359386:1676626765760" name="PRODUCT_INFO_PE" type="Page Connector" width="158" x="608" y="427">
+<page_connector target="Element@1830581359:1672364268914">PRODUCT_INFO_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@268949425:1673068831526" name="WEALTH_MGMT_BC" type="Decision" width="156" x="812" y="349">
+<exit_states>
+<exit_state name="1" target="Element@526589658:1673068831526">
+<bendpoint>
+<dim1 x="-48" y="41"/>
+<dim2 x="-48" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@526589658:1673068831526">
+<bendpoint>
+<dim1 x="74" y="41"/>
+<dim2 x="74" y="-36"/>
+</bendpoint>
+</exit_state>
+<exit_state name="7" target="Element@336359386:1676626765760"/>
+<exit_state name="8" target="Element@150091086:1676626765760"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1033636535:1673068831526" name="WEALTH_MGMT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="161" x="806" y="282">
+<exit_states>
+<exit_state name="done" target="Element@268949425:1673068831526"/>
+<exit_state name="max_nomatch" target="Element@1277350454:1672364381301"/>
+<exit_state name="max_noinput" target="Element@1317573642:1672364381301"/>
+</exit_states>
+</element>
+</page>

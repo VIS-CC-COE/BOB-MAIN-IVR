@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1873661876:1676617193166" name="BLOCK_MB_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.mobilebanking.BlockMobileBanking_BC</source>
+</config>
+</decision>

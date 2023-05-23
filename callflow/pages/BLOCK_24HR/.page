@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@878777837:1676450192638" name="BLOCK_24HR" version="6.0.1">
+<element height="46" id="Element@1300437367:1676450298480" name="DISCONNECT_PE" type="Page Connector" width="140" x="205" y="284">
+<page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@87192171:1676450192638" name="UPDATE_24HR_BLOCK_PE" type="Page Entry" width="185" x="177" y="58">
+<exit_states>
+<exit_state name="next" target="Element@1199287096:1676513395982"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1199287096:1676513395982" name="UPDATE_24_HR_BLOCK_CARD" type="Decision" width="221" x="172" y="168">
+<exit_states>
+<exit_state name="YES" target="Element@1300437367:1676450298480">
+<bendpoint>
+<dim1 x="-81" y="52"/>
+<dim2 x="-74" y="-64"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1300437367:1676450298480">
+<bendpoint>
+<dim1 x="64" y="58"/>
+<dim2 x="71" y="-58"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@368533732:1680429834472" name="CHK_MAX_INVALID_TRIES_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHK_MAX_INVALID_TRIES_BC" default_exit_state="retry">
+        <exit_state name="max-tries" conjugate="and">
+            <number operator="greater_equal">
+                <data>
+                    <element name="INCREMENT_INVALID_COUNTER" variable="count" />
+                </data>
+                <data>
+                    <session name="S_MAX_INCORRECT_DETAIL_COUNTER" />
+                </data>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

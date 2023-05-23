@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@741759042:1672297866998" name="DCStatus" version="6.0.1">
+<element height="46" id="Element@1418503959:1676237048710" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="488" y="888">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@340825428:1673873646711" name="CHECK_DC_STATUS_BC" type="Decision" width="172" x="303" y="417">
+<exit_states>
+<exit_state name="active" target="Element@1867318294:1673873252897"/>
+<exit_state name="blocked" target="Element@256353641:1673873970169"/>
+<exit_state name="transfer" target="Element@1949124552:1676237147385"/>
+</exit_states>
+</element>
+<element height="46" id="Element@752058028:1676280453746" name="DC_STATUS_INCORRECT_CARD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="232" x="735" y="437">
+<exit_states>
+<exit_state name="done" target="Element@196598321:1676280453746"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1821441907:1672297866998" name="DC_STATUS_PE" type="Page Entry" width="127" x="463" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1706349552:1673873037032"/>
+</exit_states>
+</element>
+<element height="46" id="Element@196598321:1676280453746" name="DC_STATUS_PE" type="Page Connector" width="197" x="749" y="523">
+<page_connector target="Element@1821441907:1672297866998">DC_STATUS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@461260878:1676237048710" name="DC_STATUS_SUCCESS_BC" type="Decision" width="182" x="296" y="728">
+<exit_states>
+<exit_state name="1" target="Element@340825428:1673873646711"/>
+<exit_state name="7" target="Element@1975388258:1676237048710">
+<bendpoint>
+<dim1 x="-148" y="86"/>
+<dim2 x="-133" y="-76"/>
+</bendpoint>
+</exit_state>
+<exit_state name="8" target="Element@1975388258:1676237048710"/>
+<exit_state name="9" target="Element@1418503959:1676237048710"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1422105986:1676237048710" name="DC_STATUS_SUCCESS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="187" x="292" y="654">
+<exit_states>
+<exit_state name="done" target="Element@461260878:1676237048710"/>
+<exit_state name="max_nomatch" target="Element@1410065540:1676237048710"/>
+<exit_state name="max_noinput" target="Element@1410065540:1676237048710"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1156093171:1676280453747" name="DC_STATUS_VALID_CARD_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="239" x="640" y="198">
+<exit_states>
+<exit_state name="done" target="Element@925829099:1676280453746"/>
+</exit_states>
+</element>
+<element height="46" id="Element@925829099:1676280453746" name="DC_STATUS_VALID_CARD_COUNTER_BC" type="Decision" width="259" x="652" y="276">
+<exit_states>
+<exit_state name="retry" target="Element@752058028:1676280453746"/>
+<exit_state name="max-attempt" target="Element@1949124552:1676237147385"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1303407702:1673873209633" name="GET_CUST_STATUS_BC" type="Decision" width="181" x="301" y="306">
+<exit_states>
+<exit_state name="YES" target="Element@340825428:1673873646711"/>
+<exit_state name="NO" target="Element@1949124552:1676237147385"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1386499884:1673873037032" name="IS_VALID_CARD_DC_STATUS_BC" type="Decision" width="215" x="375" y="196">
+<exit_states>
+<exit_state name="YES" target="Element@1303407702:1673873209633"/>
+<exit_state name="NO" target="Element@1156093171:1676280453747"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1706349552:1673873037032" name="L4D_CARD_NUMBER_DC_STATUS_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="242" x="373" y="122">
+<exit_states>
+<exit_state name="done" target="Element@1386499884:1673873037032"/>
+<exit_state name="max_nomatch" target="Element@1480078007:1673873121046"/>
+<exit_state name="max_noinput" target="Element@529729727:1673873122516"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1975388258:1676237048710" name="MAIN_MENU_PE" type="Page Connector" width="138" x="303" y="890">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@529729727:1673873122516" name="NI_PE" type="Page Connector" width="80" x="705" y="142">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1480078007:1673873121046" name="NM_PE" type="Page Connector" width="88" x="704" y="64">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1410065540:1676237048710" name="NM_PE" type="Page Connector" width="165" x="592" y="788">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1867318294:1673873252897" name="PLAY_DC_STATUS_ACTIVE_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="208" x="135" y="520">
+<exit_states>
+<exit_state name="done" target="Element@1422105986:1676237048710"/>
+</exit_states>
+</element>
+<element height="46" id="Element@256353641:1673873970169" name="PLAY_DC_STATUS_BLOCKED_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="221" x="398" y="524">
+<exit_states>
+<exit_state name="done" target="Element@1422105986:1676237048710"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1949124552:1676237147385" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="543" y="391">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+</page>

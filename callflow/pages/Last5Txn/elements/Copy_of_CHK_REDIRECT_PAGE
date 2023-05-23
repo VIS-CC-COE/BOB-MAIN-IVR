@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@318616286:1677481968569" name="Copy_of_CHK_REDIRECT_PAGE" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHK_REDIRECT_PAGE" default_exit_state="main-menu">
+        <exit_state name="banking-menu" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ATM_PIN_AUTHENTICATED" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="banking-menu" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_TPIN_AUTHENTICATED" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

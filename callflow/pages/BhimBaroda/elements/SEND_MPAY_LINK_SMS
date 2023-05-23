@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@304498090:1676397464848" name="SEND_MPAY_LINK_SMS" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.sms.SendBhimPayLink_BC</source>
+</config>
+</decision>

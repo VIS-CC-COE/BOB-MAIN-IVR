@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@77112891:1666759518277" name="Start" version="6.0.1">
+<element height="46" id="Element@2140723978:1679206285711" name="CHK_FLOW_TYPE" type="Decision" width="142" x="353" y="137">
+<exit_states>
+<exit_state name="create-tpin" target="Element@917975397:1679206367042"/>
+<exit_state name="nri" target="Element@1417419300:1679548752849"/>
+<exit_state name="tata-dnis" target="Element@1845759204:1680372291784"/>
+<exit_state name="disc-dnis" target="Element@1845759204:1680372291784">
+<bendpoint>
+<dim1 x="126" y="85"/>
+<dim2 x="-108" y="57"/>
+</bendpoint>
+</exit_state>
+<exit_state name="from-gnani" target="Element@849999483:1680959987467"/>
+<exit_state name="new-call" target="Element@1737689817:1680947029303"/>
+</exit_states>
+</element>
+<element height="46" id="Element@917975397:1679206367042" name="CREATE_TPIN_PE" type="Page Connector" width="138" x="95" y="215">
+<page_connector target="Element@1576861272:1679205813682">CREATE_TPIN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@803817944:1670473145169" name="CVP Subdialog Start" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="172" x="337" y="-1">
+<exit_states>
+<exit_state name="done" target="Element@737716368:1670845464301"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1530673215:1670847196688" name="DISCONNECT_PE" type="Page Connector" width="140" x="587" y="72">
+<page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@849999483:1680959987467" name="GNANI_FLOW" type="Page Connector" width="124" x="403" y="307">
+<page_connector target="Element@2108698319:1680958516348">GNANI_FLOW<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@737716368:1670845464301" name="IS_CRANK_CALLER" type="Decision" width="149" x="348" y="66">
+<exit_states>
+<exit_state name="YES" target="Element@1530673215:1670847196688"/>
+<exit_state name="NO" target="Element@2140723978:1679206285711"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1417419300:1679548752849" name="NRI_DIRECT_PE" type="Page Connector" width="130" x="104" y="132">
+<page_connector target="Element@2051838713:1679491076739">NRI_DIRECT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@76471942:1677823878730" name="SET_LANG" type="Page Connector" width="153" x="597" y="438">
+<page_connector target="Element@562561881:1670996282938">SET_LANG<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@810344779:1666759518275" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="350" y="-66">
+<exit_states>
+<exit_state name="next" target="Element@803817944:1670473145169"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1845759204:1680372291784" name="WELCOME_BSNL_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="159" x="579" y="165">
+<exit_states>
+<exit_state name="done" target="Element@1530673215:1670847196688"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1774655141:1670991936598" name="WELCOME_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="126" x="393" y="444">
+<exit_states>
+<exit_state name="done" target="Element@76471942:1677823878730"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1911481000:1680946884809" name="WELCOME_PP" type="Page Entry" width="126" x="237" y="448">
+<exit_states>
+<exit_state name="next" target="Element@1774655141:1670991936598"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1737689817:1680947029303" name="WELCOME_PP" type="Page Connector" width="126" x="230" y="277">
+<page_connector target="Element@1911481000:1680946884809">WELCOME_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1082597201:1679563785392" name="WELCOME_TATA_PP" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="156" x="600" y="358">
+<exit_states>
+<exit_state name="done" target="Element@76471942:1677823878730"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2144801730:1672987883248" name="MobileBanking" version="6.0.1">
+<element height="46" id="Element@403830513:1674301355826" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="291" y="310">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@601853460:1674302012771" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="561" y="676">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1028027704:1674302331640" name="BANKING_MENU_PE" type="Page Connector" width="158" x="235" y="688">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@303769632:1674301811968" name="DEREGISTER_MB_BC" type="Decision" width="156" x="447" y="438">
+<exit_states>
+<exit_state name="YES" target="Element@931517313:1674302153689"/>
+<exit_state name="NO" target="Element@907098941:1674301872476">
+<bendpoint>
+<dim1 x="175" y="149"/>
+<dim2 x="-314" y="153"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1718806524:1676384737491" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="722" y="233">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1934175175:1676526526283" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="-57" y="665">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@798412371:1674301604697" name="GET_MB_STATUS_BC" type="Decision" width="156" x="604" y="299">
+<exit_states>
+<exit_state name="ACTIVE" target="Element@303769632:1674301811968"/>
+<exit_state name="INACTIVE" target="Element@907098941:1674301872476"/>
+<exit_state name="ERROR" target="Element@907098941:1674301872476">
+<bendpoint>
+<dim1 x="282" y="1"/>
+<dim2 x="-43" y="-128"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@907098941:1674301872476">
+<bendpoint>
+<dim1 x="114" y="114"/>
+<dim2 x="-211" y="-15"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1030465164:1676384738807" name="MAIN_MENU_PE" type="Page Connector" width="138" x="695" y="146">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1643987927:1674302153690" name="MB_DEREG_SUCCESS_BC" type="Decision" width="181" x="218" y="618">
+<exit_states>
+<exit_state name="7" target="Element@1934175175:1676526526283"/>
+<exit_state name="8" target="Element@1028027704:1674302331640"/>
+<exit_state name="9" target="Element@601853460:1674302012771"/>
+</exit_states>
+</element>
+<element height="46" id="Element@931517313:1674302153689" name="MB_DEREG_SUCCESS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="186" x="219" y="540">
+<exit_states>
+<exit_state name="done" target="Element@1643987927:1674302153690"/>
+<exit_state name="max_nomatch" target="Element@236677173:1674302235223"/>
+<exit_state name="max_noinput" target="Element@236677173:1674302235223">
+<bendpoint>
+<dim1 x="-108" y="-44"/>
+<dim2 x="57" y="-45"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1084669425:1674301266982" name="MOBILE_BANKING_" type="Decision" width="153" x="447" y="212">
+<exit_states>
+<exit_state name="1" target="Element@403830513:1674301355826"/>
+<exit_state name="2" target="Element@798412371:1674301604697"/>
+<exit_state name="7" target="Element@1718806524:1676384737491"/>
+<exit_state name="8" target="Element@1030465164:1676384738807"/>
+</exit_states>
+</element>
+<element height="46" id="Element@88665173:1674301266982" name="MOBILE_BANKING_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="173" x="448" y="122">
+<exit_states>
+<exit_state name="done" target="Element@1084669425:1674301266982"/>
+<exit_state name="max_nomatch" target="Element@1685523692:1674301367221"/>
+<exit_state name="max_noinput" target="Element@743520431:1674301365504"/>
+</exit_states>
+</element>
+<element height="46" id="Element@97183264:1672987883248" name="MOBILE_BANKING_PE" type="Page Entry" width="166" x="442" y="31">
+<exit_states>
+<exit_state name="next" target="Element@88665173:1674301266982"/>
+</exit_states>
+</element>
+<element height="46" id="Element@743520431:1674301365504" name="NI_PE" type="Page Connector" width="80" x="199" y="97">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1685523692:1674301367221" name="NM_PE" type="Page Connector" width="88" x="200" y="184">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@236677173:1674302235223" name="NM_PE" type="Page Connector" width="88" x="44" y="561">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@907098941:1674301872476" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="938" y="434">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+</page>

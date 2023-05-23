@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2088195453:1676471207705" name="FETCH_ACC_BALANCE_SERVICE_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.cbs.GetAccountBalance_BC</source>
+</config>
+</decision>

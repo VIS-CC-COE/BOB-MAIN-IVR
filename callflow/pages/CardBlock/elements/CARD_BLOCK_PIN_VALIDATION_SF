@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2065537287:1671264213419" name="CARD_BLOCK_PIN_VALIDATION_SF" version="6.0.1">
+<subflow_call subflow_name="atmPINValidation" target="Element@31:1671264217070">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

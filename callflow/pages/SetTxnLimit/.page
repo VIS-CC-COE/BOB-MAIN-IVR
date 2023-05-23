@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@920334854:1672987865476" name="SetTxnLimit" version="6.0.1">
+<element height="46" id="Element@1255479992:1673850051792" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="644" y="682">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@873072736:1677090002685" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="127" y="1281">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1351213638:1673852732407" name="CONFIRM_TXN_LIMIT_DM" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="189" x="-37" y="903">
+<exit_states>
+<exit_state name="done" target="Element@1690215566:1673852732407"/>
+<exit_state name="max_nomatch" target="Element@682226360:1677086712525"/>
+<exit_state name="max_noinput" target="Element@682226360:1677086712525"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1690215566:1673852732407" name="CONFIRM_TXN_LIMIT_MN_BC" type="Decision" width="209" x="-45" y="962">
+<exit_states>
+<exit_state name="1" target="Element@819498334:1673852840115"/>
+<exit_state name="2" target="Element@373277668:1677127155805"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1605917334:1673849364742" name="CONTINUE_CARD_MENU_BC" type="Decision" width="203" x="107" y="306">
+<exit_states>
+<exit_state name="1" target="Element@355109192:1673850194983"/>
+<exit_state name="2" target="Element@1536885409:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1449787496:1677211168753" name="CONTINUE_CARD_TXN_LIMIT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="230" x="90" y="189">
+<exit_states>
+<exit_state name="done" target="Element@1605917334:1673849364742"/>
+<exit_state name="max_nomatch" target="Element@446966876:1673849833122"/>
+<exit_state name="max_noinput" target="Element@691320983:1673849834634"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2042953967:1673850405890" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="740" y="169">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1038079184:1677087873370" name="ENTER_AMOUNT_TXN_LIMIT_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="220" x="-65" y="736">
+<exit_states>
+<exit_state name="done" target="Element@1740025478:1677086055777"/>
+<exit_state name="max_nomatch" target="Element@55826393:1673852813206"/>
+<exit_state name="max_noinput" target="Element@55826393:1673852813206"/>
+</exit_states>
+</element>
+<element height="46" id="Element@355109192:1673850194983" name="FETCH_CARD_LIMITS_BC" type="Decision" width="180" x="-34" y="391">
+<exit_states>
+<exit_state name="YES" target="Element@989818782:1673849052389"/>
+<exit_state name="NO" target="Element@532111502:1673850630301"/>
+</exit_states>
+</element>
+<element height="46" id="Element@985280009:1676694037912" name="IS_APIN_AUTHENTICATED_2" type="Decision" width="197" x="102" y="80">
+<exit_states>
+<exit_state name="YES" target="Element@1449787496:1677211168753"/>
+<exit_state name="NO" target="Element@1536885409:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1738253481:1673849125588" name="IS_RMN_CHECK_3" type="Decision" width="145" x="351" y="17">
+<exit_states>
+<exit_state name="YES" target="Element@985280009:1676694037912"/>
+<exit_state name="NO" target="Element@2050735782:1673850357947"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1536228074:1677090002684" name="MAIN_MENU_PE" type="Page Connector" width="138" x="-153" y="1335">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@691320983:1673849834634" name="NI_PE" type="Page Connector" width="158" x="-135" y="270">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1714400529:1673850051792" name="NI_PE" type="Page Connector" width="80" x="275" y="510">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@55826393:1673852813206" name="NI_PE" type="Page Connector" width="80" x="206" y="750">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@682226360:1677086712525" name="NI_PE" type="Page Connector" width="80" x="244" y="928">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@446966876:1673849833122" name="NM_PE" type="Page Connector" width="165" x="-146" y="176">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1435397638:1673850051792" name="NM_PE" type="Page Connector" width="88" x="238" y="418">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1064542173:1677082374089" name="NM_PE" type="Page Connector" width="88" x="626" y="335">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="48" id="Element@1754391457:1677090002685" name="NM_PE" type="Page Connector" width="88" x="-459" y="1215">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1375632059:1677086739114" name="PLAY_MAX_LIMIT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="161" x="203" y="856">
+<exit_states>
+<exit_state name="done" target="Element@143939867:1677141620091"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1239515759:1677127128604" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="-442" y="1322">
+<page_connector target="Element@1833849181:1677127045799">RMN_ATM_SERVICE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@373277668:1677127155805" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="240" y="1029">
+<page_connector target="Element@1833849181:1677127045799">RMN_ATM_SERVICE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@143939867:1677141620091" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="408" y="860">
+<page_connector target="Element@1833849181:1677127045799">RMN_ATM_SERVICE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1369808614:1673849629308" name="SAME_CARD_PP" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="-266" y="5">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@529345834:1677172898883" name="SEND_TXN_STATUS_BC" type="Decision" width="169" x="-206" y="1099">
+<exit_states>
+<exit_state name="YES" target="Element@1214498479:1677090002684"/>
+<exit_state name="NO" target="Element@1214498479:1677090002684">
+<bendpoint>
+<dim1 x="115" y="35"/>
+<dim2 x="127" y="-32"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@532111502:1673850630301" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="-154" y="488">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1276026313:1677086230052" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="-250" y="810">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1500441300:1677090002685" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="182" y="1170">
+<page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@583730267:1672987865476" name="SET_TXN_LIMIT_PE" type="Page Entry" width="147" x="355" y="-55">
+<exit_states>
+<exit_state name="next" target="Element@1738253481:1673849125588"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2050735782:1673850357947" name="SET_TXN_LIMIT_UNREG_CALLER_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="237" x="714" y="87">
+<exit_states>
+<exit_state name="done" target="Element@2042953967:1673850405890"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1078425757:1673850051792" name="TXN_LIMIT_CHECK_SUBFLOW_ACTION" type="Decision" width="255" x="368" y="244">
+<exit_states>
+<exit_state name="max-no-input" target="Element@1064542173:1677082374089"/>
+<exit_state name="max-no-match" target="Element@1064542173:1677082374089"/>
+<exit_state name="valid" target="Element@1449787496:1677211168753"/>
+<exit_state name="transfer" target="Element@1255479992:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@215680619:1673849052388" name="TXN_LIMIT_MENU_BC" type="Decision" width="165" x="-68" y="573">
+<exit_states>
+<exit_state name="1" target="Element@959327785:1677082851699"/>
+<exit_state name="2" target="Element@1696187636:1677082974305"/>
+<exit_state name="3" target="Element@1255479992:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@989818782:1673849052389" name="TXN_LIMIT_MENU_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="170" x="17" y="490">
+<exit_states>
+<exit_state name="done" target="Element@215680619:1673849052388"/>
+<exit_state name="max_nomatch" target="Element@1435397638:1673850051792"/>
+<exit_state name="max_noinput" target="Element@1714400529:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1536885409:1673850051792" name="TXN_LIMIT_PIN_VALIDATION_SF" type="Subflow Call" width="217" x="380" y="153">
+<subflow_call subflow_name="atmPINValidation" target="Element@31:1671264217070">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1078425757:1673850051792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1289728573:1677090002684" name="TXN_LIMIT_SUCCESS_BC" type="Decision" width="179" x="-216" y="1257">
+<exit_states>
+<exit_state name="1" target="Element@1214498479:1677090002684"/>
+<exit_state name="7" target="Element@1239515759:1677127128604"/>
+<exit_state name="8" target="Element@1536228074:1677090002684"/>
+<exit_state name="9" target="Element@873072736:1677090002685"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1214498479:1677090002684" name="TXN_LIMIT_SUCCESS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="184" x="-226" y="1165">
+<exit_states>
+<exit_state name="done" target="Element@1289728573:1677090002684">
+<bendpoint>
+<dim1 x="-171" y="49"/>
+<dim2 x="-181" y="-33"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1754391457:1677090002685">
+<bendpoint>
+<dim1 x="-129" y="-95"/>
+<dim2 x="58" y="-89"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1754391457:1677090002685"/>
+</exit_states>
+</element>
+<element height="46" id="Element@959327785:1677082851699" name="TXN_LIMIT_UPDATE_TYPE_ATM" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="213" x="-227" y="656">
+<exit_states>
+<exit_state name="done" target="Element@1038079184:1677087873370"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1696187636:1677082974305" name="TXN_LIMIT_UPDATE_TYPE_POS" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="211" x="51" y="660">
+<exit_states>
+<exit_state name="done" target="Element@1038079184:1677087873370"/>
+</exit_states>
+</element>
+<element height="46" id="Element@819498334:1673852840115" name="UPDATE_CARD_LIMITS_BC" type="Decision" width="188" x="-211" y="1031">
+<exit_states>
+<exit_state name="YES" target="Element@529345834:1677172898883"/>
+<exit_state name="NO" target="Element@1500441300:1677090002685"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1740025478:1677086055777" name="ValidateSetTxnLimit" type="Decision" width="152" x="-28" y="812">
+<exit_states>
+<exit_state name="YES" target="Element@1351213638:1673852732407"/>
+<exit_state name="NO" target="Element@1375632059:1677086739114"/>
+<exit_state name="ERROR" target="Element@1276026313:1677086230052"/>
+</exit_states>
+</element>
+</page>

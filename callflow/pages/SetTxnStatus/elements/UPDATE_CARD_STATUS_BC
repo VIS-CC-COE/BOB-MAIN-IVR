@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1359110585:1673853201674" name="UPDATE_CARD_STATUS_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.dcms.UpdateCardStatus_BC</source>
+</config>
+</decision>

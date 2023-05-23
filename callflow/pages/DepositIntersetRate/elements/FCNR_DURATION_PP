@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@480330856:1676226390873" name="FCNR_DURATION_PP" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">{Data.Session.S_NOINPUT_TIMEOUT}</setting>
+<setting name="max_noinput_count">{Data.Session.S_NOINPUT_TIMEOUT}</setting>
+<setting name="max_nomatch_count">{Data.Session.S_MAX_NO_MATCH}</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="years.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_MATCH_AUDIO}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="years.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_MATCH_AUDIO_1}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="years.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="nomatch_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_MATCH_AUDIO_2}.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_INPUT_AUDIO}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="years.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_INPUT_AUDIO_1}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="Copy of audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="years.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="3" name="noinput_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.S_NO_INPUT_AUDIO_2}.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="S_INTEREST_PRODUCT_TYPE">FCNR</data>
+<data create_when="After" name="S_INTEREST_DURATION">{Data.Element.FCNR_DURATION_PP.value}</data>
+<data create_when="After" name="S_LAST_DETAILS_ACCESSED">FCNR_DURATION_PP</data>
+</session_data>
+</config>
+</voice_element>

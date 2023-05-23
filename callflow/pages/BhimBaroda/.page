@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1719625002:1672988417335" name="BhimBaroda" version="6.0.1">
+<element height="46" id="Element@356023140:1676397358344" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="564" y="302">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@907413521:1676397080179" name="BHIM_BARODA_BC" type="Decision" width="202" x="277" y="194">
+<exit_states>
+<exit_state name="1" target="Element@617636682:1676397330944"/>
+<exit_state name="2" target="Element@356023140:1676397358344"/>
+<exit_state name="7" target="Element@274600231:1676397080179"/>
+<exit_state name="8" target="Element@1380251900:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1163913943:1676397080179" name="BHIM_BARODA_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="157" x="291" y="112">
+<exit_states>
+<exit_state name="done" target="Element@907413521:1676397080179"/>
+<exit_state name="max_nomatch" target="Element@1727980703:1676397080179"/>
+<exit_state name="max_noinput" target="Element@1133458487:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@465659562:1672988417335" name="BHIM_BARODA_PE" type="Page Entry" width="150" x="296" y="27">
+<exit_states>
+<exit_state name="next" target="Element@1163913943:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2014557834:1676397927041" name="BHIM_LINK_SUCCESS_BC" type="Decision" width="202" x="233" y="523">
+<exit_states>
+<exit_state name="1" target="Element@1519351697:1676397927041">
+<bendpoint>
+<dim1 x="-263" y="-36"/>
+<dim2 x="-252" y="39"/>
+</bendpoint>
+</exit_state>
+<exit_state name="9" target="Element@356023140:1676397358344"/>
+<exit_state name="7" target="Element@274600231:1676397080179"/>
+<exit_state name="8" target="Element@1380251900:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1519351697:1676397927041" name="BHIM_LINK_SUCCESS_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="206" x="220" y="448">
+<exit_states>
+<exit_state name="done" target="Element@2014557834:1676397927041"/>
+<exit_state name="max_nomatch" target="Element@1727980703:1676397080179"/>
+<exit_state name="max_noinput" target="Element@1133458487:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@274600231:1676397080179" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="548" y="237">
+<page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@617636682:1676397330944" name="ENTER_MOBILE_BHIM_SMS_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="223" x="198" y="289">
+<exit_states>
+<exit_state name="done" target="Element@304498090:1676397464848"/>
+<exit_state name="max_nomatch" target="Element@1727980703:1676397080179"/>
+<exit_state name="max_noinput" target="Element@1133458487:1676397080179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1380251900:1676397080179" name="MAIN_MENU_PE" type="Page Connector" width="138" x="539" y="413">
+<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1133458487:1676397080179" name="NI_PE" type="Page Connector" width="80" x="26" y="175">
+<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1727980703:1676397080179" name="NM_PE" type="Page Connector" width="88" x="27" y="248">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@304498090:1676397464848" name="SEND_MPAY_LINK_SMS" type="Decision" width="179" x="221" y="366">
+<exit_states>
+<exit_state name="YES" target="Element@1519351697:1676397927041">
+<bendpoint>
+<dim1 x="-52" y="45"/>
+<dim2 x="-65" y="-37"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1519351697:1676397927041">
+<bendpoint>
+<dim1 x="84" y="43"/>
+<dim2 x="71" y="-39"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

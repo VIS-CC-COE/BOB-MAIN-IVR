@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@696746844:1671263625581" name="validateATMPin" version="6.0.1">
+<element height="46" id="Element@31:1671263625578" name="atmPINValidation" type="Subflow Start" width="142" x="277" y="91">
+<exit_states>
+<exit_state name="next" target="Element@1419319247:1671263660316"/>
+</exit_states>
+</element>
+<element height="46" id="Element@45090691:1671263660317" name="ENTER_PIN_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="127" x="82" y="430">
+<exit_states>
+<exit_state name="done" target="Element@1642844889:1671263660317"/>
+<exit_state name="max_nomatch" target="Element@1811519050:1671266478045"/>
+<exit_state name="max_noinput" target="Element@59589215:1671266478045"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1495342056:1671263660316" name="IS_VALID_CARD_BC" type="Decision" width="151" x="274" y="370">
+<exit_states>
+<exit_state name="YES" target="Element@45090691:1671263660317"/>
+<exit_state name="NO" target="Element@1402976323:1671263660317"/>
+</exit_states>
+</element>
+<element height="46" id="Element@630325404:1671263660317" name="VALID_CARD_COUNTER_BC" type="Decision" width="195" x="579" y="435">
+<exit_states>
+<exit_state name="retry" target="Element@1675975993:1671263660317"/>
+<exit_state name="max-attempt" target="Element@173411923:1671266392998"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1642844889:1671263660317" name="IS_VALID_ATM_PIN_BC" type="Decision" width="168" x="58" y="514">
+<exit_states>
+<exit_state name="YES" target="Element@752810621:1681901836698"/>
+<exit_state name="NO" target="Element@134839168:1678772487703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1675975993:1671263660317" name="INCORRECT_CARD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="168" x="577" y="506">
+<exit_states>
+<exit_state name="done" target="Element@1301723496:1671263660317"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1301723496:1671263660317" name="ENTER_CARD_PE" type="Page Connector" width="197" x="606" y="580">
+<page_connector target="Element@960194692:1675751352839">ENTER_CARD_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1419319247:1671263660316" name="L4D_CARD_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="180" x="259" y="229">
+<exit_states>
+<exit_state name="done" target="Element@1495342056:1671263660316"/>
+<exit_state name="max_nomatch" target="Element@173411923:1671266392998"/>
+<exit_state name="max_noinput" target="Element@439762053:1671263967561"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1402976323:1671263660317" name="VALID_CARD_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="175" x="564" y="370">
+<exit_states>
+<exit_state name="done" target="Element@630325404:1671263660317"/>
+</exit_states>
+</element>
+<element height="46" id="Element@439762053:1671263967561" name="RETURN_MAX_NI" type="Subflow Return" width="148" x="567" y="277"/>
+<element height="46" id="Element@461617080:1671264089007" name="RETURN_VALID" type="Subflow Return" width="151" x="79" y="659"/>
+<element height="46" id="Element@173411923:1671266392998" name="RETURN_MAX_NM" type="Subflow Return" width="149" x="562" y="201"/>
+<element height="46" id="Element@1811519050:1671266478045" name="RETURN_MAX_NM2" type="Subflow Return" width="155" x="-153" y="358"/>
+<element height="46" id="Element@59589215:1671266478045" name="RETURN_MAX_NI2" type="Subflow Return" width="147" x="-158" y="468"/>
+<element height="46" id="Element@960194692:1675751352839" name="ENTER_CARD_PE" type="Page Entry" width="138" x="40" y="231">
+<exit_states>
+<exit_state name="next" target="Element@1419319247:1671263660316"/>
+</exit_states>
+</element>
+<element height="46" id="Element@563922273:1677476307351" name="UPDATE_APIN_AUTH_FLAG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="193" x="73" y="587">
+<exit_states>
+<exit_state name="done" target="Element@461617080:1671264089007"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1302287327:1678772487703" name="INCORRECT_PIN_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="160" x="270" y="828">
+<exit_states>
+<exit_state name="done" target="Element@2141485962:1678772487703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1009965701:1678772487703" name="UPDATE_BLOCK_STATUS" type="Decision" width="177" x="497" y="654">
+<exit_states>
+<exit_state name="YES" target="Element@439762053:1671263967561"/>
+<exit_state name="NO" target="Element@439762053:1671263967561"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2141485962:1678772487703" name="ENTER_CARD_PE" type="Page Connector" width="138" x="273" y="904">
+<page_connector target="Element@960194692:1675751352839">ENTER_CARD_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@134839168:1678772487703" name="VALID_PIN_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="163" x="294" y="455">
+<exit_states>
+<exit_state name="done" target="Element@1815779894:1678772487703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1815779894:1678772487703" name="VALID_PIN_COUNTER_BC" type="Decision" width="183" x="290" y="538">
+<exit_states>
+<exit_state name="retry" target="Element@1506564391:1680928283371"/>
+<exit_state name="max-attempt" target="Element@1009965701:1678772487703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1506564391:1680928283371" name="UPDATE_BLOCK_STATUS_RETRY" type="Decision" width="226" x="239" y="658">
+<exit_states>
+<exit_state name="YES" target="Element@361067113:1680928375342"/>
+<exit_state name="NO" target="Element@361067113:1680928375342"/>
+</exit_states>
+</element>
+<element height="46" id="Element@361067113:1680928375342" name="CHECK_BLOCK_STATUS" type="Decision" width="173" x="276" y="735">
+<exit_states>
+<exit_state name="PERMANENT_BLOCK" target="Element@2135822445:1680928750534"/>
+<exit_state name="SOFT_BLOCK" target="Element@392944320:1680928425847"/>
+<exit_state name="POTENTIAL_FRAUD" target="Element@574897541:1680928750534"/>
+<exit_state name="NO_FRAUD" target="Element@1302287327:1678772487703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@392944320:1680928425847" name="ACCOUNT_BLOCKED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="703" y="752">
+<exit_states>
+<exit_state name="done" target="Element@439762053:1671263967561"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2135822445:1680928750534" name="SET_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="61" y="798">
+<exit_states>
+<exit_state name="done" target="Element@1810964220:1680928773503"/>
+</exit_states>
+</element>
+<element height="46" id="Element@574897541:1680928750534" name="SET_POT_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="136" x="62" y="720">
+<exit_states>
+<exit_state name="done" target="Element@1810964220:1680928773503"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1810964220:1680928773503" name="RETURN_TRANSFER" type="Subflow Return" width="153" x="-146" y="756"/>
+<element height="46" id="Element@752810621:1681901836698" name="UPDATE_SUCCESS_PIN_STATUS" type="Decision" width="226" x="-199" y="562">
+<exit_states>
+<exit_state name="YES" target="Element@563922273:1677476307351"/>
+<exit_state name="NO" target="Element@563922273:1677476307351">
+<bendpoint>
+<dim1 x="127" y="56"/>
+<dim2 x="-128" y="31"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

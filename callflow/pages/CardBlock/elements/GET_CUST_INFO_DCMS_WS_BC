@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@688744465:1677037311006" name="GET_CUST_INFO_DCMS_WS_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.dcms.GetCustInfo</source>
+</config>
+</decision>

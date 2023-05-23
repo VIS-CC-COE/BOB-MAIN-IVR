@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_return id="Element@59589215:1671266478045" name="RETURN_MAX_NI2" version="6.0.1">
+<config>
+<return_data>
+<data name="MAIN_FLOW_ACTION" type="String">max-no-input</data>
+</return_data>
+</config>
+</subflow_return>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1752381165:1671264251908" name="CARD_BLOCK_CHECK_SUBFLOW_ACTION" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule default_exit_state="transfer" name="CHECK_SUBFLOW_ACTION">
+        <exit_state conjugate="and" name="max-no-input">
+            <string operator="equal">
+                <data>
+                    <element name="CARD_BLOCK_PIN_VALIDATION_SF" variable="MAIN_FLOW_ACTION"/>
+                </data>
+                <constant_string value="max-no-input"/>
+            </string>
+        </exit_state>
+        <exit_state conjugate="and" name="valid">
+            <string operator="equal">
+                <data>
+                    <element name="CARD_BLOCK_PIN_VALIDATION_SF" variable="MAIN_FLOW_ACTION"/>
+                </data>
+                <constant_string value="valid"/>
+            </string>
+        </exit_state>
+        <exit_state conjugate="and" name="max-no-match">
+            <string operator="equal">
+                <data>
+                    <element name="CARD_BLOCK_PIN_VALIDATION_SF" variable="MAIN_FLOW_ACTION"/>
+                </data>
+                <constant_string value="max-no-match"/>
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>
+]]></source>
+</config>
+</decision>

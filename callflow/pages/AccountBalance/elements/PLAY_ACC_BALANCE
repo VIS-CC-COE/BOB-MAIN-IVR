@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1853227768:1674111859093" name="PLAY_ACC_BALANCE" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.vis.bobmain.dm.PlayBalance_DM</dynamic>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="S_MENU_PATH_NEW">{Data.Session.S_MENU_PATH_NEW}|PLAY_BALANCE</data>
+</session_data>
+</config>
+</voice_element>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1226781999:1679205813682" name="VALID_NEW_TPIN_COUNTER_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="VALID_NEW_TPIN_COUNTER_BC" default_exit_state="max-attempt">
+        <exit_state name="retry" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="VALID_NEW_TPIN_COUNTER" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

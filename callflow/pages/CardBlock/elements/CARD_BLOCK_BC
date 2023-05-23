@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1075330541:1671267601041" name="CARD_BLOCK_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.dcms.CardBlock_BC</source>
+</config>
+</decision>

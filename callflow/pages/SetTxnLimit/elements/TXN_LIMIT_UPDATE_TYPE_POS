@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1696187636:1677082974305" name="TXN_LIMIT_UPDATE_TYPE_POS" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="S_TXN_SERVICE_CARD_TYPE">ATM</data>
+</session_data>
+</config>
+</action_element>
