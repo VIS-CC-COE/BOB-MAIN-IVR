@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@1812391450:1671256129921" name="DigitalChannelBlock" version="6.0.1">
-<element height="46" id="Element@1931055282:1682280096244" name="ACCOUNT_BLOCKED_IB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="196" x="277" y="538">
-<exit_states>
-<exit_state name="done" target="Element@1439086308:1671297214582"/>
-</exit_states>
-</element>
 <element height="46" id="Element@103317011:1682279794050" name="ACCOUNT_BLOCKED_MB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="230" x="-4" y="270">
 <exit_states>
 <exit_state name="done" target="Element@703976121:1680173136876"/>
@@ -14,10 +9,6 @@
 <exit_states>
 <exit_state name="done" target="Element@139737848:1682280334414"/>
 </exit_states>
-</element>
-<element height="46" id="Element@1439086308:1671297214582" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="346" y="705">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
 </element>
 <element height="46" id="Element@1883585083:1671309179742" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="1512" y="788">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
@@ -47,10 +38,6 @@
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1822339311:1682280022629" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="234" y="321">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@380056575:1682280066153" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="909" y="651">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
@@ -58,14 +45,6 @@
 <element height="46" id="Element@139737848:1682280334414" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="1574" y="414">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
-</element>
-<element height="46" id="Element@2072683933:1671308784081" name="BCOT_BLOCK_CHECK_SUBFLOW_ACTION" type="Decision" width="270" x="637" y="601">
-<exit_states>
-<exit_state name="max-no-input" target="Element@380056575:1682280066153"/>
-<exit_state name="max-no-match" target="Element@380056575:1682280066153"/>
-<exit_state name="valid" target="Element@727861796:1671309639082"/>
-<exit_state name="transfer" target="Element@1439086308:1671297214582"/>
-</exit_states>
 </element>
 <element height="46" id="Element@426777471:1671309050648" name="BCOT_BLOCK_CONFIRM_BC" type="Decision" width="199" x="708" y="908">
 <exit_states>
@@ -76,20 +55,8 @@
 <element height="46" id="Element@1001704228:1674202491620" name="BCOT_BLOCK_CONFIRM_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="204" x="715" y="796">
 <exit_states>
 <exit_state name="done" target="Element@426777471:1671309050648"/>
-<exit_state name="max_nomatch" target="Element@1439086308:1671297214582"/>
-<exit_state name="max_noinput" target="Element@1439086308:1671297214582"/>
-</exit_states>
-</element>
-<element height="46" id="Element@769747266:1671308784081" name="BCOT_BLOCK_PIN_VALIDATION_SF" type="Subflow Call" width="232" x="638" y="533">
-<subflow_call subflow_name="atmPINValidation" target="Element@31:1671264217070">
-<config>
-<input_data>
-<data name="MAIN_FLOW_ACTION"/>
-</input_data>
-</config>
-</subflow_call>
-<exit_states>
-<exit_state name="next" target="Element@2072683933:1671308784081"/>
+<exit_state name="max_nomatch" target="Element@380056575:1682280066153"/>
+<exit_state name="max_noinput" target="Element@380056575:1682280066153"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1938539570:1671309050648" name="BCOT_BLOCK_SUCCESS" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="174" x="696" y="1064">
@@ -140,14 +107,6 @@
 <exit_state name="max_noinput" target="Element@274159410:1676236290762"/>
 </exit_states>
 </element>
-<element height="46" id="Element@230881155:1682280096244" name="CHECK_BLOCK_STATUS_IB" type="Decision" width="188" x="433" y="389">
-<exit_states>
-<exit_state name="PERMANENT_BLOCK" target="Element@1029751061:1682280096244"/>
-<exit_state name="SOFT_BLOCK" target="Element@1931055282:1682280096244"/>
-<exit_state name="POTENTIAL_FRAUD" target="Element@85099952:1682280096244"/>
-<exit_state name="NO_FRAUD" target="Element@1986799594:1677674634706"/>
-</exit_states>
-</element>
 <element height="46" id="Element@831913998:1682279794050" name="CHECK_BLOCK_STATUS_MB" type="Decision" width="222" x="-311" y="214">
 <exit_states>
 <exit_state name="PERMANENT_BLOCK" target="Element@1053479225:1682279920532"/>
@@ -178,7 +137,7 @@
 <element height="46" id="Element@1735681211:1671296707211" name="DIGITAL_CHANNEL_BLOCK_BC" type="Decision" width="213" x="612" y="168">
 <exit_states>
 <exit_state name="1" target="Element@426264029:1676617298980"/>
-<exit_state name="2" target="Element@1029196297:1676403605684"/>
+<exit_state name="2" target="Element@727861796:1671309639082"/>
 <exit_state name="3" target="Element@688177699:1676402354625"/>
 <exit_state name="7" target="Element@2077354322:1676382113516"/>
 <exit_state name="8" target="Element@501402617:1676382115444"/>
@@ -199,25 +158,6 @@
 <element height="46" id="Element@1405904323:1676617193166" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="-793" y="703">
 <page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
 </page_connector>
-</element>
-<element height="46" id="Element@1818180676:1676403605684" name="ENTER_ACCOUNT_NUMBER_IB_BC" type="Decision" width="233" x="452" y="307">
-<exit_states>
-<exit_state name="YES" target="Element@230881155:1682280096244"/>
-<exit_state name="NO" target="Element@1891418146:1680065600480"/>
-<exit_state name="MAX_ATTEMPT" target="Element@1822339311:1682280022629"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1029196297:1676403605684" name="ENTER_ACCOUNT_NUMBER_IB_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="232" x="466" y="232">
-<exit_states>
-<exit_state name="done" target="Element@1818180676:1676403605684"/>
-<exit_state name="max_nomatch" target="Element@1822339311:1682280022629">
-<bendpoint>
-<dim1 x="-188" y="-21"/>
-<dim2 x="96" y="87"/>
-</bendpoint>
-</exit_state>
-<exit_state name="max_noinput" target="Element@1822339311:1682280022629"/>
-</exit_states>
 </element>
 <element height="46" id="Element@1952326852:1676617298981" name="ENTER_ACCOUNT_NUMBER_MB_BC" type="Decision" width="241" x="-312" y="129">
 <exit_states>
@@ -267,11 +207,6 @@
 <page_connector target="Element@1922167949:1671267675907">HOTLIST_MAIN_MN<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@157112382:1676403605684" name="INCORRECT_ACCOUNT_IB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="208" x="744" y="250">
-<exit_states>
-<exit_state name="done" target="Element@1029196297:1676403605684"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1120294463:1676617298981" name="INCORRECT_ACCOUNT_MB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="216" x="27" y="209">
 <exit_states>
 <exit_state name="done" target="Element@426264029:1676617298980"/>
@@ -280,22 +215,6 @@
 <element height="46" id="Element@1565368888:1676402354625" name="INCORRECT_ACCOUNT_UPI_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="262" x="1192" y="92">
 <exit_states>
 <exit_state name="done" target="Element@688177699:1676402354625"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1986799594:1677674634706" name="IS_ATM_PIN_VALID_3" type="Decision" width="208" x="628" y="468">
-<exit_states>
-<exit_state name="YES" target="Element@769747266:1671308784081">
-<bendpoint>
-<dim1 x="-56" y="53"/>
-<dim2 x="-57" y="-48"/>
-</bendpoint>
-</exit_state>
-<exit_state name="NO" target="Element@769747266:1671308784081">
-<bendpoint>
-<dim1 x="47" y="52"/>
-<dim2 x="46" y="-49"/>
-</bendpoint>
-</exit_state>
 </exit_states>
 </element>
 <element height="46" id="Element@126291695:1671309179743" name="IS_RMN_2" type="Decision" width="102" x="1003" y="514">
@@ -314,11 +233,11 @@
 <exit_states>
 <exit_state name="YES" target="Element@1001704228:1674202491620"/>
 <exit_state name="NO" target="Element@1544356674:1676236427208"/>
-<exit_state name="CORPORATE" target="Element@1439086308:1671297214582"/>
-<exit_state name="MULTIUSER" target="Element@1439086308:1671297214582">
+<exit_state name="CORPORATE" target="Element@380056575:1682280066153"/>
+<exit_state name="MULTIUSER" target="Element@380056575:1682280066153">
 <bendpoint>
-<dim1 x="-101" y="71"/>
-<dim2 x="139" y="-13"/>
+<dim1 x="51" y="-142"/>
+<dim2 x="-136" y="-84"/>
 </bendpoint>
 </exit_state>
 </exit_states>
@@ -399,11 +318,6 @@
 <exit_state name="done" target="Element@2132182599:1673084103049"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1029751061:1682280096244" name="SET_FRAUD_IB" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="159" x="301" y="613">
-<exit_states>
-<exit_state name="done" target="Element@1439086308:1671297214582"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1053479225:1682279920532" name="SET_FRAUD_MB" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="159" x="-555" y="308">
 <exit_states>
 <exit_state name="done" target="Element@588114075:1676617298980"/>
@@ -412,11 +326,6 @@
 <element height="46" id="Element@1411441854:1682280240786" name="SET_FRAUD_UPI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="159" x="1335" y="476">
 <exit_states>
 <exit_state name="done" target="Element@139737848:1682280334414"/>
-</exit_states>
-</element>
-<element height="46" id="Element@85099952:1682280096244" name="SET_POT_FRAUD_IB" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="151" x="272" y="446">
-<exit_states>
-<exit_state name="done" target="Element@1986799594:1677674634706"/>
 </exit_states>
 </element>
 <element height="46" id="Element@116968035:1682279794050" name="SET_POT_FRAUD_MB" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="185" x="-592" y="251">
@@ -499,17 +408,6 @@
 <exit_states>
 <exit_state name="YES" target="Element@669420837:1671309179742"/>
 <exit_state name="NO" target="Element@1455183732:1671309179742"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1891418146:1680065600480" name="VALID_ACC_IB_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="183" x="713" y="327">
-<exit_states>
-<exit_state name="done" target="Element@346925795:1680065600480"/>
-</exit_states>
-</element>
-<element height="46" id="Element@346925795:1680065600480" name="VALID_ACC_IB_COUNTER_BC" type="Decision" width="203" x="715" y="402">
-<exit_states>
-<exit_state name="retry" target="Element@157112382:1676403605684"/>
-<exit_state name="max-attempt" target="Element@380056575:1682280066153"/>
 </exit_states>
 </element>
 <element height="46" id="Element@60466312:1680065692539" name="VALID_ACC_UPI_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="232" x="1275" y="245">
