@@ -5,7 +5,7 @@
 <exit_state name="next" target="Element@565308513:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1325092649:1684835381678" name="RETURN_TRANSFER" type="Subflow Return" width="178" x="-77" y="313"/>
+<element height="46" id="Element@1325092649:1684835381678" name="RETURN_TRANSFER" type="Subflow Return" width="178" x="-106" y="310"/>
 <element height="46" id="Element@512908078:1684835381678" name="CHECK_BLOCK_STATUS" type="Decision" width="173" x="358" y="310">
 <exit_states>
 <exit_state name="PERMANENT_BLOCK" target="Element@1047041270:1684835381678"/>
@@ -14,14 +14,9 @@
 <exit_state name="NO_FRAUD" target="Element@421655882:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1503794494:1684835381678" name="ACCOUNT_BLOCKED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="122" y="397">
+<element height="46" id="Element@1503794494:1684835381678" name="ACCOUNT_BLOCKED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="96" y="438">
 <exit_states>
 <exit_state name="done" target="Element@1325092649:1684835381678"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1709237035:1684835381678" name="UPDATE_NRI_SKILL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="173" x="599" y="412">
-<exit_states>
-<exit_state name="done" target="Element@928891115:1684835381678"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1551094187:1684835381678" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="324" y="207">
@@ -30,7 +25,7 @@
 <exit_state name="NO" target="Element@588774030:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@928891115:1684835381678" name="RETURN_VALID" type="Subflow Return" width="129" x="382" y="521"/>
+<element height="46" id="Element@928891115:1684835381678" name="RETURN_VALID" type="Subflow Return" width="129" x="377" y="523"/>
 <element height="46" id="Element@1911978681:1684835381678" name="VALID_ACC_NUM_COUNTER_BC" type="Decision" width="221" x="795" y="260">
 <exit_states>
 <exit_state name="retry" target="Element@519646850:1684835381678"/>
@@ -50,25 +45,25 @@
 <exit_state name="done" target="Element@565308513:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1047041270:1684835381678" name="SET_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="160" y="324">
+<element height="46" id="Element@1047041270:1684835381678" name="SET_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="110" y="319">
 <exit_states>
 <exit_state name="done" target="Element@1325092649:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@276321009:1684835381678" name="SET_POT_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="136" x="149" y="245">
+<element height="46" id="Element@276321009:1684835381678" name="SET_POT_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="136" x="128" y="217">
 <exit_states>
 <exit_state name="done" target="Element@1325092649:1684835381678"/>
 </exit_states>
 </element>
-<element height="46" id="Element@588774030:1684835381678" name="VALID_ACC_BM_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="191" x="590" y="330">
+<element height="46" id="Element@588774030:1684835381678" name="VALID_ACC_BM_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="191" x="598" y="348">
 <exit_states>
 <exit_state name="done" target="Element@1911978681:1684835381678"/>
 </exit_states>
 </element>
 <element height="46" id="Element@421655882:1684835381678" name="IS_NRI_ACCOUNT" type="Decision" width="166" x="360" y="404">
 <exit_states>
-<exit_state name="YES" target="Element@1709237035:1684835381678"/>
-<exit_state name="NO" target="Element@928891115:1684835381678"/>
+<exit_state name="YES" target="Element@928891115:1684835381678"/>
+<exit_state name="NO" target="Element@588774030:1684835381678"/>
 </exit_states>
 </element>
 </page>

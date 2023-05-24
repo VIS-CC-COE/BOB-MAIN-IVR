@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@724949183:1672364268914" name="ProductInfo" version="6.0.1">
-<element height="46" id="Element@216182669:1672364426448" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="9" y="270">
+<element height="46" id="Element@216182669:1672364426448" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="-6" y="283">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>

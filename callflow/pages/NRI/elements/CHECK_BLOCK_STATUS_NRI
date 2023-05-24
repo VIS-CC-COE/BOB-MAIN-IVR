@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision id="Element@1447877809:1682623767483" name="CHECK_BLOCK_STATUS_NRI" version="6.0.1">
-<config>
-<source type="Class">com.vis.bobmain.decision.CheckBlockStatus_BC</source>
-</config>
-</decision>

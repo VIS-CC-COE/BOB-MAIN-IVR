@@ -1,93 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@394221533:1673072639777" name="NRI" version="6.0.1">
-<element height="46" id="Element@1158624057:1682623767483" name="ACCOUNT_BLOCKED_NRI_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="205" x="139" y="545">
-<exit_states>
-<exit_state name="done" target="Element@1805253792:1679423500280"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1718171891:1673073641411" name="ACCOUNT_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="178" x="544" y="136">
-<exit_states>
-<exit_state name="done" target="Element@580115329:1673073696718"/>
-<exit_state name="max_nomatch" target="Element@589940847:1679555691111"/>
-<exit_state name="max_noinput" target="Element@589940847:1679555691111"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1805253792:1679423500280" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="174" y="338">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@1447877809:1682623767483" name="CHECK_BLOCK_STATUS_NRI" type="Decision" width="197" x="396" y="335">
-<exit_states>
-<exit_state name="PERMANENT_BLOCK" target="Element@148706724:1682623767483"/>
-<exit_state name="SOFT_BLOCK" target="Element@1158624057:1682623767483"/>
-<exit_state name="POTENTIAL_FRAUD" target="Element@1824498473:1682623767484"/>
-<exit_state name="NO_FRAUD" target="Element@549410208:1673073780084"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1898621812:1679556613105" name="CHK_RMN_PE" type="Page Connector" width="141" x="1043" y="565">
+<element height="46" id="Element@1898621812:1679556613105" name="CHK_RMN_PE" type="Page Connector" width="141" x="116" y="403">
 <page_connector target="Element@1998844450:1677480058007">CHK_RMN_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@1046807628:1673073780084" name="INCORRECT_NRI_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="242" x="590" y="513">
-<exit_states>
-<exit_state name="done" target="Element@873744218:1673073780084"/>
-</exit_states>
-</element>
-<element height="46" id="Element@549410208:1673073780084" name="INVALID_NRI_ACC_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="224" x="693" y="310">
-<exit_states>
-<exit_state name="done" target="Element@744357829:1673073780084"/>
-</exit_states>
-</element>
-<element height="46" id="Element@744357829:1673073780084" name="INVALID_NRO_ACC_COUNTER_BC" type="Decision" width="244" x="684" y="401">
-<exit_states>
-<exit_state name="retry" target="Element@1046807628:1673073780084"/>
-<exit_state name="max-attempt" target="Element@1291830432:1679555399799"/>
-</exit_states>
-</element>
-<element height="46" id="Element@580115329:1673073696718" name="IS_NRI_ACCOUNT" type="Decision" width="166" x="548" y="220">
-<exit_states>
-<exit_state name="YES" target="Element@116942657:1680035213723"/>
-<exit_state name="NO" target="Element@1447877809:1682623767483"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1291830432:1679555399799" name="IS_VALID_NRI_ACCOUNT_NUMBER_BC" type="Decision" width="278" x="917" y="467">
-<exit_states>
-<exit_state name="YES" target="Element@1898621812:1679556613105"/>
-<exit_state name="NO" target="Element@589940847:1679555691111">
-<bendpoint>
-<dim1 x="-71" y="70"/>
-<dim2 x="-105" y="-75"/>
-</bendpoint>
-</exit_state>
-<exit_state name="MAX_ATTEMPT" target="Element@589940847:1679555691111"/>
-</exit_states>
-</element>
-<element height="46" id="Element@589940847:1679555691111" name="NM_PE" type="Page Connector" width="88" x="1050" y="205">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
 <element height="46" id="Element@555059764:1673072639777" name="NRI_PE" type="Page Entry" width="88" x="588" y="47">
 <exit_states>
-<exit_state name="next" target="Element@1718171891:1673073641411"/>
+<exit_state name="next" target="Element@2144176938:1684835784762"/>
 </exit_states>
 </element>
-<element height="46" id="Element@873744218:1673073780084" name="NRI_PE" type="Page Connector" width="149" x="603" y="607">
-<page_connector target="Element@555059764:1673072639777">NRI_PE<config/>
+<element height="46" id="Element@2144176938:1684835784762" name="NRI_ACC_VALIDATION_SF" type="Subflow Call" width="185" x="551" y="144">
+<subflow_call subflow_name="nriAccountNumberValidation" target="Element@31:1684835908181">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@388171474:1684835936980"/>
+</exit_states>
+</element>
+<element height="46" id="Element@388171474:1684835936980" name="CHECK_NRI_ACC_SF_ACTION" type="Decision" width="206" x="538" y="240">
+<exit_states>
+<exit_state name="max-attempt" target="Element@747899920:1684851304936"/>
+<exit_state name="transfer" target="Element@168548146:1684851389439"/>
+<exit_state name="nri-acc" target="Element@1771469594:1684853175906"/>
+</exit_states>
+</element>
+<element height="46" id="Element@747899920:1684851304936" name="CHECK_VALID_SA_BC" type="Decision" width="163" x="210" y="275">
+<exit_states>
+<exit_state name="valid-savings-acc" target="Element@1898621812:1679556613105"/>
+<exit_state name="invalid-acc" target="Element@393042586:1684852220701"/>
+</exit_states>
+</element>
+<element height="46" id="Element@168548146:1684851389439" name="UPDATE_NRI_SKILL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="173" x="846" y="305">
+<exit_states>
+<exit_state name="done" target="Element@1044827524:1684852167250"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1044827524:1684852167250" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="851" y="373">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@148706724:1682623767483" name="SET_FRAUD_NRI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="142" x="76" y="441">
+<element height="46" id="Element@393042586:1684852220701" name="NM_PE" type="Page Connector" width="88" x="316" y="379">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1771469594:1684853175906" name="NRI_ACC_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="123" x="574" y="333">
 <exit_states>
-<exit_state name="done" target="Element@1805253792:1679423500280"/>
+<exit_state name="done" target="Element@385254113:1684853175906"/>
+<exit_state name="max_nomatch" target="Element@393042586:1684852220701"/>
+<exit_state name="max_noinput" target="Element@393042586:1684852220701"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1824498473:1682623767484" name="SET_POT_FRAUD_NRI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="160" x="466" y="432">
+<element height="46" id="Element@385254113:1684853175906" name="NRI_ACC_BC" type="Decision" width="149" x="558" y="413">
 <exit_states>
-<exit_state name="done" target="Element@549410208:1673073780084"/>
-</exit_states>
-</element>
-<element height="46" id="Element@116942657:1680035213723" name="UPDATE_NRI_SKILL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="173" x="184" y="238">
-<exit_states>
-<exit_state name="done" target="Element@1805253792:1679423500280"/>
+<exit_state name="1" target="Element@1898621812:1679556613105"/>
+<exit_state name="2" target="Element@1044827524:1684852167250"/>
 </exit_states>
 </element>
 </page>
