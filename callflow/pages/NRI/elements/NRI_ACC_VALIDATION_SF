@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2144176938:1684835784762" name="NRI_ACC_VALIDATION_SF" version="6.0.1">
+<subflow_call subflow_name="nriAccountNumberValidation" target="Element@31:1685041467918">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

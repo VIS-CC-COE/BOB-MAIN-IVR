@@ -10,7 +10,7 @@
 </exit_states>
 </element>
 <element height="46" id="Element@2144176938:1684835784762" name="NRI_ACC_VALIDATION_SF" type="Subflow Call" width="185" x="551" y="144">
-<subflow_call subflow_name="nriAccountNumberValidation" target="Element@31:1684835908181">
+<subflow_call subflow_name="nriAccountNumberValidation" target="Element@31:1685041467918">
 <config>
 <input_data>
 <data name="MAIN_FLOW_ACTION"/>
@@ -25,13 +25,13 @@
 <exit_states>
 <exit_state name="max-attempt" target="Element@747899920:1684851304936"/>
 <exit_state name="transfer" target="Element@168548146:1684851389439"/>
-<exit_state name="nri-acc" target="Element@1771469594:1684853175906"/>
+<exit_state name="valid" target="Element@1771469594:1684853175906"/>
 </exit_states>
 </element>
 <element height="46" id="Element@747899920:1684851304936" name="CHECK_VALID_SA_BC" type="Decision" width="163" x="210" y="275">
 <exit_states>
 <exit_state name="valid-savings-acc" target="Element@1898621812:1679556613105"/>
-<exit_state name="invalid-acc" target="Element@393042586:1684852220701"/>
+<exit_state name="invalid-sa" target="Element@1419891636:1685096775053"/>
 </exit_states>
 </element>
 <element height="46" id="Element@168548146:1684851389439" name="UPDATE_NRI_SKILL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="173" x="846" y="305">
@@ -43,15 +43,11 @@
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@393042586:1684852220701" name="NM_PE" type="Page Connector" width="88" x="316" y="379">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@1771469594:1684853175906" name="NRI_ACC_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="123" x="574" y="333">
 <exit_states>
 <exit_state name="done" target="Element@385254113:1684853175906"/>
-<exit_state name="max_nomatch" target="Element@393042586:1684852220701"/>
-<exit_state name="max_noinput" target="Element@393042586:1684852220701"/>
+<exit_state name="max_nomatch" target="Element@1419891636:1685096775053"/>
+<exit_state name="max_noinput" target="Element@1419891636:1685096775053"/>
 </exit_states>
 </element>
 <element height="46" id="Element@385254113:1684853175906" name="NRI_ACC_BC" type="Decision" width="149" x="558" y="413">
@@ -59,5 +55,9 @@
 <exit_state name="1" target="Element@1898621812:1679556613105"/>
 <exit_state name="2" target="Element@1044827524:1684852167250"/>
 </exit_states>
+</element>
+<element height="46" id="Element@1419891636:1685096775053" name="PRODUCT_INFO_PE" type="Page Connector" width="153" x="311" y="377">
+<page_connector target="Element@1830581359:1672364268914">PRODUCT_INFO_PE<config/>
+</page_connector>
 </element>
 </page>

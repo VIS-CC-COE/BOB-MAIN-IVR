@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@747899920:1684851304936" name="CHECK_VALID_SA_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CHECK_VALID_SA_BC" default_exit_state="invalid-sa">
+        <exit_state name="valid-savings-acc" conjugate="and">
+            <string operator="not_equal">
+                <data>
+                    <session name="S_CUSTOMER_ID" />
+                </data>
+                <constant_string value="NA" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>
