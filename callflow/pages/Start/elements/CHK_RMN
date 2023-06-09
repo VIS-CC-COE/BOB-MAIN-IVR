@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1836239268:1685360207893" name="CHK_RMN" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.host.crm.IsRMN</source>
+</config>
+</decision>

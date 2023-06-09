@@ -112,6 +112,7 @@ LoggerEvent.4=vxmlError
 LoggerEvent.5=warning
 LoggerEvent.6=xmlApiError]]></config_file>
 </logger>
+<logger class="com.audium.logger.application.debug.ApplicationDebugLogger" enforce_call_event_order="true" name="DebugLog"/>
 </loggers>
 </general_settings>
 <audio_settings>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <decision id="Element@821654145:1670996387491" name="IS_RMN" version="6.0.1">
 <config>
-<source type="Class">com.vis.bobmain.host.crm.IsRMN</source>
+<source type="Class">com.vis.bobmain.decision.ValidateRmnAndAni_BC</source>
 </config>
 </decision>
