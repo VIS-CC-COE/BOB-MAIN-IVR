@@ -88,7 +88,7 @@
 <exit_state name="NO" target="Element@286820195:1673789166389"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1796970820:1682671261891" name="GNANI_SUBDIALOGUE_TRANSFER" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="229" x="-190" y="229">
+<element height="46" id="Element@1796970820:1682671261891" name="GNANI_SUBDIALOGUE_TRANSFER" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="229" x="-202" y="203">
 <exit_states>
 <exit_state name="done"/>
 </exit_states>

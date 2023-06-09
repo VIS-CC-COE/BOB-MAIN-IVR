@@ -11,6 +11,7 @@
 </settings>
 <session_data>
 <data create_when="After" name="IS_HNI">YES</data>
+<data create_when="After" name="S_PREFERRED_LANGUAGE">HNI</data>
 </session_data>
 </config>
 </action_element>
