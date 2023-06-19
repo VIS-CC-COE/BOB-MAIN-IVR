@@ -16,6 +16,7 @@
 <exit_states>
 <exit_state name="YES" target="Element@45090691:1671263660317"/>
 <exit_state name="NO" target="Element@1402976323:1671263660317"/>
+<exit_state name="ERROR" target="Element@974270849:1686313937972"/>
 </exit_states>
 </element>
 <element height="46" id="Element@630325404:1671263660317" name="VALID_CARD_COUNTER_BC" type="Decision" width="195" x="579" y="435">
@@ -28,6 +29,7 @@
 <exit_states>
 <exit_state name="YES" target="Element@752810621:1681901836698"/>
 <exit_state name="NO" target="Element@134839168:1678772487703"/>
+<exit_state name="ERROR" target="Element@974270849:1686313937972"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1675975993:1671263660317" name="INCORRECT_CARD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="168" x="577" y="506">
@@ -133,4 +135,5 @@
 </exit_state>
 </exit_states>
 </element>
+<element height="46" id="Element@974270849:1686313937972" name="RETURN_ERROR_TRANSFER" type="Subflow Return" width="202" x="42" y="320"/>
 </page>
