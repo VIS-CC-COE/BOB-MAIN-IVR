@@ -24,7 +24,7 @@
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1063945130:1677848009961" name="BANKING_MENU_PE" type="Page Connector" width="158" x="-24" y="640">
+<element height="46" id="Element@1063945130:1677848009961" name="BANKING_MENU_PE" type="Page Connector" width="158" x="-15" y="633">
 <page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
 </page_connector>
 </element>
@@ -110,6 +110,7 @@
 <exit_states>
 <exit_state name="1" target="Element@369195407:1676361912178"/>
 <exit_state name="2" target="Element@1395954861:1680691308353"/>
+<exit_state name="3" target="Element@1063945130:1677848009961"/>
 </exit_states>
 </element>
 <element height="46" id="Element@958221238:1676389363109" name="CHQBOOK_ISSUE_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="202" x="375" y="452">
