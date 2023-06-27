@@ -209,13 +209,19 @@
 </element>
 <element height="46" id="Element@1681179602:1676395103096" name="CPPS_CONFIRM_BC" type="Decision" width="211" x="801" y="429">
 <exit_states>
-<exit_state name="1" target="Element@729762027:1676361711263"/>
+<exit_state name="1" target="Element@729762027:1676361711263">
+<bendpoint>
+<dim1 x="-11" y="58"/>
+<dim2 x="-106" y="-30"/>
+</bendpoint>
+</exit_state>
 <exit_state name="2" target="Element@1395954861:1680691308353">
 <bendpoint>
 <dim1 x="-34" y="54"/>
 <dim2 x="-129" y="-34"/>
 </bendpoint>
 </exit_state>
+<exit_state name="9" target="Element@729762027:1676361711263"/>
 </exit_states>
 </element>
 <element height="46" id="Element@167910869:1676395103096" name="CPPS_CONFIRM_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="216" x="795" y="354">

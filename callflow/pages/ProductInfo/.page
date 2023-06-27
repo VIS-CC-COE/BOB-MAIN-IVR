@@ -73,15 +73,11 @@
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
-<element height="48" id="Element@1277350454:1672364381301" name="NM_PE" type="Page Connector" width="165" x="897" y="75">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
-</page_connector>
-</element>
 <element height="48" id="Element@502541491:1673012964862" name="NM_PE" type="Page Connector" width="165" x="5" y="183">
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@896166825:1672364330800" name="PRODUCT_INFO_BC" type="Decision" width="155" x="465" y="173">
+<element height="46" id="Element@896166825:1672364330800" name="PRODUCT_INFO_BC" type="Decision" width="155" x="475" y="135">
 <exit_states>
 <exit_state name="1" target="Element@216182669:1672364426448"/>
 <exit_state name="2" target="Element@2065813187:1673012964862"/>
@@ -103,16 +99,16 @@
 <exit_state name="8" target="Element@582400537:1676384535497"/>
 </exit_states>
 </element>
-<element height="46" id="Element@20695355:1672364330800" name="PRODUCT_INFO_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="160" x="462" y="107">
+<element height="46" id="Element@20695355:1672364330800" name="PRODUCT_INFO_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="160" x="468" y="51">
 <exit_states>
 <exit_state name="done" target="Element@896166825:1672364330800"/>
-<exit_state name="max_nomatch" target="Element@1277350454:1672364381301"/>
+<exit_state name="max_nomatch" target="Element@1317573642:1672364381301"/>
 <exit_state name="max_noinput" target="Element@1317573642:1672364381301"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1830581359:1672364268914" name="PRODUCT_INFO_PE" type="Page Entry" width="153" x="466" y="39">
+<element height="46" id="Element@1830581359:1672364268914" name="PRODUCT_INFO_PE" type="Page Entry" width="153" x="469" y="-226">
 <exit_states>
-<exit_state name="next" target="Element@20695355:1672364330800"/>
+<exit_state name="next" target="Element@1901602268:1687752637972"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1541348841:1676626724032" name="PRODUCT_INFO_PE" type="Page Connector" width="158" x="-2" y="424">
@@ -144,8 +140,29 @@
 <element height="46" id="Element@1033636535:1673068831526" name="WEALTH_MGMT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="161" x="806" y="282">
 <exit_states>
 <exit_state name="done" target="Element@268949425:1673068831526"/>
-<exit_state name="max_nomatch" target="Element@1277350454:1672364381301"/>
+<exit_state name="max_nomatch" target="Element@1317573642:1672364381301"/>
 <exit_state name="max_noinput" target="Element@1317573642:1672364381301"/>
 </exit_states>
+</element>
+<element height="46" id="Element@1901602268:1687752637972" name="IS_UPSELL_OFFER_ELIGIBILE" type="Decision" width="195" x="447" y="-147">
+<exit_states>
+<exit_state name="YES" target="Element@506060941:1687752777931"/>
+<exit_state name="NO" target="Element@20695355:1672364330800"/>
+</exit_states>
+</element>
+<element height="46" id="Element@506060941:1687752777931" name="UPSELL_OFFER_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="152" x="170" y="-122">
+<exit_states>
+<exit_state name="done" target="Element@365820697:1687752847815"/>
+</exit_states>
+</element>
+<element height="46" id="Element@365820697:1687752847815" name="UPSELL_OFFER_BC" type="Decision" width="204" x="137" y="-54">
+<exit_states>
+<exit_state name="1" target="Element@1958499361:1687753007271"/>
+<exit_state name="2" target="Element@20695355:1672364330800"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1958499361:1687753007271" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="-5" y="33">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
 </element>
 </page>
