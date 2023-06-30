@@ -21,7 +21,7 @@
 <exit_state name="next" target="Element@388171474:1684835936980"/>
 </exit_states>
 </element>
-<element height="46" id="Element@388171474:1684835936980" name="CHECK_NRI_ACC_SF_ACTION" type="Decision" width="206" x="538" y="240">
+<element height="46" id="Element@388171474:1684835936980" name="CHECK_NRI_ACC_SUBFLOW_ACTION" type="Decision" width="247" x="538" y="240">
 <exit_states>
 <exit_state name="max-attempt" target="Element@747899920:1684851304936"/>
 <exit_state name="transfer" target="Element@168548146:1684851389439"/>
