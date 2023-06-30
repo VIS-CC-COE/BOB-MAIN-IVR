@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@365820697:1687752847815" name="UPSELL_OFFER_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.MenuDecisionBC</source>
+</config>
+</decision>
