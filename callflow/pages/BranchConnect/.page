@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1898545555:1689218720815" name="BranchConnect" version="6.0.1">
+<element height="46" id="Element@1693118652:1689218720815" name="BRANCH_CONNECT_PE" type="Page Entry" width="176" x="354" y="42">
+<exit_states>
+<exit_state name="next" target="Element@728247223:1689218759862"/>
+</exit_states>
+</element>
+<element height="46" id="Element@728247223:1689218759862" name="CAPTURE_DTMF_NUMBER" src="com.audium.server.voiceElement.number.MBasicNumber" type="Voice Element" width="188" x="352" y="130">
+<exit_states>
+<exit_state name="done" target="Element@538959146:1689219075764">
+<bendpoint>
+<dim1 x="-201" y="72"/>
+<dim2 x="-214" y="-60"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@538959146:1689219075764"/>
+<exit_state name="max_noinput" target="Element@538959146:1689219075764">
+<bendpoint>
+<dim1 x="179" y="69"/>
+<dim2 x="166" y="-63"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@538959146:1689219075764" name="WELCOME_PP" type="Page Connector" width="126" x="396" y="261">
+<page_connector target="Element@1911481000:1680946884809">WELCOME_PP<config/>
+</page_connector>
+</element>
+</page>

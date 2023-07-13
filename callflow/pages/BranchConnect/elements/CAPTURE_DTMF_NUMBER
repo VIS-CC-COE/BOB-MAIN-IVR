@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@728247223:1689218759862" name="CAPTURE_DTMF_NUMBER" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="Setting RMN as  ">{Data.Element.CAPTURE_DTMF_NUMBER.value}</data>
+</log>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="S_ANI">{Data.Element.CAPTURE_DTMF_NUMBER.value}</data>
+</session_data>
+</config>
+</voice_element>

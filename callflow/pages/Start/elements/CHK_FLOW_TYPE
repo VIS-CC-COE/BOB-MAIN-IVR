@@ -43,6 +43,14 @@
                 <call_data type="dnis" />
             </string>
         </exit_state>
+        <exit_state name="branch-connect" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="S_BRANCH_CONNECT_DNIS" />
+                </data>
+                <call_data type="dnis" />
+            </string>
+        </exit_state>
     </rule>
 </knowledge_base>]]></source>
 </config>

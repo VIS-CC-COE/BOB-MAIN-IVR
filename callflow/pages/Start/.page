@@ -13,6 +13,7 @@
 </exit_state>
 <exit_state name="from-gnani" target="Element@849999483:1680959987467"/>
 <exit_state name="new-call" target="Element@1737689817:1680947029303"/>
+<exit_state name="branch-connect" target="Element@2125363712:1689218889922"/>
 </exit_states>
 </element>
 <element height="46" id="Element@917975397:1679206367042" name="CREATE_TPIN_PE" type="Page Connector" width="138" x="95" y="215">
@@ -28,7 +29,7 @@
 <page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@849999483:1680959987467" name="GNANI_FLOW" type="Page Connector" width="124" x="403" y="307">
+<element height="46" id="Element@849999483:1680959987467" name="GNANI_FLOW" type="Page Connector" width="124" x="300" y="296">
 <page_connector target="Element@2108698319:1680958516348">GNANI_FLOW<config/>
 </page_connector>
 </element>
@@ -66,7 +67,7 @@
 <exit_state name="next" target="Element@1836239268:1685360207893"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1737689817:1680947029303" name="WELCOME_PP" type="Page Connector" width="126" x="162" y="322">
+<element height="46" id="Element@1737689817:1680947029303" name="WELCOME_PP" type="Page Connector" width="126" x="134" y="298">
 <page_connector target="Element@1911481000:1680946884809">WELCOME_PP<config/>
 </page_connector>
 </element>
@@ -117,6 +118,10 @@
 </element>
 <element height="46" id="Element@676050871:1685360423340" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="937" y="610">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2125363712:1689218889922" name="BRANCH_CONNECT_PE" type="Page Connector" width="176" x="461" y="294">
+<page_connector target="Element@1693118652:1689218720815">BRANCH_CONNECT_PE<config/>
 </page_connector>
 </element>
 </page>
