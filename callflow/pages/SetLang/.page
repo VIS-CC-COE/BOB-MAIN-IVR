@@ -182,7 +182,7 @@
 <element height="46" id="Element@1085788903:1682670986768" name="TRANSFER_TO_GNANI" type="Decision" width="166" x="47" y="105">
 <exit_states>
 <exit_state name="YES" target="Element@1961674604:1682671020204"/>
-<exit_state name="NO" target="Element@120323421:1673789107722"/>
+<exit_state name="NO" target="Element@1447890618:1689766999855"/>
 </exit_states>
 </element>
 <element height="46" id="Element@712007264:1675332407633" name="UPDATED_LANGUAGE_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="1002" y="617">
@@ -284,6 +284,12 @@
 <dim2 x="151" y="15"/>
 </bendpoint>
 </exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1447890618:1689766999855" name="IS_PREFERRED_LANG_AVAILABLE" type="Decision" width="222" x="55" y="171">
+<exit_states>
+<exit_state name="YES" target="Element@120323421:1673789107722"/>
+<exit_state name="NO" target="Element@765823229:1671018385154"/>
 </exit_states>
 </element>
 </page>
