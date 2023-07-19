@@ -17,7 +17,7 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="enter-account-number.wav"/>
+<static default_audio_path="true" uri="last-four-digit-acc.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -31,7 +31,7 @@
 <audio_item name="Copy of audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="enter-account-number.wav"/>
+<static default_audio_path="true" uri="last-four-digit-acc.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -45,7 +45,7 @@
 <audio_item name="Copy of audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="enter-account-number.wav"/>
+<static default_audio_path="true" uri="last-four-digit-acc.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -67,7 +67,7 @@
 <audio_item name="Copy of audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="enter-account-number.wav"/>
+<static default_audio_path="true" uri="last-four-digit-acc.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -81,7 +81,7 @@
 <audio_item name="Copy of audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="enter-account-number.wav"/>
+<static default_audio_path="true" uri="last-four-digit-acc.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
