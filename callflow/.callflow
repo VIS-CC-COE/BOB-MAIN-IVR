@@ -4,9 +4,9 @@
 <page closed="false" id="Page@933265632:1670996282938">SetLang</page>
 <page closed="false" id="Page@687125693:1671001691297">AccountBalance</page>
 <page closed="false" id="Page@1486553161:1671019634997">StdError</page>
+<page closed="false" id="Page@579366849:1671255365386">CardBlock</page>
 <page closed="false" id="Page@1332297820:1670845235065">Return</page>
 <page closed="false" id="Page@780066211:1671253383250">MainMenu</page>
-<page closed="false" id="Page@579366849:1671255365386">CardBlock</page>
 <page closed="false" id="Page@1812391450:1671256129921">DigitalChannelBlock</page>
 <page closed="false" id="Page@1950650833:1671256179203">ReportFraud</page>
 <page closed="false" id="Page@473321536:1672297822718">GenerateGreenPIN</page>
