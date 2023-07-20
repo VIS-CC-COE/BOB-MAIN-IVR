@@ -121,7 +121,7 @@
 <exit_state name="next" target="Element@154099553:1680706955844"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1815091634:1680707107427" name="EMAIL_STMT_FAIL_MN_PE" type="Page Connector" width="188" x="794" y="1217">
+<element height="46" id="Element@1815091634:1680707107427" name="EMAIL_STMT_FAIL_MN_PE" type="Page Connector" width="188" x="853" y="1165">
 <page_connector target="Element@1553003917:1680706991963">EMAIL_STMT_FAIL_MN_PE<config/>
 </page_connector>
 </element>
@@ -191,9 +191,15 @@
 </exit_state>
 <exit_state name="NO" target="Element@1006178466:1677668290218"/>
 <exit_state name="NO_RECORD" target="Element@1664330963:1677823764457"/>
+<exit_state name="STMT_SENT" target="Element@1134883945:1677668316939">
+<bendpoint>
+<dim1 x="129" y="94"/>
+<dim2 x="143" y="-50"/>
+</bendpoint>
+</exit_state>
 </exit_states>
 </element>
-<element height="46" id="Element@350084111:1677823554321" name="INVALID_DATE_ACC_STMT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="207" x="-34" y="453">
+<element height="46" id="Element@350084111:1677823554321" name="INVALID_DATE_ACC_STMT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="207" x="-42" y="456">
 <exit_states>
 <exit_state name="done" target="Element@387366841:1677823554321"/>
 </exit_states>
@@ -325,7 +331,7 @@
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1664330963:1677823764457" name="NO_RECORD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="137" x="795" y="1145">
+<element height="46" id="Element@1664330963:1677823764457" name="NO_RECORD_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="137" x="876" y="1103">
 <exit_states>
 <exit_state name="done" target="Element@1815091634:1680707107427"/>
 </exit_states>
