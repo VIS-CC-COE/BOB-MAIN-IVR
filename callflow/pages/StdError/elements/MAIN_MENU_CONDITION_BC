@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1601507819:1689678617811" name="MAIN_MENU_CONDITION_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.CheckLastAccessedDetails_BC</source>
+</config>
+</decision>
