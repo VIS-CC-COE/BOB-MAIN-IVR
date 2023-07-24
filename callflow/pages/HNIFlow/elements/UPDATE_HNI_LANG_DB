@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@431517488:1690136133328" name="UPDATE_HNI_LANG_DB" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.UpdatePreferredLanguageBC</source>
+</config>
+</decision>
