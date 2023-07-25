@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@75187468:1690036080636" name="IS_LANG_ENG_OR_HIN_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Copy_of_LANG_SELECTION_HNI_BC" default_exit_state="OTHERS">
+        <exit_state name="ENG" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREFERRED_LANGUAGE" />
+                </data>
+                <constant_string value="ENG" />
+            </string>
+        </exit_state>
+        <exit_state name="HIN" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREFERRED_LANGUAGE" />
+                </data>
+                <constant_string value="HIN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

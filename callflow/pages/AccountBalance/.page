@@ -8,8 +8,9 @@
 <element height="46" id="Element@246251411:1671253034403" name="ACC_BALANCE_BC" type="Decision" width="157" x="442" y="229">
 <exit_states>
 <exit_state name="star" target="Element@1853227768:1674111859093"/>
-<exit_state name="1" target="Element@811209048:1672321498778"/>
-<exit_state name="2" target="Element@263415042:1676036823416"/>
+<exit_state name="1" target="Element@1741709599:1689665146725"/>
+<exit_state name="8" target="Element@811209048:1672321498778"/>
+<exit_state name="2" target="Element@478212233:1689821351913"/>
 </exit_states>
 </element>
 <element height="46" id="Element@406827058:1674104940579" name="ACC_BALANCE_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="156" x="439" y="159">
@@ -30,10 +31,6 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="46" id="Element@263415042:1676036823416" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="451" y="300">
-<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@811209048:1672321498778" name="MAIN_MENU_PE" type="Page Connector" width="138" x="208" y="236">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
@@ -42,5 +39,13 @@
 <exit_states>
 <exit_state name="done" target="Element@406827058:1674104940579"/>
 </exit_states>
+</element>
+<element height="46" id="Element@1741709599:1689665146725" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="306" y="322">
+<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@478212233:1689821351913" name="SWITCH_ACCOUNT_TYPE_PE" type="Page Connector" width="202" x="570" y="331">
+<page_connector target="Element@1934287156:1689819961952">SWITCH_ACCOUNT_TYPE_PE<config/>
+</page_connector>
 </element>
 </page>

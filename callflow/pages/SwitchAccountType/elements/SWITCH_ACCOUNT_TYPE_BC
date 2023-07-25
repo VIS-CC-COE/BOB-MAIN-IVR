@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision id="Element@270970891:1685360059025" name="HNI_MENU_BC" version="6.0.1">
+<decision id="Element@1077163873:1689820397947" name="SWITCH_ACCOUNT_TYPE_BC" version="6.0.1">
 <config>
 <source type="Class">com.vis.bobmain.decision.MenuDecisionBC</source>
 </config>

@@ -11,7 +11,7 @@
 <exit_state name="retry" target="Element@231546000:1680429971599"/>
 </exit_states>
 </element>
-<element height="46" id="Element@343859559:1671020996397" name="DISCONNECT_PE" type="Page Connector" width="140" x="239" y="279">
+<element height="46" id="Element@343859559:1671020996397" name="DISCONNECT_PE" type="Page Connector" width="140" x="94" y="224">
 <page_connector target="Element@856780857:1670845374812">DISCONNECT_PE<config/>
 </page_connector>
 </element>
@@ -44,17 +44,17 @@
 <page_connector target="Element@1888912657:1680436604034">INTEREST_AMOUNT_PP<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1272216757:1671020897774" name="MAX_ATTEMPTS_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="155" x="237" y="185">
+<element height="46" id="Element@1272216757:1671020897774" name="MAX_ATTEMPTS_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="155" x="84" y="152">
 <exit_states>
 <exit_state name="done" target="Element@343859559:1671020996397"/>
 </exit_states>
 </element>
-<element height="46" id="Element@2087467842:1671020844510" name="NI_PE" type="Page Entry" width="170" x="77" y="32">
+<element height="46" id="Element@2087467842:1671020844510" name="NI_PE" type="Page Entry" width="170" x="-12" y="27">
 <exit_states>
 <exit_state name="next" target="Element@1272216757:1671020897774"/>
 </exit_states>
 </element>
-<element height="46" id="Element@455101586:1671019634997" name="NM_PE" type="Page Entry" width="165" x="309" y="30">
+<element height="46" id="Element@455101586:1671019634997" name="NM_PE" type="Page Entry" width="165" x="178" y="38">
 <exit_states>
 <exit_state name="next" target="Element@1272216757:1671020897774"/>
 </exit_states>

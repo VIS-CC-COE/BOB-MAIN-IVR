@@ -188,9 +188,8 @@
 </element>
 <element height="46" id="Element@781011031:1675946968299" name="IS_VALID_ACCOUNT_NUMBER_CB_BC" type="Decision" width="249" x="368" y="66">
 <exit_states>
-<exit_state name="YES" target="Element@1575327777:1678101180289"/>
-<exit_state name="NO" target="Element@1230307748:1680065258469"/>
-<exit_state name="MAX_ATTEMPT" target="Element@630921936:1679666497662"/>
+<exit_state name="VALID" target="Element@1575327777:1678101180289"/>
+<exit_state name="INVALID" target="Element@1230307748:1680065258469"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1349571916:1676235998783" name="MAIN_MENU_PE" type="Page Connector" width="138" x="-108" y="1260">

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@327650384:1675946968300" name="ENTER_ACCOUNT_NUMBER_CB_PP" version="6.0.1">
+<voice_element id="Element@1690372024:1689832871263" name="ENTER_ACCOUNT_NUMBER_PP" version="6.0.1">
 <config>
 <settings>
 <setting name="inputmode">dtmf</setting>
-<setting name="noinput_timeout">{Data.Session.S_NOINPUT_TIMEOUT}</setting>
+<setting name="noinput_timeout">10s</setting>
 <setting name="max_noinput_count">{Data.Session.S_MAX_NO_INPUT}</setting>
-<setting name="max_nomatch_count">{Data.Session.S_MAX_NO_MATCH}</setting>
-<setting name="min_digit">14</setting>
-<setting name="max_digit">14</setting>
+<setting name="max_nomatch_count">{Data.Session.S_MAX_NO_INPUT}</setting>
+<setting name="min_digit">4</setting>
+<setting name="max_digit">4</setting>
 <setting name="modal">false</setting>
 <setting name="secure_logging">true</setting>
 <setting name="dtmf_overlay">false</setting>
 </settings>
+<vxml_properties>
+<data name="interdigittimeout">10s</data>
+</vxml_properties>
 <audio>
 <audio_group barge_in="true" count="1" name="initial_audio_group">
 <audio_item name="audio item 1" type="static">
@@ -89,14 +92,13 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri="{Data.Session.S_NO_INPUT_AUDIO_2}.wav"/>
+<static default_audio_path="true" uri="{Data.Session.S_NO_MATCH_AUDIO_2}.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
 </audio>
 <session_data>
-<data create_when="After" name="S_ACCOUNT_NUMBER">{Data.Element.ENTER_ACCOUNT_NUMBER_CB_PP.value}</data>
-<data create_when="After" name="S_MENU_PATH_NEW">{Data.Session.S_MENU_PATH_NEW}|ENTER_ACC_NO</data>
+<data create_when="After" name="S_ACCOUNT_NUMBER_L4D">{Data.Element.ENTER_ACCOUNT_NUMBER_PP.value}</data>
 </session_data>
 </config>
 </voice_element>

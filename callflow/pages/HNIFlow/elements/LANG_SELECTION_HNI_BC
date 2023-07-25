@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@644048257:1690035932548" name="LANG_SELECTION_HNI_BC" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.MenuDecisionBC</source>
+</config>
+</decision>

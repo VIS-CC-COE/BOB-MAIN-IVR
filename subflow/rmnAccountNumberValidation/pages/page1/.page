@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@973266723:1689832858770" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1689832858770" name="rmnAccountNumberValidation" type="Subflow Start" width="213" x="392" y="28">
+<exit_states>
+<exit_state name="next" target="Element@1690372024:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1540972299:1689832871263" name="SET_POT_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="136" x="182" y="218">
+<exit_states>
+<exit_state name="done" target="Element@1956559683:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@460438354:1689832871263" name="VALID_ACC_NUM_COUNTER_BC" type="Decision" width="221" x="854" y="259">
+<exit_states>
+<exit_state name="retry" target="Element@981940775:1689832871263"/>
+<exit_state name="max-attempt" target="Element@1970355500:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@894448137:1689832871263" name="ACCOUNT_BLOCKED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="163" y="417">
+<exit_states>
+<exit_state name="done" target="Element@1956559683:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1970355500:1689832871263" name="RETURN_MAX_NM" type="Subflow Return" width="149" x="775" y="94"/>
+<element height="46" id="Element@1729457485:1689832871263" name="CHECK_BLOCK_STATUS" type="Decision" width="173" x="417" y="309">
+<exit_states>
+<exit_state name="PERMANENT_BLOCK" target="Element@1949619298:1689832871263"/>
+<exit_state name="SOFT_BLOCK" target="Element@894448137:1689832871263"/>
+<exit_state name="POTENTIAL_FRAUD" target="Element@1540972299:1689832871263"/>
+<exit_state name="NO_FRAUD" target="Element@13355629:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13355629:1689832871263" name="RETURN_VALID" type="Subflow Return" width="129" x="435" y="415"/>
+<element height="46" id="Element@2002882241:1689832871263" name="VALID_ACC_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="191" x="649" y="329">
+<exit_states>
+<exit_state name="done" target="Element@460438354:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1956559683:1689832871263" name="RETURN_TRANSFER" type="Subflow Return" width="178" x="-52" y="312"/>
+<element height="46" id="Element@1949619298:1689832871263" name="SET_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="189" y="304">
+<exit_states>
+<exit_state name="done" target="Element@1956559683:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1690372024:1689832871263" name="ENTER_ACCOUNT_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="217" x="386" y="104">
+<exit_states>
+<exit_state name="done" target="Element@1312601572:1689832871263"/>
+<exit_state name="max_nomatch" target="Element@1970355500:1689832871263"/>
+<exit_state name="max_noinput" target="Element@1970355500:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@981940775:1689832871263" name="INCORRECT_ACC_NUM_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="194" x="630" y="161">
+<exit_states>
+<exit_state name="done" target="Element@1690372024:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1312601572:1689832871263" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="389" y="189">
+<exit_states>
+<exit_state name="VALID" target="Element@1729457485:1689832871263"/>
+<exit_state name="INVALID" target="Element@2002882241:1689832871263"/>
+</exit_states>
+</element>
+</page>

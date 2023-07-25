@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@42631270:1685360059024" name="HNI_MENU_MN" version="6.0.1">
+<voice_element id="Element@1443673760:1690035932548" name="LANG_SELECTION_HNI_MN" version="6.0.1">
 <config>
 <dynamic base_config="true" type="Class">com.vis.bobmain.menu.BobSpecificMenu</dynamic>
 <settings>
