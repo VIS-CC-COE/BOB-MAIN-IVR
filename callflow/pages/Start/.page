@@ -61,11 +61,7 @@
 <exit_state name="done" target="Element@76471942:1677823878730"/>
 </exit_states>
 </element>
-<<<<<<< HEAD
 <element height="46" id="Element@1911481000:1680946884809" name="WELCOME_PP" type="Page Entry" width="126" x="-123" y="564">
-=======
-<element height="46" id="Element@1911481000:1680946884809" name="WELCOME_PP" type="Page Entry" width="126" x="-399" y="450">
->>>>>>> refs/heads/ivr_enhancement
 <exit_states>
 <exit_state name="next" target="Element@1836239268:1685360207893"/>
 </exit_states>
@@ -80,9 +76,9 @@
 <exit_state name="NO" target="Element@1774655141:1670991936598"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1836239268:1685360207893" name="CHK_RMN" type="Decision" width="151" x="-223" y="453">
+<element height="46" id="Element@1836239268:1685360207893" name="CHK_RMN" type="Decision" width="151" x="-135" y="448">
 <exit_states>
-<exit_state name="YES" target="Element@1432888663:1689563767014"/>
+<exit_state name="YES" target="Element@1302287327:1685352698033"/>
 <exit_state name="NO" target="Element@1774655141:1670991936598">
 <bendpoint>
 <dim1 x="173" y="81"/>
@@ -94,16 +90,5 @@
 <element height="46" id="Element@398275400:1690035729520" name="HNI_FLOW" type="Page Connector" width="108" x="384" y="435">
 <page_connector target="Element@1876888458:1690035673087">HNI_FLOW<config/>
 </page_connector>
-</element>
-<element height="46" id="Element@1432888663:1689563767014" name="GET_ALL_ACC_DETAILS" type="Decision" width="171" x="-41" y="376">
-<exit_states>
-<exit_state name="YES" target="Element@1302287327:1685352698033"/>
-<exit_state name="NO" target="Element@1302287327:1685352698033">
-<bendpoint>
-<dim1 x="164" y="4"/>
-<dim2 x="-43" y="-63"/>
-</bendpoint>
-</exit_state>
-</exit_states>
 </element>
 </page>

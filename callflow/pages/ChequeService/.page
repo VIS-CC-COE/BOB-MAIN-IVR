@@ -53,14 +53,14 @@
 <exit_state name="8" target="Element@765206415:1676385564819"/>
 </exit_states>
 </element>
-<element height="46" id="Element@715095183:1673606117010" name="CHEQUE_SERVICES_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="175" x="398" y="-18">
+<element height="46" id="Element@715095183:1673606117010" name="CHEQUE_SERVICES_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="175" x="401" y="62">
 <exit_states>
 <exit_state name="done" target="Element@1846690874:1673606117010"/>
 <exit_state name="max_nomatch" target="Element@1796516928:1673606117009"/>
 <exit_state name="max_noinput" target="Element@87457378:1673606117010"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1886251769:1673077729774" name="CHEQUE_SERVICES_PE" type="Page Entry" width="168" x="400" y="-122">
+<element height="46" id="Element@1886251769:1673077729774" name="CHEQUE_SERVICES_PE" type="Page Entry" width="168" x="395" y="3">
 <exit_states>
 <exit_state name="next" target="Element@715095183:1673606117010"/>
 </exit_states>
