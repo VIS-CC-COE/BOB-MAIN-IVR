@@ -9,7 +9,7 @@
 <dim2 x="-227" y="-133"/>
 </bendpoint>
 </exit_state>
-<exit_state name="3" target="Element@868965145:1673607267197"/>
+<exit_state name="3" target="Element@294493451:1690429233872"/>
 <exit_state name="4" target="Element@1243164372:1673610240617"/>
 <exit_state name="5" target="Element@100802969:1673077614033"/>
 <exit_state name="7" target="Element@696784162:1676378982003"/>
@@ -28,7 +28,7 @@
 <exit_state name="next" target="Element@1211914368:1672924596101"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1243164372:1673610240617" name="ACCOUNT_STMT_PE" type="Page Connector" width="158" x="547" y="302">
+<element height="46" id="Element@1243164372:1673610240617" name="ACCOUNT_STMT_PE" type="Page Connector" width="158" x="843" y="381">
 <page_connector target="Element@967780353:1673077791469">ACCOUNT_STMT_PE<config/>
 </page_connector>
 </element>
@@ -59,7 +59,7 @@
 <page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@868965145:1673607267197" name="CHEQUE_SERVICES_PE" type="Page Connector" width="168" x="344" y="286">
+<element height="46" id="Element@868965145:1673607267197" name="CHEQUE_SERVICES_PE" type="Page Connector" width="168" x="604" y="396">
 <page_connector target="Element@1886251769:1673077729774">CHEQUE_SERVICES_PE<config/>
 </page_connector>
 </element>
@@ -97,7 +97,7 @@
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@100802969:1673077614033" name="OTHER_SERVICES_PE" type="Page Connector" width="158" x="729" y="289">
+<element height="46" id="Element@100802969:1673077614033" name="OTHER_SERVICES_PE" type="Page Connector" width="158" x="904" y="274">
 <page_connector target="Element@292254279:1672298585383">OTHER_SERVICES_PE<config/>
 </page_connector>
 </element>
@@ -108,6 +108,21 @@
 </element>
 <element height="46" id="Element@1231354179:1676471449100" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="118" y="375">
 <page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@294493451:1690429233872" name="CHEQUE_BOOK_ELIGIBLE_BC" type="Decision" width="203" x="399" y="311">
+<exit_states>
+<exit_state name="eligible" target="Element@868965145:1673607267197"/>
+<exit_state name="not-eligible" target="Element@1321117494:1690429501921"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1321117494:1690429501921" name="CHEQUE_BOOK_NOT_ELIGIBLE_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="230" x="311" y="397">
+<exit_states>
+<exit_state name="done" target="Element@1015147974:1690430209813"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1015147974:1690430209813" name="CHK_RMN_PE" type="Page Connector" width="141" x="398" y="483">
+<page_connector target="Element@1998844450:1677480058007">CHK_RMN_PE<config/>
 </page_connector>
 </element>
 </page>

@@ -72,36 +72,8 @@
 </element>
 <element height="46" id="Element@1302287327:1685352698033" name="IS_HNI_CALLER" type="Decision" width="131" x="186" y="443">
 <exit_states>
-<exit_state name="YES" target="Element@754531347:1685352742097"/>
+<exit_state name="YES" target="Element@499698265:1690279154869"/>
 <exit_state name="NO" target="Element@1774655141:1670991936598"/>
-</exit_states>
-</element>
-<element height="46" id="Element@754531347:1685352742097" name="WELCOME_HNI_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="175" x="386" y="387">
-<exit_states>
-<exit_state name="done" target="Element@42631270:1685360059024"/>
-</exit_states>
-</element>
-<element height="46" id="Element@270970891:1685360059025" name="HNI_MENU_BC" type="Decision" width="198" x="836" y="378">
-<exit_states>
-<exit_state name="1" target="Element@76471942:1677823878730"/>
-<exit_state name="2" target="Element@998049072:1685360159797"/>
-</exit_states>
-</element>
-<element height="46" id="Element@42631270:1685360059024" name="HNI_MENU_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="135" x="642" y="383">
-<exit_states>
-<exit_state name="done" target="Element@270970891:1685360059025"/>
-<exit_state name="max_nomatch" target="Element@76471942:1677823878730"/>
-<exit_state name="max_noinput" target="Element@76471942:1677823878730">
-<bendpoint>
-<dim1 x="-60" y="74"/>
-<dim2 x="-76" y="-61"/>
-</bendpoint>
-</exit_state>
-</exit_states>
-</element>
-<element height="46" id="Element@998049072:1685360159797" name="SET_HNI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="118" x="960" y="520">
-<exit_states>
-<exit_state name="done" target="Element@676050871:1685360423340"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1836239268:1685360207893" name="CHK_RMN" type="Decision" width="151" x="-223" y="453">
@@ -115,10 +87,6 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="46" id="Element@676050871:1685360423340" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="937" y="610">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@1432888663:1689563767014" name="GET_ALL_ACC_DETAILS" type="Decision" width="171" x="-41" y="376">
 <exit_states>
 <exit_state name="YES" target="Element@1302287327:1685352698033"/>
@@ -129,5 +97,9 @@
 </bendpoint>
 </exit_state>
 </exit_states>
+</element>
+<element height="46" id="Element@499698265:1690279154869" name="HNI_FLOW" type="Page Connector" width="108" x="646" y="394">
+<page_connector target="Element@1412888459:1690279021567">HNI_FLOW<config/>
+</page_connector>
 </element>
 </page>

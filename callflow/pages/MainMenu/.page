@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@780066211:1671253383250" name="MainMenu" version="6.0.1">
-<element height="46" id="Element@1417067453:1671680897257" name="ACCOUNT_BLOCKED_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="181" x="655" y="489">
-<exit_states>
-<exit_state name="done" target="Element@966390928:1676514995377"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1111979924:1672293988107" name="ACCOUNT_MENU_NON_REG_BC" type="Decision" width="223" x="482" y="794">
 <exit_states>
 <exit_state name="1" target="Element@1705193750:1672297650997"/>
@@ -80,10 +75,6 @@
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@966390928:1676514995377" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="832" y="568">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@1366557572:1680334379353" name="AGENT_TRANSFER_PE" type="Page Connector" width="178" x="29" y="484">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
@@ -119,15 +110,7 @@
 <page_connector target="Element@642409129:1671255365386">CARD_BLOCK_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@904067302:1677610418892" name="CHECK_BLOCK_STATUS" type="Decision" width="173" x="374" y="409">
-<exit_states>
-<exit_state name="PERMANENT_BLOCK" target="Element@1858604636:1678774868098"/>
-<exit_state name="SOFT_BLOCK" target="Element@1417067453:1671680897257"/>
-<exit_state name="POTENTIAL_FRAUD" target="Element@1057696603:1678101074939"/>
-<exit_state name="NO_FRAUD" target="Element@274816456:1672293699415"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1998844450:1677480058007" name="CHK_RMN_PE" type="Page Entry" width="124" x="211" y="594">
+<element height="46" id="Element@1998844450:1677480058007" name="CHK_RMN_PE" type="Page Entry" width="124" x="197" y="264">
 <exit_states>
 <exit_state name="next" target="Element@274816456:1672293699415"/>
 </exit_states>
@@ -143,13 +126,6 @@
 <element height="46" id="Element@177376826:1672298667904" name="DIGITAL_CHANNEL_PE" type="Page Connector" width="169" x="409" y="1252">
 <page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
 </page_connector>
-</element>
-<element height="46" id="Element@284877977:1675747832240" name="ENTER_ACCOUNT_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="217" x="346" y="255">
-<exit_states>
-<exit_state name="done" target="Element@493569679:1675751193057"/>
-<exit_state name="max_nomatch" target="Element@1714380152:1680414892962"/>
-<exit_state name="max_noinput" target="Element@1714380152:1680414892962"/>
-</exit_states>
 </element>
 <element height="46" id="Element@262479150:1672297918680" name="GENERATE_GREEN_PIN_PE" type="Page Connector" width="188" x="40" y="922">
 <page_connector target="Element@1903868590:1672297822718">GENERATE_GREEN_PIN_PE<config/>
@@ -187,28 +163,16 @@
 <exit_state name="max_noinput" target="Element@1366557572:1680334379353"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1739725835:1675751300175" name="INCORRECT_ACCOUNT_BM_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="242" x="691" y="299">
+<element height="46" id="Element@274816456:1672293699415" name="IS_RMN_CALLER" type="Decision" width="180" x="371" y="289">
 <exit_states>
-<exit_state name="done" target="Element@284877977:1675747832240"/>
-</exit_states>
-</element>
-<element height="46" id="Element@274816456:1672293699415" name="IS_RMN_CALLER" type="Decision" width="180" x="367" y="500">
-<exit_states>
-<exit_state name="YES" target="Element@873299325:1672293919916"/>
-<exit_state name="NO" target="Element@584678854:1672293988107"/>
-</exit_states>
-</element>
-<element height="46" id="Element@493569679:1675751193057" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="343" y="332">
-<exit_states>
-<exit_state name="YES" target="Element@904067302:1677610418892"/>
-<exit_state name="NO" target="Element@1193002181:1680064891447"/>
-<exit_state name="MAX_ATTEMPT" target="Element@102196634:1680415063830"/>
+<exit_state name="YES" target="Element@1783923110:1690280625338"/>
+<exit_state name="NO" target="Element@1952406080:1690280768549"/>
 </exit_states>
 </element>
 <element height="46" id="Element@2001325463:1671253769229" name="MAIN_MENU_BC" type="Decision" width="140" x="385" y="177">
 <exit_states>
 <exit_state name="1" target="Element@1712936312:1671255437838"/>
-<exit_state name="2" target="Element@284877977:1675747832240"/>
+<exit_state name="2" target="Element@274816456:1672293699415"/>
 <exit_state name="3" target="Element@2059639789:1672368004239"/>
 <exit_state name="4" target="Element@791388509:1673701265126"/>
 </exit_states>
@@ -265,14 +229,6 @@
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
-<element height="48" id="Element@1714380152:1680414892962" name="NM_PE" type="Page Connector" width="120" x="975" y="254">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
-</page_connector>
-</element>
-<element height="48" id="Element@102196634:1680415063830" name="NM_PE" type="Page Connector" width="94" x="165" y="322">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@791388509:1673701265126" name="NRI_PE" type="Page Connector" width="158" x="608" y="140">
 <page_connector target="Element@555059764:1673072639777">NRI_PE<config/>
 </page_connector>
@@ -289,29 +245,62 @@
 <page_connector target="Element@1770944876:1671256179203">REPORT_FRAUD_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1858604636:1678774868098" name="SET_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="603" y="567">
-<exit_states>
-<exit_state name="done" target="Element@966390928:1676514995377"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1057696603:1678101074939" name="SET_POT_FRAUD" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="136" x="213" y="466">
-<exit_states>
-<exit_state name="done" target="Element@274816456:1672293699415"/>
-</exit_states>
-</element>
 <element height="46" id="Element@768084091:1672298627457" name="SWITCH_ACCOUNT_PE" type="Page Connector" width="171" x="-162" y="1174">
 <page_connector target="Element@720383890:1672298490327">SWITCH_ACCOUNT_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1193002181:1680064891447" name="VALID_ACC_BM_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="191" x="714" y="426">
+<element height="46" id="Element@1783923110:1690280625338" name="RMN_ACCOUNT_VALIDATION_MAIN_MENU_SF" type="Subflow Call" width="300" x="247" y="374">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
 <exit_states>
-<exit_state name="done" target="Element@960194692:1680064891447"/>
+<exit_state name="next" target="Element@1363451489:1690433004532"/>
 </exit_states>
 </element>
-<element height="46" id="Element@960194692:1680064891447" name="VALID_ACC_MB_COUNTER_BC" type="Decision" width="211" x="707" y="363">
+<element height="46" id="Element@155758620:1690280625338" name="ACCOUNT_VALIDATION_MAIN_MENU_SUBFLOW_ACTION" type="Decision" width="357" x="201" y="534">
 <exit_states>
-<exit_state name="retry" target="Element@1739725835:1675751300175"/>
-<exit_state name="max-attempt" target="Element@1714380152:1680414892962"/>
+<exit_state name="max-no-input" target="Element@628817604:1672294059027"/>
+<exit_state name="max-no-match" target="Element@628817604:1672294059027"/>
+<exit_state name="valid" target="Element@873299325:1672293919916"/>
+<exit_state name="transfer" target="Element@136805865:1690280685031"/>
 </exit_states>
+</element>
+<element height="46" id="Element@136805865:1690280685031" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="903" y="633">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1952406080:1690280768549" name="NRMN_ACC_VALIDATION_MANIN_MENU_SF" type="Subflow Call" width="286" x="722" y="306">
+<subflow_call subflow_name="accountNumberValidation" target="Element@31:1690280774369">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2076246791:1690280831098"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2076246791:1690280831098" name="NRMN_MAIN_MENU_CHECK_SUBFLOW_ACTION" type="Decision" width="321" x="699" y="404">
+<exit_states>
+<exit_state name="max-no-input" target="Element@628817604:1672294059027"/>
+<exit_state name="max-no-match" target="Element@628817604:1672294059027"/>
+<exit_state name="valid" target="Element@584678854:1672293988107"/>
+<exit_state name="transfer" target="Element@136805865:1690280685031"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1363451489:1690433004532" name="IS_AUTHENTICATED_BC" type="Decision" width="174" x="333" y="450">
+<exit_states>
+<exit_state name="already-validated" target="Element@184140062:1690433100905"/>
+<exit_state name="not-validated" target="Element@155758620:1690280625338"/>
+</exit_states>
+</element>
+<element height="46" id="Element@184140062:1690433100905" name="BANKING_MENU_PE" type="Page Connector" width="158" x="676" y="542">
+<page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
+</page_connector>
 </element>
 </page>

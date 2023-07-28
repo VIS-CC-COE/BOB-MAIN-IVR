@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@687201385:1690279018157" name="HNIFlow" version="6.0.1">
+<element height="46" id="Element@1393947372:1690279021566" name="LANG_SELECTION_HNI_BC" type="Decision" width="198" x="644" y="239">
+<exit_states>
+<exit_state name="1" target="Element@1751491167:1690279021567">
+<bendpoint>
+<dim1 x="-71" y="41"/>
+<dim2 x="-75" y="-43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@1751491167:1690279021567">
+<bendpoint>
+<dim1 x="95" y="44"/>
+<dim2 x="91" y="-40"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1597359897:1690279021566" name="WELCOME_HNI_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="226" y="359">
+<exit_states>
+<exit_state name="done" target="Element@1783767961:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@68302728:1690279021567" name="HNI_MENU_BC" type="Decision" width="198" x="451" y="560">
+<exit_states>
+<exit_state name="1" target="Element@1970152732:1690279021567"/>
+<exit_state name="2" target="Element@982573055:1690279021567"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2031942350:1690279021567" name="Copy_of_SET_HNI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="143" x="439" y="-20">
+<exit_states>
+<exit_state name="done" target="Element@2133298462:1690279021567"/>
+</exit_states>
+</element>
+<element height="46" id="Element@64589083:1690279021567" name="IS_LANG_ENG_OR_HIN_BC" type="Decision" width="190" x="108" y="155">
+<exit_states>
+<exit_state name="ENG" target="Element@1597359897:1690279021566">
+<bendpoint>
+<dim1 x="36" y="50"/>
+<dim2 x="33" y="-49"/>
+</bendpoint>
+</exit_state>
+<exit_state name="HIN" target="Element@1597359897:1690279021566">
+<bendpoint>
+<dim1 x="-92" y="50"/>
+<dim2 x="-95" y="-49"/>
+</bendpoint>
+</exit_state>
+<exit_state name="OTHERS" target="Element@452512005:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1412888459:1690279021567" name="HNI_FLOW" type="Page Entry" width="108" x="440" y="-115">
+<exit_states>
+<exit_state name="next" target="Element@2031942350:1690279021567"/>
+</exit_states>
+</element>
+<element height="46" id="Element@452512005:1690279021566" name="LANG_SELECTION_HNI_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="196" x="639" y="151">
+<exit_states>
+<exit_state name="done" target="Element@1393947372:1690279021566"/>
+<exit_state name="max_nomatch" target="Element@1783767961:1690279021566"/>
+<exit_state name="max_noinput" target="Element@1783767961:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@982573055:1690279021567" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="718" y="564">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1783767961:1690279021566" name="HNI_MENU_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="184" x="413" y="466">
+<exit_states>
+<exit_state name="done" target="Element@68302728:1690279021567"/>
+<exit_state name="max_nomatch" target="Element@1970152732:1690279021567"/>
+<exit_state name="max_noinput" target="Element@1970152732:1690279021567"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2018091873:1690279021566" name="Copy_of_WELCOME_HNI_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="250" x="632" y="68">
+<exit_states>
+<exit_state name="done" target="Element@452512005:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1822895122:1690279021567" name="UPDATE_HNI_LANG_DB" type="Decision" width="174" x="663" y="441">
+<exit_states>
+<exit_state name="YES" target="Element@1783767961:1690279021566"/>
+<exit_state name="NO" target="Element@1783767961:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1751491167:1690279021567" name="SET_HNI_LANG" type="Action" width="130" x="691" y="348">
+<exit_states>
+<exit_state name="done" target="Element@1822895122:1690279021567"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2133298462:1690279021567" name="GET_PREFERRED_LANG" type="Decision" width="171" x="416" y="67">
+<exit_states>
+<exit_state name="YES" target="Element@64589083:1690279021567"/>
+<exit_state name="NO" target="Element@2018091873:1690279021566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1970152732:1690279021567" name="SET_LANG" type="Page Connector" width="107" x="233" y="555">
+<page_connector target="Element@562561881:1670996282938">SET_LANG<config/>
+</page_connector>
+</element>
+</page>

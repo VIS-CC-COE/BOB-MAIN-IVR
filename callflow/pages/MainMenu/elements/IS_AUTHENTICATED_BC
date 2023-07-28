@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1363451489:1690433004532" name="IS_AUTHENTICATED_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_AUTHENTICATED_BC" default_exit_state="not-validated">
+        <exit_state name="already-validated" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="S_ATM_PIN_AUTHENTICATED" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_TPIN_AUTHENTICATED" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

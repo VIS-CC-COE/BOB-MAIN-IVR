@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<connector id="Element@1643072207:1689833244403" name="RMN_ACCOUNT_VALIDATION_SF" version="6.0.1">
+<connector id="Element@1783923110:1690280625338" name="RMN_ACCOUNT_VALIDATION_MAIN_MENU_SF" version="6.0.1">
 <subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
 <config>
 <input_data>

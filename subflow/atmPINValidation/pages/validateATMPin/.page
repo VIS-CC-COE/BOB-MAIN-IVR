@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@696746844:1671263625581" name="validateATMPin" version="6.0.1">
-<element height="46" id="Element@31:1671263625578" name="atmPINValidation" type="Subflow Start" width="142" x="277" y="91">
+<element height="46" id="Element@31:1671263625578" name="atmPINValidation" type="Subflow Start" width="142" x="253" y="-13">
 <exit_states>
 <exit_state name="next" target="Element@1419319247:1671263660316"/>
 </exit_states>

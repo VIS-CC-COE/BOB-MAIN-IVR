@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@2006875106:1690284052191" name="SET_PRE_TRANSFER_INFO_AE" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.action.PreTransferInfo</source>
+</config>
+</action>

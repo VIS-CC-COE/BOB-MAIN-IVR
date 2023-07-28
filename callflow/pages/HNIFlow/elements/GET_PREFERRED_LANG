@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2133298462:1690279021567" name="GET_PREFERRED_LANG" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.GetPreferredLang_BC</source>
+</config>
+</decision>

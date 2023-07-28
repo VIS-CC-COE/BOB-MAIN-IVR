@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1751491167:1690279021567" name="SET_HNI_LANG" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.action.SetPreferredLang_AE</source>
+</config>
+</action>

@@ -7,13 +7,9 @@
 </element>
 <element height="46" id="Element@269991374:1689820180401" name="NUMBER_OF_ACCOUNTS_BC" type="Decision" width="205" x="352" y="140">
 <exit_states>
-<exit_state name="SINGLE" target="Element@1637330404:1689820331108"/>
+<exit_state name="SINGLE" target="Element@1247658953:1690427900685"/>
 <exit_state name="MULTIPLE" target="Element@991691109:1689820397947"/>
 </exit_states>
-</element>
-<element height="46" id="Element@1637330404:1689820331108" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="138" y="197">
-<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
-</page_connector>
 </element>
 <element height="46" id="Element@1077163873:1689820397947" name="SWITCH_ACCOUNT_TYPE_BC" type="Decision" width="222" x="348" y="305">
 <exit_states>
@@ -53,7 +49,7 @@
 </page_connector>
 </element>
 <element height="46" id="Element@1643072207:1689833244403" name="RMN_ACCOUNT_VALIDATION_SF" type="Subflow Call" width="225" x="366" y="538">
-<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1689833249762">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
 <config>
 <input_data>
 <data name="MAIN_FLOW_ACTION"/>
@@ -83,6 +79,15 @@
 </element>
 <element height="46" id="Element@159958180:1689833483092" name="MAIN_MENU_PE" type="Page Connector" width="138" x="97" y="669">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1247658953:1690427900685" name="SINGLE_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="168" x="85" y="222">
+<exit_states>
+<exit_state name="done" target="Element@1557753656:1690427946620"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1557753656:1690427946620" name="ACCOUNT_BALANCE_PE" type="Page Connector" width="181" x="86" y="312">
+<page_connector target="Element@440110326:1671001691297">ACCOUNT_BALANCE_PE<config/>
 </page_connector>
 </element>
 </page>

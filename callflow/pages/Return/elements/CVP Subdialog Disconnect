@@ -3,10 +3,10 @@
 <config>
 <settings>
 <setting name="caller_input">D</setting>
-<setting name="FromExtVXML0">{Data.Session.S_PREFERRED_LANGUAGE}</setting>
-<setting name="FromExtVXML1">Y</setting>
-<setting name="FromExtVXML2"/>
-<setting name="FromExtVXML3"/>
+<setting name="FromExtVXML0">{Data.Session.TOEXTVXML0}</setting>
+<setting name="FromExtVXML1">{Data.Session.TOEXTVXML1}</setting>
+<setting name="FromExtVXML2">{Data.Session.TOEXTVXML2}</setting>
+<setting name="FromExtVXML3">{Data.Session.TOEXTVXML3}</setting>
 </settings>
 </config>
 </subdialog_return>

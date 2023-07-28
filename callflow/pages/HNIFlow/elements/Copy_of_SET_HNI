@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<action_element id="Element@1057696603:1678101074939" name="SET_POT_FRAUD" version="6.0.1">
+<action_element id="Element@2031942350:1690279021567" name="Copy_of_SET_HNI" version="6.0.1">
 <config>
 <settings>
 <setting name="maintainer"/>
@@ -10,7 +10,7 @@
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
-<data create_when="After" name="POTENTIAL_FRAUD">Y</data>
+<data create_when="After" name="IS_HNI">YES</data>
 </session_data>
 </config>
 </action_element>

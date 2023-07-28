@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@618213372:1690434112737" name="TDS_ELIGIBLE_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="TDS_ELIGIBLE_BC" default_exit_state="not-eligible">
+        <exit_state name="eligible" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ACCOUNT_TYPE" />
+                </data>
+                <constant_string value="SBA" />
+            </string>
+        </exit_state>
+        <exit_state name="not-eligible" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ACCOUNT_TYPE" />
+                </data>
+                <constant_string value="CAA" />
+            </string>
+        </exit_state>
+        <exit_state name="not-eligible" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ACCOUNT_TYPE" />
+                </data>
+                <constant_string value="ODA" />
+            </string>
+        </exit_state>
+        <exit_state name="not-eligible" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ACCOUNT_TYPE" />
+                </data>
+                <constant_string value="CCA" />
+            </string>
+        </exit_state>
+        <exit_state name="eligible" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_ACCOUNT_TYPE" />
+                </data>
+                <constant_string value="TDA" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>
