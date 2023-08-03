@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision id="Element@790622954:1680065258469" name="VALID_ACC_CB_COUNTER_BC" version="6.0.1">
+<decision id="Element@965255629:1690979813921" name="INELIGIBLE_ACCOUNT_COUNTER_BC" version="6.0.1">
 <config>
 <source type="Decision Editor"><![CDATA[<knowledge_base>
-    <rule name="VALID_ACC_CB_COUNTER_BC" default_exit_state="max-attempt">
+    <rule name="INELIGIBLE_ACCOUNT_COUNTER_BC" default_exit_state="max-attempt">
         <exit_state name="retry" conjugate="and">
             <number operator="less">
                 <data>
-                    <element name="VALID_ACC_CB_COUNTER" variable="count" />
+                    <element name="INELIGIBLE_ACCOUNT_COUNTER" variable="count" />
                 </data>
                 <constant_number value="3" />
             </number>

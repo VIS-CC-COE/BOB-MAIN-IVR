@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1425726912:1690911579035" name="IS_RMN_CALLER_3" version="6.0.1">
+<config>
+<source type="Class">com.vis.bobmain.decision.ValidateRmnAndAni_BC</source>
+</config>
+</decision>

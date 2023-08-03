@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1458760659:1690892679740" name="CheckServiceEligibile" version="6.0.1">
+<element height="46" id="Element@806029380:1690892679740" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Entry" width="217" x="424" y="14">
+<exit_states>
+<exit_state name="next" target="Element@1256393083:1690892965694"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1198192339:1690892884917" name="CHEQUE_SERVICES_PE" type="Page Connector" width="168" x="1224" y="229">
+<page_connector target="Element@1886251769:1673077729774">CHEQUE_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@176253019:1690892884917" name="IS_SERVICE_ELIGIBLE_BC" type="Decision" width="177" x="353" y="387">
+<exit_states>
+<exit_state name="ELIGIBLE" target="Element@1813387483:1690894152566"/>
+<exit_state name="NOT_ELIGIBLE" target="Element@598324741:1690979813921"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1833352568:1690892884917" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="1187" y="150">
+<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1256393083:1690892965694" name="IS_RMN_CALLER_2" type="Decision" width="148" x="438" y="90">
+<exit_states>
+<exit_state name="YES" target="Element@530522674:1690892965694"/>
+<exit_state name="NO" target="Element@1813387483:1690894152566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@530522674:1690892965694" name="RMN_ACCOUNT_VALIDATION_ELIGIBILITY_CHECK_SF" type="Subflow Call" width="349" x="67" y="172">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1170637485:1690893198652"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1170637485:1690893198652" name="ACCOUNT_VALIDATION_ELIGIBILITY_CHECK_SUBFLOW_ACTION" type="Decision" width="388" x="50" y="248">
+<exit_states>
+<exit_state name="max-no-input" target="Element@160903373:1690893534996"/>
+<exit_state name="max-no-match" target="Element@160903373:1690893534996"/>
+<exit_state name="valid" target="Element@176253019:1690892884917"/>
+<exit_state name="transfer" target="Element@1238694584:1690893518601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1238694584:1690893518601" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="66" y="401">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@160903373:1690893534996" name="NM_PE" type="Page Connector" width="88" x="-1" y="327">
+<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1813387483:1690894152566" name="SERVICE_ROUTER_BC" type="Decision" width="161" x="848" y="252">
+<exit_states>
+<exit_state name="SERVICE_CHEQUE_RELATED" target="Element@1198192339:1690892884917"/>
+<exit_state name="not-eligible" target="Element@176253019:1690892884917">
+<bendpoint>
+<dim1 x="-184" y="131"/>
+<dim2 x="304" y="-4"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SERVICE_L5T" target="Element@1833352568:1690892884917"/>
+<exit_state name="SERVICE_ACCOUNT_MINI_STMT" target="Element@274869867:1690899496689"/>
+<exit_state name="SERVICE_ACCOUNT_STMT" target="Element@1349604097:1690899481103"/>
+<exit_state name="SERVICE_TDS_CERT" target="Element@2005198165:1690899545185"/>
+<exit_state name="SERVICE_INTEREST_CERT" target="Element@587235687:1690899516400"/>
+<exit_state name="SERVICE_MB" target="Element@2080621624:1690910861060"/>
+<exit_state name="SERVICE_SMS_ALERT" target="Element@389300674:1690910865576"/>
+<exit_state name="SERVICE_DC_SERVICE" target="Element@873662709:1690913570022"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1401428142:1690898268198" name="SERVICE_NOT_ELIGIBLE_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="498" y="643">
+<exit_states>
+<exit_state name="done" target="Element@387058713:1690979881140"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1349604097:1690899481103" name="ACCOUNT_STMT_PE" type="Page Connector" width="158" x="1192" y="298">
+<page_connector target="Element@967780353:1673077791469">ACCOUNT_STMT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@274869867:1690899496689" name="ACC_MINI_STMT_PE" type="Page Connector" width="157" x="1191" y="363">
+<page_connector target="Element@1386520914:1690899082785">ACC_MINI_STMT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@587235687:1690899516400" name="INTEREST_STMT_PE" type="Page Connector" width="151" x="1187" y="427">
+<page_connector target="Element@1784345802:1690899130746">INTEREST_STMT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2005198165:1690899545185" name="TDS_STMT_PE" type="Page Connector" width="122" x="1177" y="500">
+<page_connector target="Element@866513587:1690899119317">TDS_STMT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2080621624:1690910861060" name="MOBILE_BANKING_PE" type="Page Connector" width="166" x="1210" y="595">
+<page_connector target="Element@97183264:1672987883248">MOBILE_BANKING_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@389300674:1690910865576" name="SET_SMS_ALERT_PE" type="Page Connector" width="151" x="900" y="658">
+<page_connector target="Element@1425123531:1672988544483">SET_SMS_ALERT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@873662709:1690913570022" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="1078" y="656">
+<page_connector target="Element@1833849181:1677127045799">RMN_ATM_SERVICE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@598324741:1690979813921" name="INELIGIBLE_ACCOUNT_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="226" x="175" y="480">
+<exit_states>
+<exit_state name="done" target="Element@965255629:1690979813921"/>
+</exit_states>
+</element>
+<element height="46" id="Element@965255629:1690979813921" name="INELIGIBLE_ACCOUNT_COUNTER_BC" type="Decision" width="246" x="199" y="596">
+<exit_states>
+<exit_state name="retry" target="Element@1401428142:1690898268198"/>
+<exit_state name="max-attempt" target="Element@812145181:1690979882355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@387058713:1690979881140" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Connector" width="217" x="404" y="754">
+<page_connector target="Element@806029380:1690892679740">CHECK_SERVICE_ELIGIBILITY_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@812145181:1690979882355" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="188" y="752">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+</page>

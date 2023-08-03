@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1813387483:1690894152566" name="SERVICE_ROUTER_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="SERVICE_ROUTER_BC" default_exit_state="not-eligible">
+        <exit_state name="SERVICE_CHEQUE_RELATED" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_CHEQUE_RELATED" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_L5T" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_L5T" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_ACCOUNT_MINI_STMT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_ACCOUNT_MINI_STMT" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_ACCOUNT_STMT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_ACCOUNT_STMT" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_TDS_CERT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_TDS_CERT" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_INTEREST_CERT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_INTEREST_CERT" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_MB" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_MB" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_SMS_ALERT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_SMS_ALERT" />
+            </string>
+        </exit_state>
+        <exit_state name="SERVICE_DC_SERVICE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IVR_SERVICE_NAME" />
+                </data>
+                <constant_string value="SERVICE_DC_SERVICE" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

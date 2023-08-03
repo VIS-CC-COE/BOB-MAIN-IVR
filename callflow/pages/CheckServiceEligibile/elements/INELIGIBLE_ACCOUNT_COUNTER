@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<action_element id="Element@1230307748:1680065258469" name="VALID_ACC_CB_COUNTER" version="6.0.1">
+<action_element id="Element@598324741:1690979813921" name="INELIGIBLE_ACCOUNT_COUNTER" version="6.0.1">
 <config>
 <settings>
 <setting name="initial">0</setting>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@957609908:1673077791469" name="AccStmt" version="6.0.1">
-<element height="46" id="Element@1079031617:1673610255205" name="ACCOUNT_SERVICES_PE" type="Page Connector" width="181" x="812" y="153">
+<element height="46" id="Element@1079031617:1673610255205" name="ACCOUNT_SERVICES_PE" type="Page Connector" width="181" x="869" y="69">
 <page_connector target="Element@134425777:1672298535054">ACCOUNT_SERVICES_PE<config/>
 </page_connector>
 </element>
@@ -16,12 +16,12 @@
 <page_connector target="Element@134425777:1672298535054">ACCOUNT_SERVICES_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@967780353:1673077791469" name="ACCOUNT_STMT_PE" type="Page Entry" width="158" x="339" y="-51">
+<element height="46" id="Element@967780353:1673077791469" name="ACCOUNT_STMT_PE" type="Page Entry" width="158" x="335" y="-186">
 <exit_states>
 <exit_state name="next" target="Element@1787972939:1677660054304"/>
 </exit_states>
 </element>
-<element height="46" id="Element@446966876:1677660133921" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="70" y="34">
+<element height="46" id="Element@446966876:1677660133921" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="64" y="-21">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
@@ -70,22 +70,17 @@
 <exit_state name="2" target="Element@1391624508:1677667765934"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1607603843:1673606782127" name="EMAIL_ACCT_STMT_BC" type="Decision" width="173" x="340" y="135">
+<element height="46" id="Element@1607603843:1673606782127" name="EMAIL_ACCT_STMT_BC" type="Decision" width="173" x="321" y="31">
 <exit_states>
-<exit_state name="1" target="Element@607488081:1690433992130"/>
-<exit_state name="2" target="Element@816572047:1690434089535">
-<bendpoint>
-<dim1 x="12" y="95"/>
-<dim2 x="-61" y="-75"/>
-</bendpoint>
-</exit_state>
-<exit_state name="3" target="Element@618213372:1690434112737"/>
-<exit_state name="4" target="Element@1088973799:1690434181495"/>
+<exit_state name="1" target="Element@1340938377:1690898766200"/>
+<exit_state name="2" target="Element@285772634:1690898921237"/>
+<exit_state name="3" target="Element@1415930398:1690898921735"/>
+<exit_state name="4" target="Element@90210474:1690898922150"/>
 <exit_state name="7" target="Element@1079031617:1673610255205"/>
 <exit_state name="8" target="Element@1049447444:1676384804090"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1732992188:1673606782126" name="EMAIL_ACCT_STMT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="180" x="335" y="74">
+<element height="46" id="Element@1732992188:1673606782126" name="EMAIL_ACCT_STMT_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="180" x="329" y="-42">
 <exit_states>
 <exit_state name="done" target="Element@1607603843:1673606782127"/>
 <exit_state name="max_nomatch" target="Element@2043543952:1673606782127"/>
@@ -224,7 +219,7 @@
 <exit_state name="done" target="Element@281674183:1678768150832"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1787972939:1677660054304" name="IS_EMAIL_EXIST_BC" type="Decision" width="151" x="346" y="12">
+<element height="46" id="Element@1787972939:1677660054304" name="IS_EMAIL_EXIST_BC" type="Decision" width="151" x="344" y="-115">
 <exit_states>
 <exit_state name="YES" target="Element@1732992188:1673606782126"/>
 <exit_state name="NO" target="Element@446966876:1677660133921"/>
@@ -266,7 +261,7 @@
 <exit_state name="NO" target="Element@1781393245:1680438033699"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1049447444:1676384804090" name="MAIN_MENU_PE" type="Page Connector" width="138" x="761" y="78">
+<element height="46" id="Element@1049447444:1676384804090" name="MAIN_MENU_PE" type="Page Connector" width="138" x="762" y="7">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
@@ -278,7 +273,7 @@
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@477258611:1673606782127" name="NI_PE" type="Page Connector" width="158" x="560" y="60">
+<element height="46" id="Element@477258611:1673606782127" name="NI_PE" type="Page Connector" width="158" x="578" y="-24">
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
@@ -286,7 +281,7 @@
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
-<element height="48" id="Element@2043543952:1673606782127" name="NM_PE" type="Page Connector" width="165" x="560" y="2">
+<element height="48" id="Element@2043543952:1673606782127" name="NM_PE" type="Page Connector" width="165" x="558" y="-70">
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
@@ -402,37 +397,48 @@
 <exit_state name="next" target="Element@552106659:1678768150833"/>
 </exit_states>
 </element>
-<element height="46" id="Element@607488081:1690433992130" name="MINI_STMT_ELIGIBLE_BC" type="Decision" width="180" x="-167" y="269">
-<exit_states>
-<exit_state name="eligible" target="Element@619558760:1677666379073"/>
-<exit_state name="not-eligible" target="Element@373776370:1690433992129"/>
-</exit_states>
-</element>
-<element height="46" id="Element@373776370:1690433992129" name="STATMENT_SERVICE_ELIGIBLE_BC" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="224" x="-337" y="193">
-<exit_states>
-<exit_state name="done" target="Element@994465099:1690433992129"/>
-</exit_states>
-</element>
-<element height="46" id="Element@994465099:1690433992129" name="CHK_RMN_PE" type="Page Connector" width="141" x="-321" y="99">
-<page_connector target="Element@1998844450:1677480058007">CHK_RMN_PE<config/>
+<element height="46" id="Element@678220602:1690898731118" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Connector" width="217" x="357" y="214">
+<page_connector target="Element@806029380:1690892679740">CHECK_SERVICE_ELIGIBILITY_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@816572047:1690434089535" name="ACC_STMT_ELIGIBLE_BC" type="Decision" width="181" x="181" y="258">
+<element height="46" id="Element@1340938377:1690898766200" name="SET_SERVICE_ACCOUNT_MINI_STMT" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="242" x="-211" y="84">
 <exit_states>
-<exit_state name="eligible" target="Element@1019958972:1677823554321"/>
-<exit_state name="not-eligible" target="Element@373776370:1690433992129"/>
+<exit_state name="done" target="Element@678220602:1690898731118"/>
 </exit_states>
 </element>
-<element height="46" id="Element@618213372:1690434112737" name="TDS_ELIGIBLE_BC" type="Decision" width="140" x="488" y="244">
+<element height="46" id="Element@285772634:1690898921237" name="SET_SERVICE_ACCOUNT_STMT" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="211" x="127" y="127">
 <exit_states>
-<exit_state name="eligible" target="Element@1063187762:1678768150833"/>
-<exit_state name="not-eligible" target="Element@373776370:1690433992129"/>
+<exit_state name="done" target="Element@678220602:1690898731118"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1088973799:1690434181495" name="INTEREST_ELIGIBLE_BC" type="Decision" width="169" x="851" y="225">
+<element height="46" id="Element@1415930398:1690898921735" name="SET_SERVICE_TDS_CERT" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="172" x="404" y="139">
 <exit_states>
-<exit_state name="eligible" target="Element@295051314:1677668401940"/>
-<exit_state name="not-eligible" target="Element@373776370:1690433992129"/>
+<exit_state name="done" target="Element@678220602:1690898731118"/>
+</exit_states>
+</element>
+<element height="46" id="Element@90210474:1690898922150" name="SET_SERVICE_INTEREST_CERT" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="201" x="650" y="144">
+<exit_states>
+<exit_state name="done" target="Element@678220602:1690898731118"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1386520914:1690899082785" name="ACC_MINI_STMT_PE" type="Page Entry" width="157" x="-243" y="267">
+<exit_states>
+<exit_state name="next" target="Element@619558760:1677666379073"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1011876717:1690899105134" name="ACC_STMT_PE" type="Page Entry" width="126" x="258" y="276">
+<exit_states>
+<exit_state name="next" target="Element@1019958972:1677823554321"/>
+</exit_states>
+</element>
+<element height="46" id="Element@866513587:1690899119317" name="TDS_STMT_PE" type="Page Entry" width="122" x="647" y="268">
+<exit_states>
+<exit_state name="next" target="Element@1063187762:1678768150833"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1784345802:1690899130746" name="INTEREST_STMT_PE" type="Page Entry" width="151" x="1266" y="228">
+<exit_states>
+<exit_state name="next" target="Element@295051314:1677668401940"/>
 </exit_states>
 </element>
 </page>

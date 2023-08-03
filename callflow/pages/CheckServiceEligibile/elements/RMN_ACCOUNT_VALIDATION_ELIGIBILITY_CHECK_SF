@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@530522674:1690892965694" name="RMN_ACCOUNT_VALIDATION_ELIGIBILITY_CHECK_SF" version="6.0.1">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

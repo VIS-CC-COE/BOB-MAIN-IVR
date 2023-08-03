@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@579366849:1671255365386" name="CardBlock" version="6.0.1">
-<element height="46" id="Element@487481184:1678101180289" name="ACCOUNT_BLOCKED_CB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="721" y="208">
-<exit_states>
-<exit_state name="done" target="Element@1036331914:1671267204190"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1036331914:1671267204190" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="689" y="422">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
@@ -14,14 +9,6 @@
 </page_connector>
 </element>
 <element height="46" id="Element@2051420622:1679640147418" name="AGENT_TRANSFER_PE" type="Page Connector" width="188" x="712" y="732">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@630921936:1679666497662" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="12" y="72">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@68170953:1680333543790" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="953" y="29">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
@@ -127,36 +114,6 @@
 <exit_state name="NO" target="Element@1764129896:1671273055991"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1575327777:1678101180289" name="CHECK_BLOCK_CB_STATUS" type="Decision" width="193" x="394" y="146">
-<exit_states>
-<exit_state name="PERMANENT_BLOCK" target="Element@487481184:1678101180289">
-<bendpoint>
-<dim1 x="171" y="63"/>
-<dim2 x="-160" y="1"/>
-</bendpoint>
-</exit_state>
-<exit_state name="SOFT_BLOCK" target="Element@487481184:1678101180289">
-<bendpoint>
-<dim1 x="199" y="-3"/>
-<dim2 x="-132" y="-65"/>
-</bendpoint>
-</exit_state>
-<exit_state name="POTENTIAL_FRAUD" target="Element@757328809:1678101180288">
-<bendpoint>
-<dim1 x="-120" y="61"/>
-<dim2 x="-149" y="-66"/>
-</bendpoint>
-</exit_state>
-<exit_state name="NO_FRAUD" target="Element@2065537287:1671264213419"/>
-</exit_states>
-</element>
-<element height="46" id="Element@327650384:1675946968300" name="ENTER_ACCOUNT_NUMBER_CB_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="237" x="363" y="-9">
-<exit_states>
-<exit_state name="done" target="Element@781011031:1675946968299"/>
-<exit_state name="max_nomatch" target="Element@630921936:1679666497662"/>
-<exit_state name="max_noinput" target="Element@630921936:1679666497662"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1991375969:1677032937109" name="GET_CUST_INFO_CRM_WS_BC" type="Decision" width="208" x="-101" y="869">
 <exit_states>
 <exit_state name="YES" target="Element@194703569:1671272981836"/>
@@ -181,17 +138,6 @@
 <page_connector target="Element@1922167949:1671267675907">HOTLIST_MAIN_MN<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1842957286:1675946968300" name="INCORRECT_ACCOUNT_CB_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="213" x="704" y="117">
-<exit_states>
-<exit_state name="done" target="Element@327650384:1675946968300"/>
-</exit_states>
-</element>
-<element height="46" id="Element@781011031:1675946968299" name="IS_VALID_ACCOUNT_NUMBER_CB_BC" type="Decision" width="249" x="368" y="66">
-<exit_states>
-<exit_state name="VALID" target="Element@1575327777:1678101180289"/>
-<exit_state name="INVALID" target="Element@1230307748:1680065258469"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1349571916:1676235998783" name="MAIN_MENU_PE" type="Page Connector" width="138" x="-108" y="1260">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
@@ -209,23 +155,61 @@
 </element>
 <element height="46" id="Element@279758770:1679206862715" name="SET_EMERGENCY_FLAG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="205" x="395" y="-75">
 <exit_states>
-<exit_state name="done" target="Element@327650384:1675946968300"/>
+<exit_state name="done" target="Element@1425726912:1690911579035"/>
 </exit_states>
 </element>
-<element height="46" id="Element@757328809:1678101180288" name="SET_POT_FRAUD_CB" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="185" x="58" y="250">
+<element height="46" id="Element@1533020913:1690911557221" name="NRMN_ACC_VALIDATION_CARD_BLOCK_SF" type="Subflow Call" width="280" x="638" y="79">
+<subflow_call subflow_name="accountNumberValidation" target="Element@31:1690280774369">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
 <exit_states>
-<exit_state name="done" target="Element@1752381165:1671264251908"/>
+<exit_state name="next" target="Element@963967719:1690911557221"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1230307748:1680065258469" name="VALID_ACC_CB_COUNTER" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="240" x="683" y="-89">
+<element height="46" id="Element@777139183:1690911557221" name="RMN_ACCOUNT_VALIDATION_CARD_BLOCK_SF" type="Subflow Call" width="303" x="38" y="87">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
 <exit_states>
-<exit_state name="done" target="Element@790622954:1680065258469"/>
+<exit_state name="next" target="Element@1368163464:1690911557221"/>
 </exit_states>
 </element>
-<element height="46" id="Element@790622954:1680065258469" name="VALID_ACC_CB_COUNTER_BC" type="Decision" width="208" x="706" y="30">
+<element height="46" id="Element@963967719:1690911557221" name="NRMN_CARD_BLOCK_CHECK_SUBFLOW_ACTION" type="Decision" width="313" x="638" y="173">
 <exit_states>
-<exit_state name="retry" target="Element@1842957286:1675946968300"/>
-<exit_state name="max-attempt" target="Element@68170953:1680333543790"/>
+<exit_state name="max-no-input" target="Element@1829220911:1690911605702"/>
+<exit_state name="max-no-match" target="Element@1829220911:1690911605702"/>
+<exit_state name="valid" target="Element@2065537287:1671264213419"/>
+<exit_state name="transfer" target="Element@1829220911:1690911605702"/>
 </exit_states>
+</element>
+<element height="46" id="Element@1368163464:1690911557221" name="ACCOUNT_VALIDATION_CARD_BLOCK_SUBFLOW_ACTION" type="Decision" width="360" x="15" y="178">
+<exit_states>
+<exit_state name="max-no-input" target="Element@1082597201:1690911605356"/>
+<exit_state name="max-no-match" target="Element@1082597201:1690911605356"/>
+<exit_state name="valid" target="Element@2065537287:1671264213419"/>
+<exit_state name="transfer" target="Element@1082597201:1690911605356"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1425726912:1690911579035" name="IS_RMN_CALLER_3" type="Decision" width="151" x="419" y="-2">
+<exit_states>
+<exit_state name="YES" target="Element@777139183:1690911557221"/>
+<exit_state name="NO" target="Element@1533020913:1690911557221"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1082597201:1690911605356" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="-253" y="194">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1829220911:1690911605702" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="1085" y="174">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
 </element>
 </page>

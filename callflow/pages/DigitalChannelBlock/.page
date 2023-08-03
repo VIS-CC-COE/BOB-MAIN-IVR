@@ -35,7 +35,7 @@
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1921705702:1680173103838" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="941" y="99">
+<element height="46" id="Element@1921705702:1680173103838" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="1021" y="-118">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
@@ -175,7 +175,7 @@
 <exit_state name="NO" target="Element@1873661876:1676617193166"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1735681211:1671296707211" name="DIGITAL_CHANNEL_BLOCK_BC" type="Decision" width="213" x="612" y="168">
+<element height="46" id="Element@1735681211:1671296707211" name="DIGITAL_CHANNEL_BLOCK_BC" type="Decision" width="213" x="615" y="-37">
 <exit_states>
 <exit_state name="1" target="Element@426264029:1676617298980"/>
 <exit_state name="2" target="Element@1029196297:1676403605684"/>
@@ -184,14 +184,14 @@
 <exit_state name="8" target="Element@501402617:1676382115444"/>
 </exit_states>
 </element>
-<element height="46" id="Element@2132182599:1673084103049" name="DIGITAL_CHANNEL_BLOCK_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="218" x="611" y="100">
+<element height="46" id="Element@2132182599:1673084103049" name="DIGITAL_CHANNEL_BLOCK_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="218" x="606" y="-133">
 <exit_states>
 <exit_state name="done" target="Element@1735681211:1671296707211"/>
 <exit_state name="max_nomatch" target="Element@1921705702:1680173103838"/>
 <exit_state name="max_noinput" target="Element@1921705702:1680173103838"/>
 </exit_states>
 </element>
-<element height="46" id="Element@466334272:1671256129921" name="DIGITAL_CHANNEL_BLOCK_PE" type="Page Entry" width="211" x="617" y="-71">
+<element height="46" id="Element@466334272:1671256129921" name="DIGITAL_CHANNEL_BLOCK_PE" type="Page Entry" width="211" x="610" y="-262">
 <exit_states>
 <exit_state name="next" target="Element@1763835710:1680173031242"/>
 </exit_states>
@@ -394,7 +394,7 @@
 <page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1763835710:1680173031242" name="SET_EMERGENCY_FLAG_DIGITAL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="223" x="627" y="8">
+<element height="46" id="Element@1763835710:1680173031242" name="SET_EMERGENCY_FLAG_DIGITAL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="223" x="599" y="-199">
 <exit_states>
 <exit_state name="done" target="Element@2132182599:1673084103049"/>
 </exit_states>

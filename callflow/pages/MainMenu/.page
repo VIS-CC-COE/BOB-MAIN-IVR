@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@780066211:1671253383250" name="MainMenu" version="6.0.1">
-<element height="46" id="Element@1111979924:1672293988107" name="ACCOUNT_MENU_NON_REG_BC" type="Decision" width="223" x="482" y="794">
+<element height="46" id="Element@1111979924:1672293988107" name="ACCOUNT_MENU_NON_REG_BC" type="Decision" width="223" x="768" y="839">
 <exit_states>
 <exit_state name="1" target="Element@1705193750:1672297650997"/>
 <exit_state name="2" target="Element@1200741024:1672297742107"/>
-<exit_state name="8" target="Element@932273501:1679560580268"/>
+<exit_state name="8" target="Element@1980671592:1680415191811"/>
 </exit_states>
 </element>
-<element height="46" id="Element@584678854:1672293988107" name="ACCOUNT_MENU_NON_REG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="228" x="480" y="693">
+<element height="46" id="Element@584678854:1672293988107" name="ACCOUNT_MENU_NON_REG_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="228" x="773" y="730">
 <exit_states>
 <exit_state name="done" target="Element@1111979924:1672293988107"/>
 <exit_state name="max_nomatch" target="Element@628817604:1672294059027"/>
@@ -47,7 +47,7 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="46" id="Element@1200741024:1672297742107" name="ACC_MENU_PIN_VALIDATION_SF" type="Subflow Call" width="224" x="358" y="937">
+<element height="46" id="Element@1200741024:1672297742107" name="ACC_MENU_PIN_VALIDATION_SF" type="Subflow Call" width="224" x="443" y="939">
 <subflow_call subflow_name="atmPINValidation" target="Element@31:1671264217070">
 <config>
 <input_data>
@@ -115,7 +115,7 @@
 <exit_state name="next" target="Element@274816456:1672293699415"/>
 </exit_states>
 </element>
-<element height="46" id="Element@182591600:1672297933276" name="DC_STATUS_PE" type="Page Connector" width="127" x="-117" y="885">
+<element height="46" id="Element@182591600:1672297933276" name="DC_STATUS_PE" type="Page Connector" width="127" x="-157" y="757">
 <page_connector target="Element@1821441907:1672297866998">DC_STATUS_PE<config/>
 </page_connector>
 </element>
@@ -127,7 +127,7 @@
 <page_connector target="Element@1372910279:1672298555839">DIGITAL_CHANNEL_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@262479150:1672297918680" name="GENERATE_GREEN_PIN_PE" type="Page Connector" width="188" x="40" y="922">
+<element height="46" id="Element@262479150:1672297918680" name="GENERATE_GREEN_PIN_PE" type="Page Connector" width="188" x="-169" y="875">
 <page_connector target="Element@1903868590:1672297822718">GENERATE_GREEN_PIN_PE<config/>
 </page_connector>
 </element>
@@ -197,11 +197,7 @@
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@932273501:1679560580268" name="MAIN_MENU_PE" type="Page Connector" width="138" x="790" y="798">
-<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@1980671592:1680415191811" name="MAIN_MENU_PE" type="Page Connector" width="138" x="3" y="796">
+<element height="46" id="Element@1980671592:1680415191811" name="MAIN_MENU_PE" type="Page Connector" width="138" x="530" y="787">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
@@ -209,7 +205,7 @@
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@628817604:1672294059027" name="NI_PE" type="Page Connector" width="85" x="786" y="665">
+<element height="46" id="Element@628817604:1672294059027" name="NI_PE" type="Page Connector" width="85" x="685" y="641">
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
@@ -258,18 +254,18 @@
 </config>
 </subflow_call>
 <exit_states>
-<exit_state name="next" target="Element@1363451489:1690433004532"/>
+<exit_state name="next" target="Element@155758620:1690280625338"/>
 </exit_states>
 </element>
-<element height="46" id="Element@155758620:1690280625338" name="ACCOUNT_VALIDATION_MAIN_MENU_SUBFLOW_ACTION" type="Decision" width="357" x="201" y="534">
+<element height="46" id="Element@155758620:1690280625338" name="ACCOUNT_VALIDATION_MAIN_MENU_SUBFLOW_ACTION" type="Decision" width="357" x="222" y="453">
 <exit_states>
 <exit_state name="max-no-input" target="Element@628817604:1672294059027"/>
 <exit_state name="max-no-match" target="Element@628817604:1672294059027"/>
-<exit_state name="valid" target="Element@873299325:1672293919916"/>
+<exit_state name="valid" target="Element@1363451489:1690433004532"/>
 <exit_state name="transfer" target="Element@136805865:1690280685031"/>
 </exit_states>
 </element>
-<element height="46" id="Element@136805865:1690280685031" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="903" y="633">
+<element height="46" id="Element@136805865:1690280685031" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="632" y="554">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
 </element>
@@ -293,13 +289,13 @@
 <exit_state name="transfer" target="Element@136805865:1690280685031"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1363451489:1690433004532" name="IS_AUTHENTICATED_BC" type="Decision" width="174" x="333" y="450">
+<element height="46" id="Element@1363451489:1690433004532" name="IS_AUTHENTICATED_BC" type="Decision" width="174" x="270" y="559">
 <exit_states>
 <exit_state name="already-validated" target="Element@184140062:1690433100905"/>
-<exit_state name="not-validated" target="Element@155758620:1690280625338"/>
+<exit_state name="not-validated" target="Element@873299325:1672293919916"/>
 </exit_states>
 </element>
-<element height="46" id="Element@184140062:1690433100905" name="BANKING_MENU_PE" type="Page Connector" width="158" x="676" y="542">
+<element height="46" id="Element@184140062:1690433100905" name="BANKING_MENU_PE" type="Page Connector" width="158" x="486" y="681">
 <page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
 </page_connector>
 </element>
