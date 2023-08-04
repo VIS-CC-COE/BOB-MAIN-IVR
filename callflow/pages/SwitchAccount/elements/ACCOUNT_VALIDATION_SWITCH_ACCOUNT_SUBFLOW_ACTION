@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@754382402:1691139930842" name="ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SUBFLOW_ACTION" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SUBFLOW_ACTION" default_exit_state="transfer">
+        <exit_state name="max-no-input" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="RMN_ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SF" variable="MAIN_FLOW_ACTION" />
+                </data>
+                <constant_string value="max-no-input" />
+            </string>
+        </exit_state>
+        <exit_state name="valid" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="RMN_ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SF" variable="MAIN_FLOW_ACTION" />
+                </data>
+                <constant_string value="valid" />
+            </string>
+        </exit_state>
+        <exit_state name="max-no-match" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="RMN_ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SF" variable="MAIN_FLOW_ACTION" />
+                </data>
+                <constant_string value="max-no-match" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

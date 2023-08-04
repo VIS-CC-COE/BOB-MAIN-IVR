@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<action_element id="Element@389872218:1682280240786" name="SET_POT_FRAUD_UPI" version="6.0.1">
+<action_element id="Element@2110427078:1691053213551" name="SET_SERVICE_BLOCK_UPI" version="6.0.1">
 <config>
 <settings>
 <setting name="maintainer"/>
@@ -10,7 +10,7 @@
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
-<data create_when="After" name="POTENTIAL_FRAUD">Y</data>
+<data create_when="After" name="IVR_SERVICE_NAME">SERVICE_BLOCK_UPI</data>
 </session_data>
 </config>
 </action_element>

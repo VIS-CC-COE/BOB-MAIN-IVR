@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@99552410:1691139930842" name="RMN_ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SF" version="6.0.1">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

@@ -64,22 +64,22 @@
 </exit_state>
 <exit_state name="SERVICE_L5T" target="Element@1833352568:1690892884917"/>
 <exit_state name="SERVICE_ACCOUNT_MINI_STMT" target="Element@274869867:1690899496689"/>
-<exit_state name="SERVICE_ACCOUNT_STMT" target="Element@1349604097:1690899481103"/>
+<exit_state name="SERVICE_ACCOUNT_STMT" target="Element@1443806775:1691143719489"/>
 <exit_state name="SERVICE_TDS_CERT" target="Element@2005198165:1690899545185"/>
 <exit_state name="SERVICE_INTEREST_CERT" target="Element@587235687:1690899516400"/>
 <exit_state name="SERVICE_MB" target="Element@2080621624:1690910861060"/>
 <exit_state name="SERVICE_SMS_ALERT" target="Element@389300674:1690910865576"/>
 <exit_state name="SERVICE_DC_SERVICE" target="Element@873662709:1690913570022"/>
+<exit_state name="SERVICE_BLOCK_MB" target="Element@371617352:1691053411207"/>
+<exit_state name="SERVICE_BLOCK_UPI" target="Element@381509025:1691053410101"/>
+<exit_state name="SERVICE_BLOCK_IB" target="Element@1685681279:1691053330814"/>
+<exit_state name="SERVICE_ACCOUNT_BALANCE" target="Element@1766356757:1691140995686"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1401428142:1690898268198" name="SERVICE_NOT_ELIGIBLE_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="498" y="643">
+<element height="46" id="Element@1401428142:1690898268198" name="SERVICE_NOT_ELIGIBLE_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="252" y="680">
 <exit_states>
 <exit_state name="done" target="Element@387058713:1690979881140"/>
 </exit_states>
-</element>
-<element height="46" id="Element@1349604097:1690899481103" name="ACCOUNT_STMT_PE" type="Page Connector" width="158" x="1192" y="298">
-<page_connector target="Element@967780353:1673077791469">ACCOUNT_STMT_PE<config/>
-</page_connector>
 </element>
 <element height="46" id="Element@274869867:1690899496689" name="ACC_MINI_STMT_PE" type="Page Connector" width="157" x="1191" y="363">
 <page_connector target="Element@1386520914:1690899082785">ACC_MINI_STMT_PE<config/>
@@ -97,11 +97,11 @@
 <page_connector target="Element@97183264:1672987883248">MOBILE_BANKING_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@389300674:1690910865576" name="SET_SMS_ALERT_PE" type="Page Connector" width="151" x="900" y="658">
+<element height="46" id="Element@389300674:1690910865576" name="SET_SMS_ALERT_PE" type="Page Connector" width="151" x="1050" y="691">
 <page_connector target="Element@1425123531:1672988544483">SET_SMS_ALERT_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@873662709:1690913570022" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="1078" y="656">
+<element height="46" id="Element@873662709:1690913570022" name="RMN_ATM_SERVICE" type="Page Connector" width="154" x="1126" y="640">
 <page_connector target="Element@1833849181:1677127045799">RMN_ATM_SERVICE<config/>
 </page_connector>
 </element>
@@ -116,12 +116,32 @@
 <exit_state name="max-attempt" target="Element@812145181:1690979882355"/>
 </exit_states>
 </element>
-<element height="46" id="Element@387058713:1690979881140" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Connector" width="217" x="404" y="754">
+<element height="46" id="Element@387058713:1690979881140" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Connector" width="217" x="240" y="799">
 <page_connector target="Element@806029380:1690892679740">CHECK_SERVICE_ELIGIBILITY_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@812145181:1690979882355" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="188" y="752">
+<element height="46" id="Element@812145181:1690979882355" name="AGENT_TRANSFER_PE" type="Page Connector" width="181" x="-97" y="665">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1685681279:1691053330814" name="SERVICE_BLOCK_IB_PE" type="Page Connector" width="168" x="783" y="738">
+<page_connector target="Element@71242230:1691053166975">SERVICE_BLOCK_IB_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@381509025:1691053410101" name="SERVICE_BLOCK_UPI_PE" type="Page Connector" width="199" x="865" y="785">
+<page_connector target="Element@1509511173:1691053276150">SERVICE_BLOCK_UPI_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@371617352:1691053411207" name="SERVICE_BLOCK_MB_PE" type="Page Connector" width="199" x="962" y="739">
+<page_connector target="Element@1805186658:1691052833971">SERVICE_BLOCK_MB_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1766356757:1691140995686" name="ACCOUNT_BALANCE_PE" type="Page Connector" width="181" x="664" y="695">
+<page_connector target="Element@440110326:1671001691297">ACCOUNT_BALANCE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1443806775:1691143719489" name="ACC_STMT_PE" type="Page Connector" width="181" x="1262" y="298">
+<page_connector target="Element@1011876717:1690899105134">ACC_STMT_PE<config/>
 </page_connector>
 </element>
 </page>

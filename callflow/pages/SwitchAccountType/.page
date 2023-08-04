@@ -62,8 +62,18 @@
 </element>
 <element height="46" id="Element@14519876:1689833344070" name="ACCOUNT_TYPE_SWITCH_SUBFLOW_ACTION" type="Decision" width="290" x="340" y="631">
 <exit_states>
-<exit_state name="max-no-input" target="Element@159958180:1689833483092"/>
-<exit_state name="max-no-match" target="Element@159958180:1689833483092"/>
+<exit_state name="max-no-input" target="Element@628342287:1689833344070">
+<bendpoint>
+<dim1 x="-207" y="20"/>
+<dim2 x="123" y="107"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max-no-match" target="Element@628342287:1689833344070">
+<bendpoint>
+<dim1 x="-207" y="23"/>
+<dim2 x="123" y="110"/>
+</bendpoint>
+</exit_state>
 <exit_state name="valid" target="Element@1647796148:1689821212641"/>
 <exit_state name="transfer" target="Element@628342287:1689833344070">
 <bendpoint>
@@ -73,12 +83,8 @@
 </exit_state>
 </exit_states>
 </element>
-<element height="46" id="Element@628342287:1689833344070" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="99" y="562">
+<element height="46" id="Element@628342287:1689833344070" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="73" y="544">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@159958180:1689833483092" name="MAIN_MENU_PE" type="Page Connector" width="138" x="97" y="669">
-<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
 <element height="46" id="Element@1247658953:1690427900685" name="SINGLE_ACCOUNT_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="168" x="85" y="222">

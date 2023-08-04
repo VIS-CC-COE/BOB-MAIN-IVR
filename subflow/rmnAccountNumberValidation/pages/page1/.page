@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@973266723:1689832858770" name="page1" version="6.0.1">
-<element height="46" id="Element@31:1689832858770" name="rmnAccountNumberValidation" type="Subflow Start" width="213" x="392" y="28">
+<element height="46" id="Element@31:1689832858770" name="rmnAccountNumberValidation" type="Subflow Start" width="213" x="383" y="-38">
 <exit_states>
 <exit_state name="next" target="Element@1690372024:1689832871263"/>
 </exit_states>
@@ -42,7 +42,7 @@
 <exit_state name="done" target="Element@1956559683:1689832871263"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1690372024:1689832871263" name="ENTER_ACCOUNT_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="217" x="386" y="104">
+<element height="46" id="Element@1690372024:1689832871263" name="ENTER_ACCOUNT_NUMBER_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="217" x="385" y="38">
 <exit_states>
 <exit_state name="done" target="Element@1312601572:1689832871263"/>
 <exit_state name="max_nomatch" target="Element@1970355500:1689832871263"/>
@@ -54,10 +54,16 @@
 <exit_state name="done" target="Element@1690372024:1689832871263"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1312601572:1689832871263" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="389" y="189">
+<element height="46" id="Element@1312601572:1689832871263" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="383" y="126">
 <exit_states>
-<exit_state name="VALID" target="Element@1729457485:1689832871263"/>
+<exit_state name="VALID" target="Element@26354241:1691147215419"/>
 <exit_state name="INVALID" target="Element@2002882241:1689832871263"/>
+</exit_states>
+</element>
+<element height="46" id="Element@26354241:1691147215419" name="GET_ACCOUNT_DETAILS_BC" type="Decision" width="198" x="403" y="225">
+<exit_states>
+<exit_state name="YES" target="Element@1729457485:1689832871263"/>
+<exit_state name="NO" target="Element@2002882241:1689832871263"/>
 </exit_states>
 </element>
 </page>

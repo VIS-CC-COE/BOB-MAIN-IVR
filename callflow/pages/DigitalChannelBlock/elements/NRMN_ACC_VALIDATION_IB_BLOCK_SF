@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1661736346:1691053107139" name="NRMN_ACC_VALIDATION_IB_BLOCK_SF" version="6.0.1">
+<subflow_call subflow_name="accountNumberValidation" target="Element@31:1690280774369">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

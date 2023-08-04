@@ -8,27 +8,10 @@
 <page_connector target="Element@1121780053:1673076799223">BANKING_MENU_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@617954093:1677475915157" name="CHK_REDIRECT_PAGE" type="Decision" width="163" x="14" y="309">
-<exit_states>
-<exit_state name="banking-menu" target="Element@950002158:1679378019969"/>
-<exit_state name="main-menu" target="Element@1630093749:1679307183092"/>
-</exit_states>
-</element>
 <element height="46" id="Element@482879789:1677480870239" name="CHK_REDIRECT_PAGE_2" type="Decision" width="212" x="625" y="483">
 <exit_states>
 <exit_state name="banking-menu" target="Element@97389195:1677480899801"/>
 <exit_state name="main-menu" target="Element@1041454197:1677481437879"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1863161350:1677480111036" name="CHK_RMN_PE" type="Page Connector" width="141" x="-243" y="543">
-<page_connector target="Element@1998844450:1677480058007">CHK_RMN_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@1769233874:1676535669355" name="ENTER_ACCOUNT_NUMBER_SWITCH_PP" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="264" x="-26" y="47">
-<exit_states>
-<exit_state name="done" target="Element@1660685562:1676535669355"/>
-<exit_state name="max_nomatch" target="Element@1577744105:1676535722010"/>
-<exit_state name="max_noinput" target="Element@783611377:1676535722010"/>
 </exit_states>
 </element>
 <element height="46" id="Element@143818552:1676535537251" name="GET_TOP_2_ACC_BC" type="Decision" width="156" x="411" y="55">
@@ -40,32 +23,8 @@
 </bendpoint>
 </exit_state>
 <exit_state name="2" target="Element@1168981008:1677130480853"/>
-<exit_state name="NA" target="Element@1769233874:1676535669355"/>
+<exit_state name="NA" target="Element@99552410:1691139930842"/>
 </exit_states>
-</element>
-<element height="46" id="Element@1725692553:1676535669355" name="INCORRECT_ACCOUNT_SWITCH_AC_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="261" x="276" y="195">
-<exit_states>
-<exit_state name="done" target="Element@1769233874:1676535669355"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1660685562:1676535669355" name="IS_VALID_ACC_BC" type="Decision" width="146" x="19" y="203">
-<exit_states>
-<exit_state name="YES" target="Element@617954093:1677475915157"/>
-<exit_state name="NO" target="Element@1725692553:1676535669355"/>
-<exit_state name="MAX_ATTEMPT" target="Element@1577744105:1676535722010"/>
-</exit_states>
-</element>
-<element height="46" id="Element@1630093749:1679307183092" name="MAIN_MENU_PE" type="Page Connector" width="138" x="106" y="439">
-<page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
-</page_connector>
-</element>
-<element height="46" id="Element@783611377:1676535722010" name="NI_PE" type="Page Connector" width="158" x="-427" y="273">
-<page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
-</page_connector>
-</element>
-<element height="48" id="Element@1577744105:1676535722010" name="NM_PE" type="Page Connector" width="165" x="-426" y="203">
-<page_connector target="Element@455101586:1671019634997">NM_PE<config/>
-</page_connector>
 </element>
 <element height="48" id="Element@379521061:1677130492901" name="NM_PE" type="Page Connector" width="165" x="925" y="77">
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
@@ -79,22 +38,6 @@
 <element height="46" id="Element@579654589:1677133893792" name="SET_ACCOUNT_2" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="140" x="810" y="285">
 <exit_states>
 <exit_state name="done" target="Element@1655234845:1677480383640"/>
-</exit_states>
-</element>
-<element height="46" id="Element@950002158:1679378019969" name="SET_RMN" type="Decision" width="100" x="-220" y="407">
-<exit_states>
-<exit_state name="YES" target="Element@1863161350:1677480111036">
-<bendpoint>
-<dim1 x="-116" y="77"/>
-<dim2 x="-113" y="-59"/>
-</bendpoint>
-</exit_state>
-<exit_state name="NO" target="Element@1863161350:1677480111036">
-<bendpoint>
-<dim1 x="89" y="77"/>
-<dim2 x="92" y="-59"/>
-</bendpoint>
-</exit_state>
 </exit_states>
 </element>
 <element height="46" id="Element@1655234845:1677480383640" name="SWITCHED_ACCOUNT_DM" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="191" x="634" y="399">
@@ -123,7 +66,41 @@
 <exit_states>
 <exit_state name="1" target="Element@1653243020:1677133865476"/>
 <exit_state name="2" target="Element@579654589:1677133893792"/>
-<exit_state name="3" target="Element@1769233874:1676535669355"/>
+<exit_state name="3" target="Element@99552410:1691139930842"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1334954759:1691054993393" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="370" y="421">
+<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@754382402:1691139930842" name="ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SUBFLOW_ACTION" type="Decision" width="390" x="-54" y="222">
+<exit_states>
+<exit_state name="max-no-input" target="Element@1334954759:1691054993393">
+<bendpoint>
+<dim1 x="198" y="77"/>
+<dim2 x="-114" y="-123"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max-no-match" target="Element@1334954759:1691054993393">
+<bendpoint>
+<dim1 x="205" y="76"/>
+<dim2 x="-107" y="-124"/>
+</bendpoint>
+</exit_state>
+<exit_state name="valid" target="Element@97389195:1677480899801"/>
+<exit_state name="transfer" target="Element@1334954759:1691054993393"/>
+</exit_states>
+</element>
+<element height="46" id="Element@99552410:1691139930842" name="RMN_ACCOUNT_VALIDATION_SWITCH_ACCOUNT_SF" type="Subflow Call" width="333" x="-37" y="146">
+<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
+<config>
+<input_data>
+<data name="MAIN_FLOW_ACTION"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@754382402:1691139930842"/>
 </exit_states>
 </element>
 </page>
