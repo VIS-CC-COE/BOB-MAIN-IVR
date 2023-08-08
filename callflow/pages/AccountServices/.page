@@ -41,7 +41,12 @@
 <exit_states>
 <exit_state name="star" target="Element@1839977883:1676471207705"/>
 <exit_state name="1" target="Element@1677144603:1676471389066"/>
-<exit_state name="2" target="Element@1352683722:1676471207705"/>
+<exit_state name="2" target="Element@78506224:1690892481342">
+<bendpoint>
+<dim1 x="379" y="-214"/>
+<dim2 x="-44" y="256"/>
+</bendpoint>
+</exit_state>
 </exit_states>
 </element>
 <element height="46" id="Element@1847370915:1676471207704" name="ACC_BALANCE_SERVICE_MN" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="205" x="-161" y="475">
@@ -65,15 +70,11 @@
 <exit_state name="NO" target="Element@1231354179:1676471449100"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1352683722:1676471207705" name="LAST_5_TXN_PE" type="Page Connector" width="132" x="29" y="686">
-<page_connector target="Element@1815509870:1673074533799">LAST_5_TXN_PE<config/>
-</page_connector>
-</element>
 <element height="46" id="Element@1509620427:1676379003458" name="MAIN_MENU_PE" type="Page Connector" width="138" x="139" y="-70">
 <page_connector target="Element@2026633527:1671253398709">MAIN_MENU_PE<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@1721322583:1676471207705" name="NI_PE" type="Page Connector" width="158" x="109" y="546">
+<element height="46" id="Element@1721322583:1676471207705" name="NI_PE" type="Page Connector" width="158" x="-330" y="544">
 <page_connector target="Element@2087467842:1671020844510">NI_PE<config/>
 </page_connector>
 </element>
@@ -81,7 +82,7 @@
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
-<element height="48" id="Element@233240421:1676471207705" name="NM_PE" type="Page Connector" width="165" x="115" y="458">
+<element height="48" id="Element@233240421:1676471207705" name="NM_PE" type="Page Connector" width="165" x="-366" y="453">
 <page_connector target="Element@455101586:1671019634997">NM_PE<config/>
 </page_connector>
 </element>
@@ -94,7 +95,7 @@
 <exit_state name="done" target="Element@1847370915:1676471207704"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1231354179:1676471449100" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="118" y="375">
+<element height="46" id="Element@1231354179:1676471449100" name="SERVICE_FAILED_PP" type="Page Connector" width="153" x="-332" y="302">
 <page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
 </page_connector>
 </element>

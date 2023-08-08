@@ -63,7 +63,7 @@
 <exit_state name="done" target="Element@2051420622:1679640147418"/>
 </exit_states>
 </element>
-<element height="46" id="Element@642409129:1671255365386" name="CARD_BLOCK_PE" type="Page Entry" width="141" x="432" y="-152">
+<element height="46" id="Element@642409129:1671255365386" name="CARD_BLOCK_PE" type="Page Entry" width="141" x="423" y="-263">
 <exit_states>
 <exit_state name="next" target="Element@279758770:1679206862715"/>
 </exit_states>
@@ -153,9 +153,9 @@
 <page_connector target="Element@1144940709:1673850542493">SERVICE_FAILED_PP<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@279758770:1679206862715" name="SET_EMERGENCY_FLAG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="205" x="395" y="-75">
+<element height="46" id="Element@279758770:1679206862715" name="SET_EMERGENCY_FLAG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="205" x="395" y="-190">
 <exit_states>
-<exit_state name="done" target="Element@1425726912:1690911579035"/>
+<exit_state name="done" target="Element@48856361:1691407291156"/>
 </exit_states>
 </element>
 <element height="46" id="Element@1533020913:1690911557221" name="NRMN_ACC_VALIDATION_CARD_BLOCK_SF" type="Subflow Call" width="280" x="638" y="79">
@@ -170,18 +170,6 @@
 <exit_state name="next" target="Element@963967719:1690911557221"/>
 </exit_states>
 </element>
-<element height="46" id="Element@777139183:1690911557221" name="RMN_ACCOUNT_VALIDATION_CARD_BLOCK_SF" type="Subflow Call" width="303" x="38" y="87">
-<subflow_call subflow_name="rmnAccountNumberValidation" target="Element@31:1690279297245">
-<config>
-<input_data>
-<data name="MAIN_FLOW_ACTION"/>
-</input_data>
-</config>
-</subflow_call>
-<exit_states>
-<exit_state name="next" target="Element@1368163464:1690911557221"/>
-</exit_states>
-</element>
 <element height="46" id="Element@963967719:1690911557221" name="NRMN_CARD_BLOCK_CHECK_SUBFLOW_ACTION" type="Decision" width="313" x="638" y="173">
 <exit_states>
 <exit_state name="max-no-input" target="Element@1829220911:1690911605702"/>
@@ -190,26 +178,28 @@
 <exit_state name="transfer" target="Element@1829220911:1690911605702"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1368163464:1690911557221" name="ACCOUNT_VALIDATION_CARD_BLOCK_SUBFLOW_ACTION" type="Decision" width="360" x="15" y="178">
-<exit_states>
-<exit_state name="max-no-input" target="Element@1082597201:1690911605356"/>
-<exit_state name="max-no-match" target="Element@1082597201:1690911605356"/>
-<exit_state name="valid" target="Element@2065537287:1671264213419"/>
-<exit_state name="transfer" target="Element@1082597201:1690911605356"/>
-</exit_states>
-</element>
 <element height="46" id="Element@1425726912:1690911579035" name="IS_RMN_CALLER_3" type="Decision" width="151" x="419" y="-2">
 <exit_states>
-<exit_state name="YES" target="Element@777139183:1690911557221"/>
+<exit_state name="YES" target="Element@456268314:1691407277541"/>
 <exit_state name="NO" target="Element@1533020913:1690911557221"/>
 </exit_states>
-</element>
-<element height="46" id="Element@1082597201:1690911605356" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="-253" y="194">
-<page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
-</page_connector>
 </element>
 <element height="46" id="Element@1829220911:1690911605702" name="AGENT_TRANSFER_PE" type="Page Connector" width="165" x="1085" y="174">
 <page_connector target="Element@1561465622:1670845235065">AGENT_TRANSFER_PE<config/>
 </page_connector>
+</element>
+<element height="46" id="Element@456268314:1691407277541" name="CHECK_SERVICE_ELIGIBILITY_PE" type="Page Connector" width="217" x="4" y="-18">
+<page_connector target="Element@806029380:1690892679740">CHECK_SERVICE_ELIGIBILITY_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@48856361:1691407291156" name="SET_SERVICE_BLOCK_DC" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="179" x="413" y="-108">
+<exit_states>
+<exit_state name="done" target="Element@1425726912:1690911579035"/>
+</exit_states>
+</element>
+<element height="46" id="Element@725800587:1691407432828" name="BLOCK_DC_PE" type="Page Entry" width="126" x="247" y="204">
+<exit_states>
+<exit_state name="next" target="Element@2065537287:1671264213419"/>
+</exit_states>
 </element>
 </page>

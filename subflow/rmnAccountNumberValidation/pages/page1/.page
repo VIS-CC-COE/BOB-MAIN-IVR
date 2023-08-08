@@ -56,14 +56,8 @@
 </element>
 <element height="46" id="Element@1312601572:1689832871263" name="IS_VALID_ACCOUNT_NUMBER_BC" type="Decision" width="229" x="383" y="126">
 <exit_states>
-<exit_state name="VALID" target="Element@26354241:1691147215419"/>
+<exit_state name="VALID" target="Element@1729457485:1689832871263"/>
 <exit_state name="INVALID" target="Element@2002882241:1689832871263"/>
-</exit_states>
-</element>
-<element height="46" id="Element@26354241:1691147215419" name="GET_ACCOUNT_DETAILS_BC" type="Decision" width="198" x="403" y="225">
-<exit_states>
-<exit_state name="YES" target="Element@1729457485:1689832871263"/>
-<exit_state name="NO" target="Element@2002882241:1689832871263"/>
 </exit_states>
 </element>
 </page>
